@@ -1,4 +1,4 @@
-- [[FYS3140 Week 8 Highlights of last week]]
+[[FYS3140 Week 8 Highlights of last week]]
     - Homogeneous equations are equations of the form
         - $y'' + P(x)y' + Q(x)y = 0$
         - Always a solution as a linear combination of two solutions

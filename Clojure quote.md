@@ -1,4 +1,4 @@
-- A quote (`'`) in [[Clojure]] means the expression is not evaluated
+A quote (`'`) in [[Clojure]] means the expression is not evaluated
     - ```clojure
 user> (quote (println "foo"))
 (println "foo")```

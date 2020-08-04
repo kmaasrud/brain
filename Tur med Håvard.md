@@ -1,2 +1,2 @@
-- Vi skal til [[Randsfjorden]]
+Vi skal til [[Randsfjorden]]
     - [[Kongeøya]]

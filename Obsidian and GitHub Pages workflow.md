@@ -3,8 +3,8 @@ For easy sharing and viewing on mobile, I publish my [[Obsidian.md]] vault to <h
 ## Some sort of [[Version control system|VCS]]
 I use [[Git]] as my preffered [[Version control system|VCS]] and host my vault on [[GitHub]]. Using version control, I'm able to track how my notes evolve over time and roll back changes if necessary. This is in contrast to automatically syncing to the cloud with a service like [[OneDrive]] or [[Dropbox]]. Hosting my vault on [[GitHub]] also allows me to use [[GitHub Actions]] to easily automate the following actions.
 
-## Convert propietary [[Obsidian.md|Obsidian]] syntax into [[CommonMark]] compliance
-Even though I'm able to only use vanilla [[Markdown]] syntax in [[Obsidian.md|Obsidian]] and achieve much the same result - the [[Wiki-style links|wiki link syntax]] is a lot quicker and intuitive for me. Thus, I need them converted into complying with the [[CommonMark]] specification. I do this using a [Python script](https://github.com/kmaasrud/obsidian-hugo) I've written. Here's a list of what needs to be replaced:
+## Convert propietary [[Obsidian.md|Obsidian]] syntax into [[Hugo]]'s [[CommonMark]] compliance
+Even though I'm able to only use vanilla [[Markdown]] syntax in [[Obsidian.md|Obsidian]] and achieve much the same result - the [[Wiki-style links|wiki link syntax]] is a lot quicker and intuitive for me. Thus, I need them converted into complying with [[Hugo]] and how it handles relative links. I do this using a [Python script](https://github.com/kmaasrud/obsidian-hugo) I've written. Here's a list of what needs to be replaced:
 
 - `[[wiki link]]` -> `[wiki link]("wiki link.md")`
 - `[[wiki links|alias]]` -> `[alias]("wiki link.md")`

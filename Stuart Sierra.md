@@ -1,1 +1,1 @@
-- [Homepage](https://stuartsierra.com/)
+[Homepage](https://stuartsierra.com/)

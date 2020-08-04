@@ -1,2 +1,2 @@
-- Using [Enlive](https://github.com/cgrand/enlive):
+Using [Enlive](https://github.com/cgrand/enlive):
     - 

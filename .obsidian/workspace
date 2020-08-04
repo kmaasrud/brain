@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Obsidian and GitHub Pages workflow.md",
+            "file": "daily/2020-08-04.md",
             "mode": "source"
           }
         }
@@ -46,8 +46,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c99458d033c36a4d",
@@ -81,10 +80,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Obsidian and GitHub Pages workflow.md",
     "daily/2020-08-04.md",
-    "clean-theme-obsidian/README.md",
-    "Syncing OneDrive in Linux.md",
-    "Rødvin.md"
+    "daily/2020-08-03.md",
+    "daily/2020-07-30.md",
+    "daily/2020-07-29.md",
+    "daily/2020-07-07.md"
   ]
 }

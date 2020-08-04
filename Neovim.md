@@ -1,4 +1,4 @@
-- [[Vim]]-based text-editor, implementing modern technologies
+[[Vim]]-based text-editor, implementing modern technologies
     - [[Asynchrony]]
     - Scriptable through languages like: [[Python]], [[Lua]] among others
 - Source:

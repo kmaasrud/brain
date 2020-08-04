@@ -1,4 +1,4 @@
-- [[Grytidlig]]
+[[Grytidlig]]
 - Tittel: [[Karl Marx]] som influencer.
 - Gjest: [[Helene Nord Mjømen]].
 - Ganske forsinket. Var mye å gjøre med jobb og skole, samt at filene ble lagret på [[Håvard]] sin PC, så det tok tid før jeg fikk begynt med redigering.

@@ -1,4 +1,4 @@
-- Maps are [[Clojure]]'s type of [[Associative array]]
+Maps are [[Clojure]]'s type of [[Associative array]]
 - A map is created in [[Clojure]] using the following syntax:
     - ```clojure
 (def my-map {:value-1 1

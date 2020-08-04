@@ -1,4 +1,4 @@
-- Ordinary differential equations (DEs)
+Ordinary differential equations (DEs)
     - Second order DEs:
         - $$y′′+P(x)y′+Q(x)y=R(x)$$.
     - Homogeneous:
