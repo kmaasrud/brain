@@ -1,0 +1,181 @@
+{
+  "theme": "obsidian",
+  "pluginEnabledStatus": {
+    "File explorer": true,
+    "Search": true,
+    "Quick switcher": true,
+    "Graph view": true,
+    "Backlinks": true,
+    "Command palette": true,
+    "Markdown format importer": false,
+    "Word count": true,
+    "Page preview": true,
+    "Custom CSS": true,
+    "Daily notes": true,
+    "Tag pane": true
+  },
+  "foldIndent": true,
+  "foldHeading": true,
+  "showLineNumber": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "assets",
+  "hotkeys": {
+    "editor:follow-link": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "o"
+      }
+    ],
+    "editor:focus-top": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "k"
+      }
+    ],
+    "editor:focus-bottom": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "j"
+      }
+    ],
+    "editor:focus-left": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "h"
+      }
+    ],
+    "editor:focus-right": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "l"
+      }
+    ],
+    "workspace:split-vertical": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "+"
+      }
+    ],
+    "workspace:split-horizontal": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "-"
+      }
+    ],
+    "graph:open": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "g"
+      }
+    ],
+    "backlink:open-backlinks": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "b"
+      }
+    ],
+    "app:go-back": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "ArrowLeft"
+      }
+    ],
+    "app:go-forward": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "ArrowRight"
+      }
+    ],
+    "workspace:close": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "q"
+      }
+    ],
+    "markdown:toggle-preview": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "e"
+      }
+    ],
+    "app:toggle-left-sidebar": [
+      {
+        "modifiers": [
+          "Alt",
+          "Mod"
+        ],
+        "key": "ArrowLeft"
+      }
+    ],
+    "app:toggle-right-sidebar": [
+      {
+        "modifiers": [
+          "Alt",
+          "Mod"
+        ],
+        "key": "ArrowRight"
+      }
+    ],
+    "editor:toggle-fold": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "f"
+      }
+    ],
+    "editor:fold-all": [
+      {
+        "modifiers": [
+          "Alt",
+          "Shift"
+        ],
+        "key": "F"
+      }
+    ],
+    "daily-notes": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "d"
+      }
+    ],
+    "global-search:open": [
+      {
+        "modifiers": [
+          "Alt"
+        ],
+        "key": "s"
+      }
+    ]
+  },
+  "vimMode": false,
+  "promptDelete": false
+}

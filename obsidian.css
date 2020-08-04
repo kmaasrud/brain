@@ -1,0 +1,208 @@
+/* Custom colors */
+/* ------------- */
+.theme-dark {
+  --background-primary: #000;
+  --background-secondary: #000;
+  --background-modifier-accent: #94a8b328;
+  --quote-opening-modifier: rgb(255, 255, 255, 0.1);
+
+  /* Text */
+  --text: 222, 220, 222;
+  --text-normal: rgb(var(--text));
+  --text-faint: rgba(var(--text), 0.3);
+
+  /* Accent */
+  --accent: 148, 168, 179;
+  --text-accent: rgb(var(--accent));
+  --text-accent-hover: rgba(var(--accent), 0.8);
+  --interactive-accent: rgba(var(--accent), 0.6);
+  --interactive-accent-rgb: var(--accent);
+  --interactive-accent-hover: rgba(var(--accent), 0.5);
+}
+
+.theme-light {
+  --background-modifier-accent: #6b8c9c1e;
+  --quote-opening-modifier: rgb(0, 0, 0, 0.1);
+
+  --text-accent:  #6b8c9c;
+  --text-accent-hover: #81a7b9;
+}
+
+/* Other variables */
+/* --------------- */
+:root {
+  --transition-length: 200ms;
+}
+
+
+/* Styling of content */
+/* ------------------ */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Collapsing sidedocks */
+.side-dock-ribbon.mod-left.is-collapsed:not(:hover), .side-dock-ribbon.mod-right.is-collapsed:not(:hover) {
+  width: 15px !important;
+  opacity: 0;
+}
+.side-dock-ribbon {
+  transition-property: width, opacity;
+}
+
+/* Fading header icons (MINIMAL EVERYTHING!!!) */
+.view-header:not(:hover) .view-actions, .view-header:not(:hover) .view-header-icon {
+  opacity: 0;
+  transition: opacity var(--transition-length) ease-in-out;
+}
+
+/* No borders on sidebar */
+.side-dock-ribbon.mod-right, .side-dock-ribbon.mod-left {
+  border: 0px;
+}
+
+/* Clean header */
+.workspace-leaf.mod-active .view-header {
+  background-color: var(--background-primary) !important;
+  border-bottom: 0px !important;
+  border-top: 0px !important;
+}
+
+/* Cleaner status bar */
+.status-bar {
+  background-color: var(--background-primary);
+  color: var(--text-faint);
+}
+
+/* Bigger margins when single pane */
+/* I think this is rendered redundant with the current version */
+.mod-single-child .CodeMirror-sizer {
+  margin: 0px 10% !important;
+}
+.mod-single-child .markdown-preview-section {
+  margin: 0px 10% !important;
+}
+
+/* Pretty link hover animations */
+.cm-hmd-internal-link, a.external-link, a.internal-link {
+  transition: filter var(--transition-length) ease-out;
+  text-decoration: none !important;
+}
+.cm-hmd-internal-link:hover, a.external-link:hover,
+a.internal-link:hover {
+  filter: brightness(70%);
+  text-decoration: none !important;
+}
+
+/* Remove border from status bar */
+.status-bar {
+  border: none !important;
+}
+
+/* Fainter icons, bringing focus to the text area */
+.view-action, .view-header-icon, .side-dock-ribbon-action,
+.nav-action-button, .workspace-tab-header-inner-icon {
+  color: var(--text-faint);
+  transition: color var(--transition-length) ease-in;
+}
+
+/* Same hovering accent color on every icon */
+.side-dock-ribbon-action:hover, .workspace-tab-header:hover .workspace-tab-header-inner-icon,
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-ribbon-collapse-btn:hover, .view-header-icon:hover {
+  color: var(--text-accent);
+}
+
+/* Side-bars do not have margins that restrict the content */
+.workspace-split.mod-right-split[style="width: 0px;"],
+.workspace-split.mod-left-split[style="width: 0px;"] {
+  margin: 0;
+}
+
+/* No overflow scrollbar in x-direction */
+.nav-files-container {
+  overflow-x: hidden;
+}
+
+/* Transparent ribbons (works better with the auto-hiding) */
+.workspace-ribbon.is-collapsed {
+  background: transparent;
+}
+
+
+/* Markdown syntax highlighting */
+/* ---------------------------- */
+/* Headers */
+.cm-formatting-header {
+  color: var(--text-faint) !important;
+  font-weight: 400 !important;
+}
+.HyperMD-header-1 {
+  font-size: 18pt !important;
+}
+.HyperMD-header-2 {
+  font-size: 16pt !important;
+}
+.HyperMD-header-3 {
+  font-size: 14pt !important;
+}
+/* Lists */
+.cm-formatting-list {
+  color: var(--text-faint) !important;
+}
+/* Quote */
+.cm-formatting-quote {
+  color: var(--text-faint) !important;
+}
+/* Tags (pill style, borrowed from kepano/obsidian-minimal) */
+.tag {
+  background-color:var(--background-modifier-accent);
+  border:none;
+  color:var(--text-muted);
+  padding:1px 7px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:4px 0px 0px;
+  cursor:pointer;
+  border-radius:10px;
+}
+.tag:hover {
+  color:var(--text-muted);
+  background-color:var(--background-modifier-border);
+}
+.cm-s-obsidian span.cm-hashtag {
+  background-color:var(--background-modifier-accent);
+  border:none;
+  color:var(--text-muted);
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:0;
+  vertical-align:middle;
+  padding-top:1px;
+  padding-bottom:1px;
+  cursor:text;
+}
+.cm-hashtag-begin {
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  padding-left:7px;
+}
+.cm-hashtag-end {
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  padding-right:7px;
+}
+
+
+/* Markdown preview styling */
+/* Blockquotes */
+.markdown-preview-view blockquote {
+  border-radius: 4px;
+  border: solid var(--quote-opening-modifier);
+  border-width: 0px 0px 0px 7px;
+  background-color: var(--background-modifier-accent);
+}
+
+

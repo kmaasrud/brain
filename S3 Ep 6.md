@@ -1,0 +1,29 @@
+- Intro
+    - Årets sesong
+        - Ikke så imponerende
+    - Jobbing på [[Håvard]] og [[Magnus]] i sommer
+    - Grytidlig teambuilding
+        - Ikke til [[Sundvolden]]
+        - men til [[Randsfjorden]]
+        - Anekdote fra [[Håvard]]
+            - Tidligere år dro lærerne på [[Bjertnes]] til [[Manchester]]
+            - Dette året gikk ikke det, ble derfor avslutning på __lærerværelset__
+- [[Håvards Statistikkhjørne]]
+    - Antall eneboliger i [[Norge]]
+        - 2 500 000
+    - Antall hytter og feriehus i [[Norge]]
+        - 500 000
+    - Hvor ligger flest hytter
+        - [[Trøndelag]] og [[Oppland]]
+    - Drikkevannkvalitet
+        - [[Røros]] og [[Askøy]]
+- [[Tvekampen]]
+    - [[Vri åtter]]
+    - [[Håvard]] vant
+        - og vant dermed hele sesongen!
+- Outro
+    - Savner [[Blindern]]
+    - [[Håvard]]s treningstøyforfengelighet
+    - Dårlig jordbærvits
+    - Ønske god sommer
+- [[Grytidlig Sesong 3]] slutt!
