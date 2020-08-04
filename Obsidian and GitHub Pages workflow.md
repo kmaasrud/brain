@@ -10,3 +10,8 @@ Even though I'm able to only use vanilla [[Markdown]] syntax in [[Obsidian.md|Ob
 - `[[wiki links|alias]]` -> `[alias]("wiki link.md")`
 - `[[wiki link#header name]]` -> `[wiki link]("wiki link.md"#header-name)`
 - `![[image or embed]]` -> `![](image or embed)` (NOTE: Embedding other [[Markdown]] files is not part of [[CommonMark]] and must therefore be replaced by a link)
+
+## Making a static site using [[Hugo]]
+With the content properly formatted, [[Hugo]] does the heavy lifting. For [[GitHub]] users like myself, there's a great [[GitHub Actions|Action]] found [here](https://github.com/peaceiris/actions-hugo) that has [[Hugo]] generate the site and later pushes the generated content to another repo or branch. This is perfect, as it allows me to have the source of my site separated from the content that is published through [[GitHub Pages]].
+
+## Publishing everything through [[GitHub Pages]]
