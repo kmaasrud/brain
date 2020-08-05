@@ -1,0 +1,4 @@
++++
+title = "Abstract data type"
++++
+

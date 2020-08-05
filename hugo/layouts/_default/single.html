@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<h1 class="post-title">
+    {{ .Title }}
+</h1>
+{{ if .Date }}
+    <p class="datestamp">{{ .Date.Format "2006-01-02" }}</p >
+{{ end }}
+<!-- {{ if (gt .WordCount 400) }}
+<aside>
+    {{ .TableOfContents }}
+</aside>
+{{ end }} -->
+<div id="content">
+    <p>
+    {{ .Content }}
+    </p>
+</div>
+
+<div class="page-footer">
+    {{if .Params.tags}}
+    <hr class="footer-divider">
+    {{ range .Params.tags }}
+        <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+    {{ end }}
+    {{ end }}
+</div>
+
+{{end}}

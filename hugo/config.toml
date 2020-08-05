@@ -1,4 +1,14 @@
 baseURL = "https://www.kmaasrud.com/brain"
 languageCode = "en-us"
 title = "kmaasrud's Brain"
-contentDir = "../."
+contentDir = [ "content" ]
+
+[params]
+    description = "A site"
+    math = true
+    email = "kmaasrud@outlook.com"
+    github = "https://github.com/kmaasrud"
+    custom_css = ["css/main.css"]
+
+[markup.goldmark.renderer]
+  unsafe= true

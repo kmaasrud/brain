@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kmaasrud&#39;s Brain</title>
+    <link>https://www.kmaasrud.com/brain/</link>
+    <description>Recent content on kmaasrud&#39;s Brain</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://www.kmaasrud.com/brain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Just a test</title>
+      <link>https://www.kmaasrud.com/brain/just-a-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kmaasrud.com/brain/just-a-test/</guid>
+      <description>Here I am testing converting links. Does it work? What about aliased links? And finally, how about header links? Or maybe several more header links.
+Here is a header link with ., which I know Hugo isn&amp;rsquo;t happy with.</description>
+    </item>
+    
+    <item>
+      <title>links</title>
+      <link>https://www.kmaasrud.com/brain/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.kmaasrud.com/brain/links/</guid>
+      <description>Here is the destination</description>
+    </item>
+    
+  </channel>
+</rss>
