@@ -1,4 +1,0 @@
-+++
-title = "Ordinary differential equation"
-+++
-

@@ -1,4 +1,0 @@
-+++
-title = "Shell script"
-+++
-

@@ -1,4 +1,0 @@
-+++
-title = "Connor White Sullivan"
-+++
-

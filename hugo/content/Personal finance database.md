@@ -1,4 +1,0 @@
-+++
-title = "Personal finance database"
-+++
-

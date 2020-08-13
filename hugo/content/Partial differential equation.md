@@ -1,4 +1,0 @@
-+++
-title = "Partial differential equation"
-+++
-

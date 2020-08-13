@@ -1,4 +1,0 @@
-+++
-title = "Bachelor's degree"
-+++
-

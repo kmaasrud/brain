@@ -1,4 +1,0 @@
-+++
-title = "Version control system"
-+++
-

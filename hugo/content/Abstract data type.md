@@ -1,4 +1,0 @@
-+++
-title = "Abstract data type"
-+++
-

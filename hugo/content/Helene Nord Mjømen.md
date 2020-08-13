@@ -1,4 +1,0 @@
-+++
-title = "Helene Nord Mjømen"
-+++
-

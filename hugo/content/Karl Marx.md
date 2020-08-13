@@ -1,4 +1,0 @@
-+++
-title = "Karl Marx"
-+++
-
