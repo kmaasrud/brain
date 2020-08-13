@@ -1,14 +1,15 @@
 ## Ingredienser
-- **Oppskrift for 8 kringler**:
-	- 630 g [[Hvetemel|hvetemel]]
-	- 12 g [[Salt|salt]]
-	- 13 g [[Gjær|gjær]]
-	- 365 g lunkent [[Vann|vann]]
-	- 21 g [[Smør|smør]]
-	- *Vannbad*:
-		- 1 L vann
-		- 60 g [[Bakepulver|bakepulver]] eller 30 g [[NaOH|lutkuler]]
-	- Hvis ønskelig, kan litt [[Maltekstrakt|maltpulver]] legges til for ekstra smak.
+Oppskrift for **8** kringler:
+- 630 g [[Hvetemel|hvetemel]]
+- 12 g [[Salt|salt]]
+- 13 g [[Gjær|gjær]]
+- 365 g lunkent [[Vann|vann]]
+- 21 g [[Smør|smør]]
+- *Vannbad*:
+	- 1 L vann
+	- 60 g [[Bakepulver|bakepulver]] eller 30 g [[NaOH|lutkuler]]
+- Hvis ønskelig, kan litt [[Maltekstrakt|maltpulver]] legges til for ekstra smak.
+	
 ## Fremgangsmåte
 - Aktiver gjæren ved å blande den i vannet (som helst skal holde rundt 35°C) og la den stå i noen få minutter.
 - Bland melet, saltet og eventuelt maltpulveret, og rør god sammen.
