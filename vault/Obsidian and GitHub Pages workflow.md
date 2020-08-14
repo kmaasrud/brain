@@ -15,3 +15,4 @@ Even though I'm able to only use vanilla [[Markdown]] syntax in [[Obsidian|Obsid
 With the content properly formatted, [[Hugo]] does the heavy lifting. For [[GitHub]] users like myself, there's a great [[GitHub Actions|Action]] found [here](https://github.com/peaceiris/actions-hugo) that has [[Hugo]] generate the site and later pushes the generated content to another repo or branch. This is perfect, as it allows me to have the source of my site separated from the content that is published through [[GitHub Pages]].
 
 ## Publishing everything through [[GitHub Pages]]
+In the end I publish the generated site through [[GitHub Pages]], giving me free hosting and great integration with [[GitHub Actions]].
