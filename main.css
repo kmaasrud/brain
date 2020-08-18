@@ -1,12 +1,21 @@
+/* Base */
+:root {
+  --transition-length: 150ms;
+  --text-color: 255, 255, 255;
+  --link-color: 100, 149, 237;
+  --bg-color: 0, 0, 0;
+}
+
+
+/* HTML and body */
 html, body {
   margin: 0px;
   height: 100%;
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 14px;
 }
 body {
-    margin: 50px 0px 150px 0px;
     color: #333;
 }
 
@@ -26,4 +35,28 @@ body {
     nav {
         margin: 0px 38px 20px 38px;
     }
+}
+
+
+/* Link styling */
+a {
+  text-decoration: none;
+  color: rgb(var(--link-color));
+  transition: all var(--transition-length) ease-in;
+}
+a:hover {
+  color: rgba(var(--link-color), 0.8)
+}
+
+
+/* List markers and styling */
+ul {
+    padding-left: 4%;
+}
+ul li {
+    padding-left: 2%    ;
+}
+ul li::marker {
+    content: "-";
+    color: rgba(0, 0, 0, 0.4);
 }
