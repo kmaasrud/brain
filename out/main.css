@@ -10,7 +10,7 @@
 /* HTML and body */
 html, body {
   margin: 0px;
-  height: 100%;
+  height: auto;
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -19,12 +19,15 @@ body {
     color: rgb(var(--text-color));
     background-color: rgb(var(--bg-color))
 }
+/* Allow overscroll */
+html { padding-bottom: 200px; }
 
 
 /* Images */
 img {
-  width: 80%;
+  display: block;
   margin: 0px auto;
+  width: 80%;
   height: auto;
 }
 
@@ -67,5 +70,5 @@ ul li {
 }
 ul li::marker {
     content: "-";
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(var(--text-color), 0.4);
 }
