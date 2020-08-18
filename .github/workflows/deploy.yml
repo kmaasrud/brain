@@ -22,7 +22,7 @@ jobs:
         pip install git+https://github.com/kmaasrud/obsidian-html.git
         
     - name: Generate HTML through obsidian-html
-      run: python -m obsidian_html ./vault -o ../docs
+      run: python -m obsidian_html ./vault -o ./docs
 
     - name: Commit page
       uses: EndBug/add-and-commit@v4
