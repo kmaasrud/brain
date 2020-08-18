@@ -1,1 +1,9 @@
-@import url("https://www.kmaasrud.com/main.css");
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: 'IBM Plex', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: rgb(var(--bg-color));
+  color: rgb(var(--text-color));
+}
