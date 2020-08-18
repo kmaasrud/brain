@@ -22,12 +22,12 @@ jobs:
         pip install git+https://github.com/kmaasrud/obsidian-html.git
         
     - name: Generate HTML through obsidian-html
-      run: python -m obsidian_html ./vault -o ./html -t ./template.html -d daily
+      run: python -m obsidian_html ./vault -o ./out -t ./template.html -d daily
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: html
+        FOLDER: out
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
