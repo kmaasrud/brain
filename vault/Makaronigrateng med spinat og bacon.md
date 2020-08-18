@@ -7,9 +7,10 @@ Oppskrift for **4** porsjoner:
 - En [[Løk|løk]], finhakket
 - 2 ss [[Smør|smør]]
 - 2 ss [[Mel|hvetemel]]
+- 3 dl [[Melk|melk]]
 - ca. 200 g [[Ost|revet ost]], gjerne en blanding
 - 150 g [[Spinat|fersk spinat]], grovhakket
-- [[Panko|panko eller griljermel]]
+- [[Panko|Panko eller griljermel]]
 - *Valgfritt*: 1 ts [[Sennep|dijonsennep]]
 
 ## Fremgangsmåte
