@@ -1,0 +1,27 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+body {
+    margin: 50px 0px 150px 0px;
+    color: #333;
+}
+
+/* Responsive content container */
+#content {
+    max-width: 800px;
+    margin: 0px auto;
+}
+@media only screen and (max-width: 876px) {
+    #content {
+        margin: 0px 38px;
+    }
+    h1 {
+        margin: 0px 10px !important;
+    }
+    nav {
+        margin: 0px 38px 20px 38px;
+    }
+}
