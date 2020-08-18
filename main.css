@@ -1,9 +1,29 @@
 html, body {
   margin: 0px;
   height: 100%;
-  font-family: 'IBM Plex', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  background-color: rgb(var(--bg-color));
-  color: rgb(var(--text-color));
+  font-size: 1.1em;
+}
+body {
+    margin: 50px 0px 150px 0px;
+    color: #333;
+}
+
+
+/* Responsive content wrapper */
+#content {
+    max-width: 800px;
+    margin: 0px auto;
+}
+@media only screen and (max-width: 876px) {
+    #content {
+        margin: 0px 38px;
+    }
+    h1 {
+        margin: 0px 10px !important;
+    }
+    nav {
+        margin: 0px 38px 20px 38px;
+    }
 }
