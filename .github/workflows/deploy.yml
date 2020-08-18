@@ -22,7 +22,7 @@ jobs:
         pip install git+https://github.com/kmaasrud/obsidian-html.git
         
     - name: Generate HTML through obsidian-html
-      run: python -m obsidian_html ./vault -o ./html
+      run: python -m obsidian_html ./vault -o ./html -d daily
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
