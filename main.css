@@ -1,9 +1,9 @@
 /* Base */
 :root {
   --transition-length: 150ms;
-  --text-color: 255, 255, 255;
+  --text-color: 240, 240, 240;
   --link-color: 100, 149, 237;
-  --bg-color: 0, 0, 0;
+  --bg-color: 10, 10, 10;
 }
 
 
@@ -12,11 +12,20 @@ html, body {
   margin: 0px;
   height: 100%;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 15px;
 }
 body {
-    color: #333;
+    color: rgb(var(--text-color));
+    background-color: rgb(var(--bg-color))
+}
+
+
+/* Images */
+img {
+  width: 80%;
+  margin: 0px auto;
+  height: auto;
 }
 
 
@@ -45,7 +54,7 @@ a {
   transition: all var(--transition-length) ease-in;
 }
 a:hover {
-  color: rgba(var(--link-color), 0.8)
+  filter: brightness(80%);
 }
 
 
@@ -54,7 +63,7 @@ ul {
     padding-left: 4%;
 }
 ul li {
-    padding-left: 2%    ;
+    padding-left: 10px;
 }
 ul li::marker {
     content: "-";
