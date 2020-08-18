@@ -13,7 +13,7 @@ html, body {
   height: auto;
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
 }
 body {
     color: rgb(var(--text-color));
@@ -34,18 +34,19 @@ img {
 
 /* Responsive content wrapper */
 #content {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0px auto;
 }
-@media only screen and (max-width: 876px) {
+header {
+  max-width: 760px;
+  margin: 0px auto;
+}
+@media only screen and (max-width: 776px) {
     #content {
         margin: 0px 38px;
     }
-    h1 {
-        margin: 0px 10px !important;
-    }
-    nav {
-        margin: 0px 38px 20px 38px;
+    header {
+        margin: 0px 8px;
     }
 }
 
