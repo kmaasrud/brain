@@ -58,7 +58,7 @@
 <p>where $\mathcal L$ is the mentioned <a href="lagrangian-density">Lagrangian density</a> (or just the <a href="lagrangian">Lagrangian</a>, if you must). $\phi(x^\mu)$ is a <a href="field-physics-">field</a> in <a href="space-time">Space-time</a>. So the Lagrangian here is not dependent on $x^\mu$, but on $\phi(x^\mu)$, and the system has infinitely many degrees of freedom.</p>
 
 <p><strong><a href="principle-of-least-action">Principle of least action</a></strong>:<br />
-$$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg}$$</p>
+$$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg]$$</p>
 
 <p><em>Notes</em>:</p>
 
@@ -67,7 +67,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \
 <li>(I don't really understand his usage of curly braces here, but wth)</li>
 </ul>
 
-<p>$$= \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \phi}\delta \phi + \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) - \delta\phi \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\right)\bigg}$$</p>
+<p>$$= \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta \phi + \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) - \delta\phi \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\right)\bigg]$$</p>
 
 <ul>
 <li><p>$\partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) \rightarrow \int_{\partial V}d\sum_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi$. In our case we describe low interaction so we can ignore this surface term. So the previous $\rightarrow 0$ if:</p>
@@ -78,7 +78,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \
 </ol></li>
 </ul>
 
-<p>$$\Rightarrow 0 \overset{!}{=} \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\bigg}\delta \phi \qquad \forall\ \delta\phi(x^\mu)$$</p>
+<p>$$\Rightarrow 0 \overset{!}{=} \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\bigg]\delta \phi \qquad \forall\ \delta\phi(x^\mu)$$</p>
 
 <p>$$\partial_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi} - \frac{\partial \mathcal L}{\partial \phi} = 0$$</p>
 
@@ -96,7 +96,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \
 
 <p>Now we can use this to describe the <a href="hamiltonian">Hamiltonian</a></p>
 
-<p>$$H\equiv \int d^3x\bigg{\pi(x^\mu)\dot \phi(\vec x^\mu) - \mathcal L\bigg}$$</p>
+<p>$$H\equiv \int d^3x\bigg[\pi(x^\mu)\dot \phi(\vec x^\mu) - \mathcal L\bigg]$$</p>
 
 <p>and the part inside is the <em><a href="hamiltonian-density">Hamiltonian density</a></em></p>
 
@@ -155,7 +155,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \
 
 <p>$= \mathcal L(\phi, \partial_\mu\phi) + \alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2)$</p>
 
-<p>$\alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2) = \alpha\Delta\mathcal L = \alpha\bigg{\left(\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\Delta\phi + \partial_\mu\frac{\partial \mathcal L}{\partial(\partial_\mu \phi)}\Delta \phi\bigg}$</p>
+<p>$\alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2) = \alpha\Delta\mathcal L = \alpha\bigg[\left(\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\Delta\phi + \partial_\mu\frac{\partial \mathcal L}{\partial(\partial_\mu \phi)}\Delta \phi\bigg]$</p>
 
 <p>The term in the parenthesis dissapears (e.o.m.)</p></li>
 </ul>
@@ -176,16 +176,15 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \
 
 <p>## Videos</p>
 
-<pre><code>&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_3.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_3.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
-</code></pre>
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
 <hr />
 
