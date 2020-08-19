@@ -23,7 +23,7 @@ We have a point particle in 1D:
 
 - It has the [[Action (physics)|action]] - $S=\int dt L(q,\dot q)$ - which is only dependent on the [[Phase space]] variables [[Position]] and [[Velocity]]. Minimizing this "trajectory" through [[Phase space]] leads to the [[Euler-Lagrange equation|equations of motion]].
 
-Now lets consider 1D $\rightarrow$ $N$ dimensions. Now $q\rightarrow q = (q_1,...,q_N)$ and $\dot q = \frac{d}{dt}q$. However, our goal is not to consider a situation with $N$ [[Degrees of freedom|d.o.f.]], but a situation with infinite [[Degrees of freedom|d.o.f.'s]]. 
+Now lets consider 1D $\rightarrow$ $N$ dimensions. Now $q\rightarrow q = (q_1,...,q_N)$ and $\dot q = \frac{d}{dt}q$. However, our goal is not to consider a situation with $N$ [[Degree of freedom|d.o.f.]], but a situation with infinite [[Degree of freedom|d.o.f.'s]]. 
 
 This is where [[Field theory]] comes in. It considers a [[Lagrangian density]] instead (required by [[Locality]]!). Now our [[Action (physics)|action]] is written:
 
@@ -57,7 +57,7 @@ We could have more than one, and different fields, this would still describe the
 
 Recall: $p\equiv \frac{\partial L}{\partial \dot q}$.
 
-We expand on this concept by defining the *[[Conjugte momentum field|canonical(!) momentum density]]*
+We expand on this concept by defining the *[[Conjugate momentum field|canonical(!) momentum density]]*
 
 $$\pi(x^\mu)\equiv \frac{\partial \mathcal L}{\partial \dot \phi}$$
 
@@ -130,8 +130,27 @@ which is called the [[Conserved current]]
 
 > For each symmetry $\Delta \phi$, there is a [[Conserved current|conserved current]] $j_N^\mu$ (and [[Conserved charge]] $Q = \int d^3x j^0$)
 
- ## Videos
- 
+### Application: the energy-momentum tensor
+
+[[Space-time]] translations: $x^\nu\rightarrow x'^\nu = x^\nu + a^\nu$. This gives me four different symmetries - one for each value of $\nu$. 
+
+$\Rightarrow \phi(x) \rightarrow \phi'(x) = \phi(x + a)$, which we [[Taylor series|Taylor expand]] to $\phi(x) + a^\nu\partial_\nu\phi(x) + O(a^2)$. We define $\partial_\nu\phi(x) \equiv (\Delta \phi)_\nu$ - for each symmetry, we have a change in the field, and this is a sum over all of them.
+
+We exploit the fact that we know about [[Lorentz covariance|Lorentz symmetries]]. We know that the [[Lagrangian]] must transform the same way as the scalar field. 
+
+$\mathcal L\rightarrow \mathcal L + a^\nu\partial_\nu \mathcal L = \mathcal L + a^\nu\partial_\mu(\delta^\mu_\nu\mathcal L)$ and identify $\delta^\mu_\nu\mathcal L \equiv (J^\mu)_\nu$.
+
+We have *four* conserved currents:
+
+$$(j_N^\mu)_\nu \equiv T^\mu_\nu = \frac{\partial \mathcal L}{\partial (\partial_\mu \phi)}\partial_\nu\phi - \mathcal L \delta^\mu_\nu$$
+
+What are the conserved charges? They are:
+
+1. $\nu = 0 \rightarrow H = \int T^{00} d^3x = \int \mathcal H d^3x$.
+2. $\nu = i \rightarrow p^i = \int T^{0i} d^3x = -\int \pi \partial_i \phi d^3x$, which is the [[physical momentum|physical momentum]].
+
+## Videos
+
 <iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
 <iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
@@ -141,7 +160,7 @@ which is called the [[Conserved current]]
 <iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
 <iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
- 
+
 ***
 
 Meta:
