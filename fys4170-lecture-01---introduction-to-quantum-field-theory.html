@@ -41,12 +41,12 @@
 
 <h2 id="1-classical-field-theory">1. Classical field theory</h2>
 
-<h3 id="lagrangianlagrangian-and-hamiltonianhamiltonian"><a href="lagrangian">Lagrangian</a> and <a href="hamiltonian">Hamiltonian</a></h3>
+<h3 id="lagrangianlagrangian-formulation"><a href="lagrangian">Lagrangian</a> formulation</h3>
 
 <p>We have a point particle in 1D:</p>
 
 <ul>
-<li>It has the <a href="action-physics-">action</a> - $S=\int dt L(q,\dot q)$ - which is only dependent on the <a href="phase-space">Phase space</a> variables <a href="position">Position</a> and <a href="velocity">Velocity</a>. Minimizing this "trajectory" through <a href="phase-space">Phase space</a> leads to the <a href="lagrange-s-equation">equations of motion</a>.</li>
+<li>It has the <a href="action-physics-">action</a> - $S=\int dt L(q,\dot q)$ - which is only dependent on the <a href="phase-space">Phase space</a> variables <a href="position">Position</a> and <a href="velocity">Velocity</a>. Minimizing this "trajectory" through <a href="phase-space">Phase space</a> leads to the <a href="euler-lagrange-equation">equations of motion</a>.</li>
 </ul>
 
 <p>Now lets consider 1D $\rightarrow$ $N$ dimensions. Now $q\rightarrow q = (q_1,...,q_N)$ and $\dot q = \frac{d}{dt}q$. However, our goal is not to consider a situation with $N$ <a href="degrees-of-freedom">d.o.f.</a>, but a situation with infinite <a href="degrees-of-freedom">d.o.f.'s</a>. </p>
@@ -55,19 +55,137 @@
 
 <p>$$S = \int dtL = \int d^4x\mathcal L(\phi, \partial_\mu \phi ),$$</p>
 
-<p>where $\mathcal L$ is the mentioned <a href="lagrangian-density">Lagrangian density</a> (or just the <a href="lagrangian">Lagrangian</a>, if you must). $\phi(x^\mu)$ is a <a href="field-physics-">field</a>. </p>
+<p>where $\mathcal L$ is the mentioned <a href="lagrangian-density">Lagrangian density</a> (or just the <a href="lagrangian">Lagrangian</a>, if you must). $\phi(x^\mu)$ is a <a href="field-physics-">field</a> in <a href="space-time">Space-time</a>. So the Lagrangian here is not dependent on $x^\mu$, but on $\phi(x^\mu)$, and the system has infinitely many degrees of freedom.</p>
+
+<p><strong><a href="principle-of-least-action">Principle of least action</a></strong>:<br />
+$$0\overset{!}{=}\delta S = \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg}$$</p>
+
+<p><em>Notes</em>:</p>
+
+<ul>
+<li><strong>NB</strong>: <a href="einstein-notation">Sum convention</a></li>
+<li>(I don't really understand his usage of curly braces here, but wth)</li>
+</ul>
+
+<p>$$= \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \phi}\delta \phi + \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) - \delta\phi \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\right)\bigg}$$</p>
+
+<ul>
+<li><p>$\partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) \rightarrow \int_{\partial V}d\sum_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi$. In our case we describe low interaction so we can ignore this surface term. So the previous $\rightarrow 0$ if:</p>
+
+<ol>
+<li>$\delta\phi(t_1,\vec x) = \delta\phi(t_2,\vec x) = 0$</li>
+<li>$\delta \phi(t_1<t<t_2,\vec x)\rightarrow 0$ sufficiently fast for $|\vec x|\rightarrow \infty$ (as you go away from the experiment, you want to make sure it falls off).</li>
+</ol></li>
+</ul>
+
+<p>$$\Rightarrow 0 \overset{!}{=} \int d^4x\bigg{\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\bigg}\delta \phi \qquad \forall\ \delta\phi(x^\mu)$$</p>
+
+<p>$$\partial_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi} - \frac{\partial \mathcal L}{\partial \phi} = 0$$</p>
+
+<p>which is the <a href="euler-lagrange-equation#field-theory-euler-lagrange-equation">Field theory|Euler-Lagrange equation</a> completely analogous to the <a href="euler-lagrange-equation#classical-mechanics-classical">Classical mechanics|classical</a> one.</p>
+
+<p>We could have more than one, and different fields, this would still describe the system. </p>
+
+<h3 id="hamiltonianhamiltonian-formulation"><a href="hamiltonian">Hamiltonian</a> formulation</h3>
+
+<p>Recall: $p\equiv \frac{\partial L}{\partial \dot q}$.</p>
+
+<p>We expand on this concept by defining the <em><a href="conjugte-momentum-field">canonical(!) momentum density</a></em></p>
+
+<p>$$\pi(x^\mu)\equiv \frac{\partial \mathcal L}{\partial \dot \phi}$$</p>
+
+<p>Now we can use this to describe the <a href="hamiltonian">Hamiltonian</a></p>
+
+<p>$$H\equiv \int d^3x\bigg{\pi(x^\mu)\dot \phi(\vec x^\mu) - \mathcal L\bigg}$$</p>
+
+<p>and the part inside is the <em><a href="hamiltonian-density">Hamiltonian density</a></em></p>
+
+<p>$$\mathcal H = \mathcal H(\phi, \pi, \vec \nabla \phi) \equiv \pi(x^\mu)\dot \phi(\vec x^\mu) - \mathcal L$$</p>
+
+<h3 id="example-scalar-field-phixmu">Example: Scalar field $\phi(x^\mu)$</h3>
+
+<p>$$\Rightarrow \mathcal L = \frac{1}{2}(\partial_\mu\phi)^2 - V(\phi),\qquad V "=" \frac{1}{2}m^2\phi^2 = \text{"1st term in Taylor expansion"}$$</p>
+
+<p><strong>Note</strong>: $(\partial_\mu\phi)^2 = (\partial_\mu\phi)(\partial^\mu\phi)$.</p>
+
+<p>Using:</p>
+
+<ul>
+<li>$\frac{\partial \mathcal L}{\partial \phi} = -V' \rightarrow -m^2\phi$</li>
+<li><p>$\frac{\partial \mathcal L}{\partial(\partial_\mu \phi)} = \frac{1}{2}\frac{\partial}{\partial(\partial_\mu \phi)}[(\partial_\nu \phi)(\partial_\sigma \phi)\eta^{\nu\sigma}]$</p>
+
+<p>$= \frac{1}{2}\left[\delta_\nu^\mu(\partial_\sigma\phi)\eta^{\nu\sigma} (\partial_\nu\phi) \delta_\sigma^\mu \eta^{\nu\sigma}\right]= \partial^\mu\phi$</p></li>
+</ul>
+
+<p>Applying the <a href="euler-lagrange-equation">Euler-Lagrange equation</a> we get the <a href="klein-gordon-equation">Klein-Gordon equation</a> (for a <em>classical</em> field)</p>
+
+<p>$$(\partial^\mu\partial_m + m^2)\phi = (\square + m^2)\phi = 0$$</p>
+
+<hr />
+
+<p>$$\pi = \frac{\partial \mathcal L}{\partial \dot \phi} = \dot \phi$$</p>
+
+<p>$$\mathcal H = \pi\dot \phi - \mathcal L = \frac{1}{2}\dot \phi^2 + \frac{1}{2}(\vec \nabla \phi)^2 + \frac{1}{2}m^2\phi^2$$</p>
+
+<p>We interpret: </p>
+
+<ul>
+<li>$\frac{1}{2}\dot \phi^2$ as the <a href="kinetic-energy">Kinetic energy</a> of the field.</li>
+<li>$\frac{1}{2}(\vec \nabla \phi)^2$ as the <em>shearing</em> in space.</li>
+<li>$\frac{1}{2}m^2\phi^2 &gt;0$ associated with having the field at all</li>
+</ul>
+
+<h2 id="noethers-theoremnoether-s-theorem"><a href="noether-s-theorem">Noether's theorem</a></h2>
+
+<blockquote>
+  <p>For every symmetry, there is a conservation law (a constant of motion)</p>
+</blockquote>
+
+<p>Consider a continuous field transformation of a <a href="field-physics-">physical field</a>.</p>
+
+<p>$$\phi(x)\rightarrow \phi'(x)\equiv \phi(x) + \Delta\phi(x)$$</p>
+
+<p>$$\Rightarrow \mathcal L \rightarrow \mathcal L' = \mathcal L + \Delta \mathcal L$$</p>
+
+<p>The transformation of $\phi(x)$ is a called a <a href="symmetry-physics-">symmetry</a> <a href="iff">iff</a> the equations of motion do not change under the transformation. </p>
+
+<ul>
+<li>Sufficient condition: $\Delta\mathcal L = \partial_\mu J^\mu(x)$</li>
+<li><p>In general (when using <a href="euler-lagrange-equation">equations of motion</a>): $\mathcal L\rightarrow \mathcal L' = \mathcal L(\phi', \partial_\mu \phi')$, which we <a href="taylor-series">Taylor expand</a>:</p>
+
+<p>$= \mathcal L(\phi, \partial_\mu\phi) + \alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2)$</p>
+
+<p>$\alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2) = \alpha\Delta\mathcal L = \alpha\bigg{\left(\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\Delta\phi + \partial_\mu\frac{\partial \mathcal L}{\partial(\partial_\mu \phi)}\Delta \phi\bigg}$</p>
+
+<p>The term in the parenthesis dissapears (e.o.m.)</p></li>
+</ul>
+
+<p>$\Rightarrow$ if there is a symmetry (i.e. $J^\mu$ exists), then</p>
+
+<p>$$\partial_\mu \left(J^\mu - \frac{\partial \mathcal L}{\partial (\partial_\mu\phi)}\Delta \phi\right) = \partial_\mu j_N^\mu = 0,$$</p>
+
+<p>where</p>
+
+<p>$$j_N^\mu \equiv J^\mu - \frac{\partial \mathcal L}{\partial (\partial_\mu\phi)}\Delta \phi$$</p>
+
+<p>which is called the <a href="conserved-current">Conserved current</a></p>
+
+<blockquote>
+  <p>For each symmetry $\Delta \phi$, there is a <a href="conserved-current">conserved current</a> $j_N^\mu$ (and <a href="conserved-charge">Conserved charge</a> $Q = \int d^3x j^0$)</p>
+</blockquote>
 
 <p>## Videos</p>
 
-<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+<pre><code>&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_3.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_3.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+&lt;iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
 
 <hr />
 
