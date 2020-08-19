@@ -49,7 +49,7 @@
 <li>It has the <a href="action-physics-">action</a> - $S=\int dt L(q,\dot q)$ - which is only dependent on the <a href="phase-space">Phase space</a> variables <a href="position">Position</a> and <a href="velocity">Velocity</a>. Minimizing this "trajectory" through <a href="phase-space">Phase space</a> leads to the <a href="euler-lagrange-equation">equations of motion</a>.</li>
 </ul>
 
-<p>Now lets consider 1D $\rightarrow$ $N$ dimensions. Now $q\rightarrow q = (q_1,...,q_N)$ and $\dot q = \frac{d}{dt}q$. However, our goal is not to consider a situation with $N$ <a href="degrees-of-freedom">d.o.f.</a>, but a situation with infinite <a href="degrees-of-freedom">d.o.f.'s</a>. </p>
+<p>Now lets consider 1D $\rightarrow$ $N$ dimensions. Now $q\rightarrow q = (q_1,...,q_N)$ and $\dot q = \frac{d}{dt}q$. However, our goal is not to consider a situation with $N$ <a href="degree-of-freedom">d.o.f.</a>, but a situation with infinite <a href="degree-of-freedom">d.o.f.'s</a>. </p>
 
 <p>This is where <a href="field-theory">Field theory</a> comes in. It considers a <a href="lagrangian-density">Lagrangian density</a> instead (required by <a href="locality">Locality</a>!). Now our <a href="action-physics-">action</a> is written:</p>
 
@@ -90,7 +90,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \
 
 <p>Recall: $p\equiv \frac{\partial L}{\partial \dot q}$.</p>
 
-<p>We expand on this concept by defining the <em><a href="conjugte-momentum-field">canonical(!) momentum density</a></em></p>
+<p>We expand on this concept by defining the <em><a href="conjugate-momentum-field">canonical(!) momentum density</a></em></p>
 
 <p>$$\pi(x^\mu)\equiv \frac{\partial \mathcal L}{\partial \dot \phi}$$</p>
 
@@ -174,7 +174,28 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \
   <p>For each symmetry $\Delta \phi$, there is a <a href="conserved-current">conserved current</a> $j_N^\mu$ (and <a href="conserved-charge">Conserved charge</a> $Q = \int d^3x j^0$)</p>
 </blockquote>
 
-<p>## Videos</p>
+<h3 id="application-the-energy-momentum-tensor">Application: the energy-momentum tensor</h3>
+
+<p><a href="space-time">Space-time</a> translations: $x^\nu\rightarrow x'^\nu = x^\nu + a^\nu$. This gives me four different symmetries - one for each value of $\nu$. </p>
+
+<p>$\Rightarrow \phi(x) \rightarrow \phi'(x) = \phi(x + a)$, which we <a href="taylor-series">Taylor expand</a> to $\phi(x) + a^\nu\partial_\nu\phi(x) + O(a^2)$. We define $\partial_\nu\phi(x) \equiv (\Delta \phi)_\nu$ - for each symmetry, we have a change in the field, and this is a sum over all of them.</p>
+
+<p>We exploit the fact that we know about <a href="lorentz-covariance">Lorentz symmetries</a>. We know that the <a href="lagrangian">Lagrangian</a> must transform the same way as the scalar field. </p>
+
+<p>$\mathcal L\rightarrow \mathcal L + a^\nu\partial_\nu \mathcal L = \mathcal L + a^\nu\partial_\mu(\delta^\mu_\nu\mathcal L)$ and identify $\delta^\mu_\nu\mathcal L \equiv (J^\mu)_\nu$.</p>
+
+<p>We have <em>four</em> conserved currents:</p>
+
+<p>$$(j_N^\mu)_\nu \equiv T^\mu_\nu = \frac{\partial \mathcal L}{\partial (\partial_\mu \phi)}\partial_\nu\phi - \mathcal L \delta^\mu_\nu$$</p>
+
+<p>What are the conserved charges? They are:</p>
+
+<ol>
+<li>$\nu = 0 \rightarrow H = \int T^{00} d^3x = \int \mathcal H d^3x$.</li>
+<li>$\nu = i \rightarrow p^i = \int T^{0i} d^3x = -\int \pi \partial_i \phi d^3x$, which is the <a href="physical-momentum">physical momentum</a>.</li>
+</ol>
+
+<h2 id="videos">Videos</h2>
 
 <iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
