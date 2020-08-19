@@ -73,3 +73,11 @@ ul li::marker {
     content: "-";
     color: rgba(var(--text-color), 0.4);
 }
+
+
+/* Headers */
+header {
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 24px;
+}
