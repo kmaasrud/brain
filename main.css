@@ -63,15 +63,17 @@ a:hover {
 
 
 /* List markers and styling */
-ul {
+ul, ol {
     padding-left: 4%;
 }
-ul li {
+li {
     padding-left: 10px;
+}
+li::marker {
+    color: rgba(var(--text-color), 0.4);
 }
 ul li::marker {
     content: "-";
-    color: rgba(var(--text-color), 0.4);
 }
 
 
