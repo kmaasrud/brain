@@ -52,8 +52,8 @@
 :root {
   --default-font:IBM Plex Sans,-apple-system,BlinkMacSystemFont,sans-serif;
 
-  --font-normal:14px;
-  --font-small:12px;
+  --font-normal:13px;
+  --font-small:11px;
   --font-smaller:10px;
 
   --normal-weight:400;  /* Switch to 300 if you want thinner default text */
@@ -294,6 +294,9 @@ a.internal-link:hover {
   border-top-right-radius:10px;
   border-bottom-right-radius:10px;
   padding-right:7px;
+}
+span.cm-math {
+  font-style: normal;
 }
 
 
