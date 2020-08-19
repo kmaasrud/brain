@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <title>FYS4170 Lecture 01 - Introduction to quantum field theory</title>
+</head>
+
+<body>
+  <header>FYS4170 Lecture 01 - Introduction to quantum field theory</header>
+  <div id="content"><p>Recall the <a href="quantization">Quantization</a> a la <a href="erwin-schrödinger">Schrödinger</a> with the following properties:</p>
+
+<ul>
+<li>Relativistic energy-momentum (requirement of <a href="special-relativity">Special relativity</a>)</li>
+<li>Number $N$ of particles is conserved</li>
+</ul>
+
+<p>But using these two, we encounter a number of paradoxes:</p>
+
+<ol>
+<li>The very concept of a particle seems to be shattered, because the <a href="relativistic-energy-momentum-relation">Relativistic energy-momentum relation</a> combined with the <a href="unceirtanty-principle">Unceirtanty principle</a>, seems to say that we cannot require that the number of particles is conserved.</li>
+<li><a href="causality">Causality</a> is violated</li>
+<li>There should exist <a href="negative-energy">negative energy states</a></li>
+<li>We have no explanation of <a href="spin">Spin</a>, but it suddenly appears</li>
+<li>The <a href="probability-interpretation">Probability interpretation</a> cannot be explained anymore</li>
+</ol>
+
+<p>In this course we will see what happens if we give up one the assumption that the "number $N$ of particles is conserved", i.e.</p>
+
+<blockquote>
+  <p>Construct a multiparticle ($N$ not conserved) "field" theory</p>
+</blockquote>
+
+<h2 id="1-classical-field-theory">1. Classical field theory</h2>
+
+<h3 id="lagrangianlagrangian-and-hamiltonianhamiltonian"><a href="lagrangian">Lagrangian</a> and <a href="hamiltonian">Hamiltonian</a></h3>
+
+<p>We have a point particle in 1D:</p>
+
+<ul>
+<li>It has the <a href="action-physics-">action</a> - $S=\int dt L(q,\dot q)$ - which is only dependent on the <a href="phase-space">Phase space</a> variables <a href="position">Position</a> and <a href="velocity">Velocity</a>. Minimizing this "trajectory" through <a href="phase-space">Phase space</a> leads to the <a href="lagrange-s-equation">equations of motion</a>.</li>
+</ul>
+
+<hr />
+
+<p>Meta:</p>
+
+<ul>
+<li>Course:<span class="tag">FYS</span>4170</li>
+<li>Date: <a href="daily/2020-08-19">daily/2020-08-19</a></li>
+<li>Lecturer: <a href="torsten-bringmann">Torsten Bringmann</a><div class="backlinks" markdown="1"></li>
+</ul>
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="2020-08-19">2020-08-19</a><br />
+</div></li>
+</ul>
+</div>
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+
+  <!-- Parsing single dollar signs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+    });
+  </script>
+</body>
+
+</html>
