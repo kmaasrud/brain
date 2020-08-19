@@ -20,46 +20,46 @@
 
 <h2 id="1a">1.a)</h2>
 
-<p>I consider the length of the arch $C<em>R$ and multiply it by the maximum value of the function to get an answer greater than the integral in question. The result when letting $R\rightarrow\infty$ is:<br />
-$$\lim</em>{R\rightarrow\infty} |\tilde I<em>R| = \lim</em>{R\rightarrow\infty} \left|\int<em>{C</em>R}f(z)dz\right| &lt; \lim<em>{R\rightarrow\infty} (\phi</em>2 - \phi<em>1) R \cdot M(R) = 0$$<br />
-$$\Rightarrow \lim</em>{R\rightarrow\infty} \tilde I_R = 0$$</p>
+<p>I consider the length of the arch $C_R$ and multiply it by the maximum value of the function to get an answer greater than the integral in question. The result when letting $R\rightarrow\infty$ is:<br />
+$$\lim_{R\rightarrow\infty} |\tilde I_R| = \lim_{R\rightarrow\infty} \left|\int_{C_R}f(z)dz\right| &lt; \lim_{R\rightarrow\infty} (\phi_2 - \phi_1) R \cdot M(R) = 0$$<br />
+$$\Rightarrow \lim_{R\rightarrow\infty} \tilde I_R = 0$$</p>
 
 <h2 id="1b">1.b)</h2>
 
 <p><img src="assets/1b.png" alt="" /><br />
-Since $f(z)$ is analytic (has no poles) in the whole region encapsulated by $\Gamma<em>R$, as well as on $\Gamma</em>R$, I can apply <a href="https://mathworld.wolfram.com/CauchyIntegralTheorem.html">Cauchy's integral theorem</a>, and thus conclude with:<br />
-$$I<em>R = \oint</em>{\Gamma_R} e^{iaz^2}dz = 0.$$</p>
+Since $f(z)$ is analytic (has no poles) in the whole region encapsulated by $\Gamma_R$, as well as on $\Gamma_R$, I can apply <a href="https://mathworld.wolfram.com/CauchyIntegralTheorem.html">Cauchy's integral theorem</a>, and thus conclude with:<br />
+$$I_R = \oint_{\Gamma_R} e^{iaz^2}dz = 0.$$</p>
 
 <h2 id="1c">1.c)</h2>
 
 <p>Using the same logic as in "1.a)", I need to find an upper bound to the absolute value of the integral. This can be done by substituting $z = Re^{i\theta}$, with $dz = iRe^{i\theta}d\theta$, giving:</p>
 
-<p>$$\left|\int<em>{C</em>2}e^{iaz^2}dz\right| = \left|\int<em>0^{\frac{\pi}{4}}e^{ia\left(Re^{i\theta}\right)^2}iRe^{i\theta}d\theta\right| = \left|\int^{\frac{\pi}{4}}</em>0 e^{iaR^2\cos(2t)}e^{-aR^2\sin(t2)}iRe^{i\theta}d\theta\right|$$</p>
+<p>$$\left|\int_{C_2}e^{iaz^2}dz\right| = \left|\int_0^{\frac{\pi}{4}}e^{ia\left(Re^{i\theta}\right)^2}iRe^{i\theta}d\theta\right| = \left|\int^{\frac{\pi}{4}}_0 e^{iaR^2\cos(2t)}e^{-aR^2\sin(t2)}iRe^{i\theta}d\theta\right|$$</p>
 
-<p>$$\le R\int^{\frac{\pi}{4}}<em>0e^{-aR^2\sin(2t)}d\theta \le R\int^{\frac{\pi}{4}}</em>0e^{-\frac{4aR^2}{\pi}\theta}d\theta = \frac{\pi}{4aR} - \frac{\pi}{4aRe^{aR^2}}.$$</p>
+<p>$$\le R\int^{\frac{\pi}{4}}_0e^{-aR^2\sin(2t)}d\theta \le R\int^{\frac{\pi}{4}}_0e^{-\frac{4aR^2}{\pi}\theta}d\theta = \frac{\pi}{4aR} - \frac{\pi}{4aRe^{aR^2}}.$$</p>
 
 <p>As $R\rightarrow\infty$, this clearly $\rightarrow 0$, and with the magnitude of the integral being limited to $0$,<br />
-$$\int<em>{C</em>2}e^{iaz^2}dz = 0$$</p>
+$$\int_{C_2}e^{iaz^2}dz = 0$$</p>
 
 <h2 id="1d">1.d)</h2>
 
-<p>Along $C<em>1$, $z\in\mathbb R$. I can therefore change to the real variable $x$ thusly:<br />
-$$\int</em>{C<em>1}e^{iaz^2}dz = \int^R</em>0e^{iax^2}dx = \int^R<em>0\left(\cos(ax^2) + i\sin(ax^2)\right)dx$$<br />
-$$= \int^R</em>0\cos(ax^2)dx + i\int^R<em>0\sin(ax^2)dx$$<br />
-$C</em>3$ is simply $C<em>1$, but rotated by the factor $e^{i\frac{\pi}{4}}$, so I can substitute $z = r e^{i\frac{\pi}{4}}$, with $dz = e^{i\frac{\pi}{4}}dr$<br />
-$$\int</em>{C<em>3}e^{iaz^2}dz = \int</em>R^0e^{iar^2e^{i\frac{\pi}{2}}}e^{i\frac{\pi}{4}}dr = -e^{i\frac{\pi}{4}}\int_0^Re^{-ar^2}dr,$$<br />
+<p>Along $C_1$, $z\in\mathbb R$. I can therefore change to the real variable $x$ thusly:<br />
+$$\int_{C_1}e^{iaz^2}dz = \int^R_0e^{iax^2}dx = \int^R_0\left(\cos(ax^2) + i\sin(ax^2)\right)dx$$<br />
+$$= \int^R_0\cos(ax^2)dx + i\int^R_0\sin(ax^2)dx$$<br />
+$C_3$ is simply $C_1$, but rotated by the factor $e^{i\frac{\pi}{4}}$, so I can substitute $z = r e^{i\frac{\pi}{4}}$, with $dz = e^{i\frac{\pi}{4}}dr$<br />
+$$\int_{C_3}e^{iaz^2}dz = \int_R^0e^{iar^2e^{i\frac{\pi}{2}}}e^{i\frac{\pi}{4}}dr = -e^{i\frac{\pi}{4}}\int_0^Re^{-ar^2}dr,$$<br />
 which is a <a href="gaussian-integral">Gaussian integral</a>.</p>
 
 <h2 id="1e">1.e)</h2>
 
 <p>From "1.d)", I simply find<br />
-$$\int^\infty<em>0\cos(ax^2)dx = \lim</em>{R\rightarrow\infty}\Re\left(\int<em>{C</em>{1}}e^{iaz^2}dz\right).$$<br />
-With the knowledge from "1.b)", that $$\oint<em>{\Gamma</em>R} e^{iaz^2}dz = \int<em>{C</em>1}e^{iaz^2}dz + \int<em>{C</em>2}e^{iaz^2}dz + \int<em>{C</em>3}e^{iaz^2}dz = 0$$, I recognize<br />
-$$\int<em>{C</em>1}e^{iaz^2}dz = -\int<em>{C</em>3}e^{iaz^2}dz = e^{i\frac{\pi}{4}}\int<em>0^Re^{-ar^2}dr.$$<br />
-The Gaussian integral $$\int^\infty</em>{-\infty}e^{-ax^2}dx$$ is known to equal $$\sqrt{\frac{\pi}{a}}$$, and since Gaussian functions are even, halving this gives me<br />
-$$\int^\infty<em>0 e^{-ax^2}dx = \sqrt{\frac{\pi}{4a}}.$$<br />
+$$\int^\infty_0\cos(ax^2)dx = \lim_{R\rightarrow\infty}\Re\left(\int_{C_{1}}e^{iaz^2}dz\right).$$<br />
+With the knowledge from "1.b)", that $$\oint_{\Gamma_R} e^{iaz^2}dz = \int_{C_1}e^{iaz^2}dz + \int_{C_2}e^{iaz^2}dz + \int_{C_3}e^{iaz^2}dz = 0$$, I recognize<br />
+$$\int_{C_1}e^{iaz^2}dz = -\int_{C_3}e^{iaz^2}dz = e^{i\frac{\pi}{4}}\int_0^Re^{-ar^2}dr.$$<br />
+The Gaussian integral $$\int^\infty_{-\infty}e^{-ax^2}dx$$ is known to equal $$\sqrt{\frac{\pi}{a}}$$, and since Gaussian functions are even, halving this gives me<br />
+$$\int^\infty_0 e^{-ax^2}dx = \sqrt{\frac{\pi}{4a}}.$$<br />
 Using this, I get the final result:<br />
-$$\int^\infty</em>0\cos(ax^2)dx = \lim<em>{R\rightarrow\infty}\Re\left(e^{i\frac{\pi}{4}}\int</em>0^Re^{-ar^2}dr\right) = \Re\left(e^{i\frac{\pi}{4}}\sqrt{\frac{\pi}{4a}}\right) = \sqrt{\frac{\pi}{8a}}$$</p>
+$$\int^\infty_0\cos(ax^2)dx = \lim_{R\rightarrow\infty}\Re\left(e^{i\frac{\pi}{4}}\int_0^Re^{-ar^2}dr\right) = \Re\left(e^{i\frac{\pi}{4}}\sqrt{\frac{\pi}{4a}}\right) = \sqrt{\frac{\pi}{8a}}$$</p>
 
 <h1 id="problem-2">Problem 2</h1>
 
@@ -69,57 +69,57 @@ $$\int^\infty</em>0\cos(ax^2)dx = \lim<em>{R\rightarrow\infty}\Re\left(e^{i\frac
 $$xy'' + (1-x)y' + \lambda y = 0$$<br />
 $$\Rightarrow y'' + \frac{1-x}{x}y' + \frac{\lambda}{x}y = y'' + \frac{b(x)}{x}y' + \frac{c(x)}{x^2}y = 0,$$<br />
 with $$b(x) = 1-x$$ and $$c(x) = \lambda x$$. Both $$b(x)$$ and $$c(x)$$ are analytic at $$x=0$$, so I have at least one solution on the Fröbenius form:<br />
-$$y(x) = x^s\sum<em>{n=0}^\infty a</em>nx^n.$$<br />
+$$y(x) = x^s\sum_{n=0}^\infty a_nx^n.$$<br />
 Differentiating these gives<br />
-$$y'(x) = \sum<em>{n=0}^\infty a</em>n(n+s)x^{n+s-1},$$<br />
-$$y''(x) = \sum<em>{n=0}^\infty a</em>n(n+s)(n+s-1)x^{n+s-2}.$$<br />
+$$y'(x) = \sum_{n=0}^\infty a_n(n+s)x^{n+s-1},$$<br />
+$$y''(x) = \sum_{n=0}^\infty a_n(n+s)(n+s-1)x^{n+s-2}.$$<br />
 I now insert the above into the original differential equation:<br />
-$$x\sum<em>{n=0}^\infty a</em>n(n+s)(n+s-1)x^{n+s-2} + (1-x)\sum<em>{n=0}^\infty a</em>n(n+s)x^{n+s-1} + \lambda x^s\sum<em>{n=0}^\infty a</em>nx^n = 0$$<br />
-$$\Rightarrow \sum<em>{n=0}^\infty a</em>n(n+s)^2x^{n+s-1} - \sum<em>{n=0}^\infty a</em>n(n+s-\lambda)x^{n+s} = 0$$<br />
+$$x\sum_{n=0}^\infty a_n(n+s)(n+s-1)x^{n+s-2} + (1-x)\sum_{n=0}^\infty a_n(n+s)x^{n+s-1} + \lambda x^s\sum_{n=0}^\infty a_nx^n = 0$$<br />
+$$\Rightarrow \sum_{n=0}^\infty a_n(n+s)^2x^{n+s-1} - \sum_{n=0}^\infty a_n(n+s-\lambda)x^{n+s} = 0$$<br />
 The indicial equation is garnered by equating the lowest order term of the differential equation (in this case the term containing $$x^{s-1}$$) to $$0$$. This results in:<br />
 $$a_0s^2 = 0 \Rightarrow s = 0$$</p>
 
 <h2 id="2b">2.b)</h2>
 
 <p>Using the above solution for $$s$$, I have<br />
-$$\sum<em>{n=0}^\infty a</em>nn^2x^{n-1} - \sum<em>{n=0}^\infty a</em>n(n-\lambda)x^{n} = 0.$$<br />
+$$\sum_{n=0}^\infty a_nn^2x^{n-1} - \sum_{n=0}^\infty a_n(n-\lambda)x^{n} = 0.$$<br />
 Gathering the terms of the same order and equating the $$x^n$$-term to $$0$$, gives me the following relation<br />
-$$a<em>{n+1} (n+1)^2 - a</em>n(n-\lambda) = 0$$<br />
-$$\Rightarrow a<em>{n+1} = -\frac{\lambda - n}{(n+1)^2}a</em>n$$</p>
+$$a_{n+1} (n+1)^2 - a_n(n-\lambda) = 0$$<br />
+$$\Rightarrow a_{n+1} = -\frac{\lambda - n}{(n+1)^2}a_n$$</p>
 
 <h2 id="2c">2.c)</h2>
 
 <p>Calculating a few of the first terms with the above rule shows a pattern:<br />
-$$a<em>1 = -\frac{\lambda}{1^2}a</em>0 = (-1)^1\frac{\lambda}{(1!)^2}a<em>0,$$<br />
-$$a</em>2 = -\frac{\lambda - 1}{2^2}a<em>1 = (-1)^2\frac{\lambda(\lambda - 1)}{(2!)^2}a</em>0,$$<br />
-$$a<em>3 = -\frac{\lambda - 2}{3^2}a</em>2 = (-1)^3\frac{\lambda(\lambda - 1)(\lambda - 2)}{(3!)^2}a<em>0.$$<br />
+$$a_1 = -\frac{\lambda}{1^2}a_0 = (-1)^1\frac{\lambda}{(1!)^2}a_0,$$<br />
+$$a_2 = -\frac{\lambda - 1}{2^2}a_1 = (-1)^2\frac{\lambda(\lambda - 1)}{(2!)^2}a_0,$$<br />
+$$a_3 = -\frac{\lambda - 2}{3^2}a_2 = (-1)^3\frac{\lambda(\lambda - 1)(\lambda - 2)}{(3!)^2}a_0.$$<br />
 So generally:<br />
-$$a</em>n = (-1)^n\frac{\lambda(\lambda - 1)(\lambda -2)(\lambda -3)\overset{n\text{ times}}{\cdots}}{(n!)^2}a<em>0.$$<br />
-The coefficients $$a</em>{n &gt; \lambda} = 0$$, because the numerator now evaluates to $$0$$. Assuming $$\lambda = N$$, which is an integer, I can now write the general form of the coefficient as:<br />
-$$a<em>n = (-1)^n\frac{N!}{(N - n)!(n!)^2}a</em>0,$$<br />
+$$a_n = (-1)^n\frac{\lambda(\lambda - 1)(\lambda -2)(\lambda -3)\overset{n\text{ times}}{\cdots}}{(n!)^2}a_0.$$<br />
+The coefficients $$a_{n &gt; \lambda} = 0$$, because the numerator now evaluates to $$0$$. Assuming $$\lambda = N$$, which is an integer, I can now write the general form of the coefficient as:<br />
+$$a_n = (-1)^n\frac{N!}{(N - n)!(n!)^2}a_0,$$<br />
 which gives the <a href="fröbenius">Fröbenius</a> solution as<br />
-$$y(x) = \sum<em>{n=0}^N(-1)^n\frac{N!}{(N - n)!(n!)^2}a</em>0x^n.$$</p>
+$$y(x) = \sum_{n=0}^N(-1)^n\frac{N!}{(N - n)!(n!)^2}a_0x^n.$$</p>
 
 <h1 id="problem-3">Problem 3</h1>
 
 <h2 id="3a">3.a)</h2>
 
-<p>$$f(x)$$ is an <a href="odd-function">Odd function</a>, which means there will be no cosines in the series (and also no $$a<em>0$$, since the function is not defined in $$x=0$$).<br />
-$$f(x) = \sum</em>{n=1}^\infty b<em>n\sin\left(\frac{\pi nx}{L}\right)$$<br />
-Now let us calculate the coefficients $$b</em>n$$:<br />
-$$b<em>n = \frac{1}{L}\int</em>{-L}^L f(x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx$$<br />
-$$= \frac{1}{2L}\left(\int^L<em>0(L-x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx-\int</em>{-L}^0 (L+x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx\right)$$<br />
+<p>$$f(x)$$ is an <a href="odd-function">Odd function</a>, which means there will be no cosines in the series (and also no $$a_0$$, since the function is not defined in $$x=0$$).<br />
+$$f(x) = \sum_{n=1}^\infty b_n\sin\left(\frac{\pi nx}{L}\right)$$<br />
+Now let us calculate the coefficients $$b_n$$:<br />
+$$b_n = \frac{1}{L}\int_{-L}^L f(x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx$$<br />
+$$= \frac{1}{2L}\left(\int^L_0(L-x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx-\int_{-L}^0 (L+x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx\right)$$<br />
 From antisymmetry $$f(-x) = -f(x)$$, so the two integrals equal eachother.<br />
-$$\Rightarrow b<em>n = \frac{1}{L}\int^L</em>0 (L-x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx = \frac{L(\pi n - \sin(\pi n))}{\pi^2 n^2} = \frac{L}{\pi n},$$<br />
+$$\Rightarrow b_n = \frac{1}{L}\int^L_0 (L-x)\cdot\sin\left(\frac{\pi nx}{L}\right)dx = \frac{L(\pi n - \sin(\pi n))}{\pi^2 n^2} = \frac{L}{\pi n},$$<br />
 and so the <a href="fourier-series">Fourier series</a> of the function is:<br />
 $$f(x) = \frac{L}{\pi}\sum_{n=1}^\infty \frac{1}{n}\sin\left(\frac{\pi n x}{L}\right)$$</p>
 
 <h2 id="3b">3.b)</h2>
 
 <p>I start by setting $$L = 1$$, which means I have the following expression for $$f(x)$$:<br />
-$$f(x) = \frac{1}{\pi}\sum<em>{n=1}^\infty\frac{\sin(\pi n x)}{n}.$$<br />
+$$f(x) = \frac{1}{\pi}\sum_{n=1}^\infty\frac{\sin(\pi n x)}{n}.$$<br />
 Now I change the variable in $$f$$ to $$\chi = \frac{x}{\pi}$$ to get<br />
-$$f(\chi) = \frac{1}{\pi} \sum</em>{n=1}^\infty\frac{\sin(nx)}{n}$$<br />
+$$f(\chi) = \frac{1}{\pi} \sum_{n=1}^\infty\frac{\sin(nx)}{n}$$<br />
 $$\Rightarrow \sum_{n=1}^\infty\frac{\sin(nx)}{n} = \pi f(\chi) = -\frac{1}{2}\bigg{\begin{matrix}(\pi + x) &amp; \text{for} &amp; -1\le x &lt; 0 \ (x - \pi) &amp; \text{for} &amp; 0 &lt; x \le 1\end{matrix}$$</p>
 
 <h1 id="problem-4">Problem 4</h1>
@@ -127,24 +127,24 @@ $$\Rightarrow \sum_{n=1}^\infty\frac{\sin(nx)}{n} = \pi f(\chi) = -\frac{1}{2}\b
 <h2 id="4a">4.a)</h2>
 
 <p><img src="assets/4a.png" alt="" /><br />
-$$F(k) = \frac{1}{\sqrt{2\pi}}\left(\int<em>{-a}^0 2(a+x)e^{-ikx}dx + \int^a</em>02 (-x+a)e^{-ikx}dx\right)$$<br />
-$$= \frac{\sqrt 2a}{\sqrt \pi}\left(\int<em>{-a}^0e^{-ikx}dx + \int^a</em>0e^{-ikx}dx\right) + \sqrt \frac{ 2}{\pi}\left(\int^0<em>{-a}xe^{-ikx}dx - \int^a</em>0xe^{-ikx}dx\right)$$<br />
-$$= \frac{\sqrt 2a}{\sqrt \pi}\left(\int<em>{a}^0e^{ikx}dx + \int^a</em>0e^{-ikx}dx\right) + \sqrt \frac{ 2}{\pi}\left(\int^0<em>{a}(-x)e^{ikx}dx - \int^a</em>0xe^{-ikx}dx\right)$$<br />
-$$= \frac{4a}{\sqrt{2\pi}}\int^a<em>0\cos(kx)dx - \frac{4}{\sqrt{2\pi}}\int^a</em>0x\cos(kx)dx$$<br />
+$$F(k) = \frac{1}{\sqrt{2\pi}}\left(\int_{-a}^0 2(a+x)e^{-ikx}dx + \int^a_02 (-x+a)e^{-ikx}dx\right)$$<br />
+$$= \frac{\sqrt 2a}{\sqrt \pi}\left(\int_{-a}^0e^{-ikx}dx + \int^a_0e^{-ikx}dx\right) + \sqrt \frac{ 2}{\pi}\left(\int^0_{-a}xe^{-ikx}dx - \int^a_0xe^{-ikx}dx\right)$$<br />
+$$= \frac{\sqrt 2a}{\sqrt \pi}\left(\int_{a}^0e^{ikx}dx + \int^a_0e^{-ikx}dx\right) + \sqrt \frac{ 2}{\pi}\left(\int^0_{a}(-x)e^{ikx}dx - \int^a_0xe^{-ikx}dx\right)$$<br />
+$$= \frac{4a}{\sqrt{2\pi}}\int^a_0\cos(kx)dx - \frac{4}{\sqrt{2\pi}}\int^a_0x\cos(kx)dx$$<br />
 $$=\frac{4a}{\sqrt{2\pi}k}\sin(ak) - \frac{4}{\sqrt{2\pi}k^2}\left(ak\sin(ak)+\cos(ak) - 1\right)$$<br />
 $$F(k) = \frac{4}{\sqrt{2\pi}k^2}(1-\cos(ak))$$</p>
 
 <h2 id="4b">4.b)</h2>
 
 <p>Using the expression for $$F(k)$$ above, I get:<br />
-$$f(x) = \frac{1}{\sqrt{2\pi}}\int^\infty<em>{-\infty}F(k)e^{ikx}dk = \frac{2}{\pi}\int^\infty</em>{-\infty}\frac{1-\cos(ak)}{k^2}e^{ikx}dk$$</p>
+$$f(x) = \frac{1}{\sqrt{2\pi}}\int^\infty_{-\infty}F(k)e^{ikx}dk = \frac{2}{\pi}\int^\infty_{-\infty}\frac{1-\cos(ak)}{k^2}e^{ikx}dk$$</p>
 
 <h2 id="4c">4.c)</h2>
 
 <p>Inserting the values of $$a = 1$$ and $$x = 0$$ into the function $$f(x)$$ and the expression above gives me:<br />
-$$f(0) = 2 = \frac{2}{\pi}\int^\infty<em>{-\infty}\frac{1-\cos k}{k^2}dk$$<br />
+$$f(0) = 2 = \frac{2}{\pi}\int^\infty_{-\infty}\frac{1-\cos k}{k^2}dk$$<br />
 Since the integrand $$\frac{1-\cos k}{k^2}$$ is an even function, I utilize the <a href="parity">symmetry</a> of it to split the integral into two equal integrals from $$0$$t to $$\infty$$:<br />
-$$2 = \frac{2}{\pi}\cdot 2\int^\infty</em>0\frac{1-\cos k}{k^2}dk$$<br />
+$$2 = \frac{2}{\pi}\cdot 2\int^\infty_0\frac{1-\cos k}{k^2}dk$$<br />
 $$\Rightarrow \int^\infty_0\frac{1 - \cos k}{k^2}dk = \frac{\pi}{2}$$</p>
 
 <h1 id="problem-5">Problem 5</h1>
@@ -153,9 +153,9 @@ $$\Rightarrow \int^\infty_0\frac{1 - \cos k}{k^2}dk = \frac{\pi}{2}$$</p>
 
 <p>I start by <a href="laplace-transform">Laplace transforming</a> the <a href="partial-differential-equation">PDE</a> with regards to the time dependence:<br />
 $$\mathcal L\left{\frac{\partial^2 u(x,t)}{\partial t^2}\right} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right}$$<br />
-$$s^2\mathcal L \left{u(x,t)\right} - su(x,0) - \frac{\partial u(x,t)}{\partial t}\bigg|<em>{t=0} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right}$$<br />
+$$s^2\mathcal L \left{u(x,t)\right} - su(x,0) - \frac{\partial u(x,t)}{\partial t}\bigg|_{t=0} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right}$$<br />
 The initial conditions where $$t = 0$$ are known to equal $$0$$, and thus<br />
-$$s^2\mathcal L\left{u(x,t)\right} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right} = c^2\cdot \int^\infty</em>0 e^{-st}\cdot \frac{\partial^2 u(x,t)}{\partial x^2}dt$$<br />
+$$s^2\mathcal L\left{u(x,t)\right} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right} = c^2\cdot \int^\infty_0 e^{-st}\cdot \frac{\partial^2 u(x,t)}{\partial x^2}dt$$<br />
 $$s^2\mathcal L\left{u(x,t)\right} = c^2 \frac{\partial^2}{\partial x^2}\cdot \int^\infty_0 e^{-st}u(x,t)dt = c^2\frac{\partial^2}{\partial x^2}\mathcal L\left{u(x,t)\right}$$<br />
 Renaming $$\mathcal L\left{u(x,t)\right} = U(x,s)$$, I now end up with the following <a href="ordinary-differential-equation">ODE</a>:<br />
 $$\frac{\partial^2 U(x,s)}{\partial x^2} = \frac{s^2}{c^2}U(x,s)$$<br />
@@ -166,7 +166,7 @@ $$\Rightarrow U(x,s) = A(s)e^{\frac{sx}{c}} + B(s)e^{-\frac{sx}{c}}$$</p>
 <h2 id="5b">5.b)</h2>
 
 <p>The <a href="laplace-transform">Laplace transform</a> $$U(x,s)$$ has to apply to the same boundary conditions as $$u(x,t)$$ (with regards to $$x$$ of course). Applying them will give me expressions for $$A(s)$$ and $$B(s)$$.<br />
-$$\lim<em>{x\rightarrow\infty} u(x,t) = \lim</em>{x\rightarrow\infty} U(x,s) = \lim_{x\rightarrow\infty}A(s)e^{\frac{sx}{c}} + B(s)e^{-\frac{sx}{c}} = 0.$$<br />
+$$\lim_{x\rightarrow\infty} u(x,t) = \lim_{x\rightarrow\infty} U(x,s) = \lim_{x\rightarrow\infty}A(s)e^{\frac{sx}{c}} + B(s)e^{-\frac{sx}{c}} = 0.$$<br />
 The term $$e^{\frac{sx}{c}}$$ tends to infinity as $$x\rightarrow\infty$$, and thus $$A(s) = 0$$. The second boundary condition is a bit more difficult as it is a function itself. With the function<br />
 $$g(t) = \bigg{\begin{matrix}\sin t, &amp; 0 \le t &lt; 2\pi \ 0, &amp; \text{otherwise}\end{matrix}$$<br />
 as the boundary condition for $$u(0,t)$$, the <a href="laplace-transform">Laplace transform</a> $$G(s) = \mathcal L{g(t)}$$ is the boundary condition for $$U(0,s)$$. Thus,<br />
