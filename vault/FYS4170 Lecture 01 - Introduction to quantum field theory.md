@@ -32,20 +32,20 @@ $$S = \int dtL = \int d^4x\mathcal L(\phi, \partial_\mu \phi ),$$
 where $\mathcal L$ is the mentioned [[Lagrangian density]] (or just the [[Lagrangian]], if you must). $\phi(x^\mu)$ is a [[Field (physics)|field]] in [[Space-time]]. So the Lagrangian here is not dependent on $x^\mu$, but on $\phi(x^\mu)$, and the system has infinitely many degrees of freedom.
 
 **[[Principle of least action]]**:
-$$0\overset{!}{=}\delta S = \int d^4x\bigg\{\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg\}$$
+$$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg]$$
 
 *Notes*:
 - **NB**: [[Einstein notation|Sum convention]]
 - (I don't really understand his usage of curly braces here, but wth)
 
-$$= \int d^4x\bigg\{\frac{\partial \mathcal L}{\partial \phi}\delta \phi + \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) - \delta\phi \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\right)\bigg\}$$
+$$= \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta \phi + \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) - \delta\phi \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\right)\bigg]$$
 
 - $\partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) \rightarrow \int_{\partial V}d\sum_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi$. In our case we describe low interaction so we can ignore this surface term. So the previous $\rightarrow 0$ if:
 
 	1. $\delta\phi(t_1,\vec x) = \delta\phi(t_2,\vec x) = 0$
 	2. $\delta \phi(t_1<t<t_2,\vec x)\rightarrow 0$ sufficiently fast for $|\vec x|\rightarrow \infty$ (as you go away from the experiment, you want to make sure it falls off).
 
-$$\Rightarrow 0 \overset{!}{=} \int d^4x\bigg\{\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\bigg\}\delta \phi \qquad \forall\ \delta\phi(x^\mu)$$
+$$\Rightarrow 0 \overset{!}{=} \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\bigg]\delta \phi \qquad \forall\ \delta\phi(x^\mu)$$
 
 $$\partial_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi} - \frac{\partial \mathcal L}{\partial \phi} = 0$$
 
@@ -63,7 +63,7 @@ $$\pi(x^\mu)\equiv \frac{\partial \mathcal L}{\partial \dot \phi}$$
 
 Now we can use this to describe the [[Hamiltonian]]
 
-$$H\equiv \int d^3x\bigg\{\pi(x^\mu)\dot \phi(\vec x^\mu) - \mathcal L\bigg\}$$
+$$H\equiv \int d^3x\bigg[\pi(x^\mu)\dot \phi(\vec x^\mu) - \mathcal L\bigg]$$
 
 and the part inside is the *[[Hamiltonian density]]*
 
@@ -114,7 +114,7 @@ The transformation of $\phi(x)$ is a called a [[Symmetry (physics)|symmetry]] [[
 
 	$= \mathcal L(\phi, \partial_\mu\phi) + \alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2)$
 	
-	$\alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2) = \alpha\Delta\mathcal L = \alpha\bigg\{\left(\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\Delta\phi + \partial_\mu\frac{\partial \mathcal L}{\partial(\partial_\mu \phi)}\Delta \phi\bigg\}$
+	$\alpha\frac{\partial \mathcal L}{\partial \phi}\Delta \phi + \alpha\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\Delta\partial_\mu \phi + O(\alpha^2) = \alpha\Delta\mathcal L = \alpha\bigg[\left(\frac{\partial \mathcal L}{\partial \phi} - \partial_\mu\frac{\partial \mathcal L}{\partial \partial_\mu\phi}\right)\Delta\phi + \partial_\mu\frac{\partial \mathcal L}{\partial(\partial_\mu \phi)}\Delta \phi\bigg]$
 	
 	The term in the parenthesis dissapears (e.o.m.)
 	
@@ -132,15 +132,15 @@ which is called the [[Conserved current]]
 
  ## Videos
  
-	<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_1.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-	<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_2.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-	<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_3.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_3.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-	<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_4.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
 
-	<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
+<iframe src="https://www.uio.no/studier/emner/matnat/fys/FYS4170/h20/forelesningsvideoer/qft_lecture_01_5.mp4?vrtx=video-embed" frameBorder="0" allowfullscreen></iframe>
  
 ***
 
