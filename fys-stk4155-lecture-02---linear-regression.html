@@ -30,7 +30,7 @@
 <li>The cost/error/loss function</li>
 </ul>
 
-<h2 id="linear-regression">Linear regression</h2>
+<h2 id="linear-regressionlinear-regression"><a href="linear-regression">Linear regression</a></h2>
 
 <h3 id="data-set">Data set</h3>
 
@@ -95,9 +95,33 @@ $$ \mathbf{\beta} = {\beta_0, \beta_1} $$</p>
 
 <p>$$ \text{MSE} = \frac{1}{n}\sum_{i=0}^{n-1}(y_i - \tilde y_i) = C(\mathbf{\beta}|x) $$</p>
 
-<p>which <a href="morten-hjorth-jensen">Morten</a> will write as $C(\mathbf{\beta})$ from now on.</p>
+<p>or <a href="cost-function">Cost function</a> (which <a href="morten-hjorth-jensen">Morten</a> will write as $C(\mathbf{\beta})$ from now on).</p>
 
 <p>We seek an optimal $\hat \beta = \text{argmin}_{\beta} C(\mathbf{\beta}1|x)$.</p>
+
+<p>We can rewrite the <a href="cost-function">Cost function</a> (<a href="morten-hjorth-jensen">Morten's</a> slides of this <a href="https://compphysics.github.io/MachineLearning/doc/pub/Regression/html/Regression.html#___sec12">here</a>)</p>
+
+<p>$$ C(\mathbf{\beta}) = \frac{1}{n}\left[\left(\mathbf y - \mathbf{\tilde y}\right)^T \left(\mathbf y -\mathbf{\tilde y}\right)\right] $$</p>
+
+<p>We want to minimize the spread of $C(\beta)$, which in practical terms means we require:</p>
+
+<p>$$ \frac{\partial C(\mathbf \beta)}{\partial \beta_j} = ... = 0 $$</p>
+
+<p>$$ \frac{\partial C(\mathbf \beta)}{\partial \beta_j} = 0 = \mathbf X^T (\mathbf y - \mathbf X \mathbf \beta) $$</p>
+
+<p>which can be rewritten into</p>
+
+<p>$$ \mathbf X^T \mathbf y = \mathbf X^T \mathbf X \mathbf \beta .$$</p>
+
+<p>If the matrix $\mathbf X^T \mathbf X$ is <a href="invertibility">invertible</a>, we have our solution, namely:</p>
+
+<p>$$ \mathbf \beta = \left(\mathbf X^T \mathbf X\right)^{-1} \mathbf X^T \mathbf y $$</p>
+
+<h2 id="practical-application">Practical application</h2>
+
+<p>From <code>sklearn.linear_model</code> we can import <code>LinearRegression</code> which contains the handy function <code>fit</code>.</p>
+
+<p>(Hopefully, <a href="morten-hjorth-jensen">Morten</a> will go more into this)</p>
 
 <hr />
 
