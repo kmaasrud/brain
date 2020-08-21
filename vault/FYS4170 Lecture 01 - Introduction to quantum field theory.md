@@ -35,7 +35,7 @@ where $\mathcal L$ is the mentioned [[Lagrangian density]] (or just the [[Lagran
 $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg]$$
 
 *Notes*:
-- **NB**: [[Einstein notation|Sum convention]]
+- **NB**: [[Index notation|Sum convention]]
 - (I don't really understand his usage of curly braces here, but wth)
 
 $$= \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta \phi + \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\delta \phi\right) - \delta\phi \partial_\mu\left(\frac{\partial \mathcal L}{\partial \partial_\mu \phi}\right)\bigg]$$

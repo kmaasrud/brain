@@ -1,4 +1,8 @@
-The **Einstein summation convention** is a way of simplifying the notation of summation over indeces that range over a set. For example, given indeces that range over the set $\{1,2,3\}$, we can write
+**Index notation** is a way of writing tensors using indeces.
+
+## Einstein notation
+
+The **Einstein notation** or **Einstein summation convention** is a way of simplifying the notation of summation over indeces that range over a set. For example, given indeces that range over the set $\{1,2,3\}$, we can write
 
 $$y = \sum_{i = 1}^3 c_i x^i = c_1 x^1 + c_2 x^2 + c_3 x^3,$$
 
