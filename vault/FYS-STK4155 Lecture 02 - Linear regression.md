@@ -10,7 +10,7 @@ Recall: [[Machine learning]] has three important elements:
 - The model
 - The cost/error/loss function
 
-## Linear regression
+## [[Linear regression]]
 
 ### Data set
 
@@ -75,9 +75,33 @@ We have the [[Mean squared error|mean squared error (MSE)]]:
 
 $$ \text{MSE} = \frac{1}{n}\sum_{i=0}^{n-1}(y_i - \tilde y_i) = C(\mathbf{\beta}|x) $$
 
-which [[Morten Hjorth-Jensen|Morten]] will write as $C(\mathbf{\beta})$ from now on.
+or [[Cost function]] (which [[Morten Hjorth-Jensen|Morten]] will write as $C(\mathbf{\beta})$ from now on).
 
 We seek an optimal $\hat \beta = \text{argmin}_{\beta} C(\mathbf{\beta}1|x)$.
+
+We can rewrite the [[Cost function]] ([[Morten Hjorth-Jensen|Morten's]] slides of this [here](https://compphysics.github.io/MachineLearning/doc/pub/Regression/html/Regression.html#___sec12))
+
+$$ C(\mathbf{\beta}) = \frac{1}{n}\left[\left(\mathbf y - \mathbf{\tilde y}\right)^T \left(\mathbf y -\mathbf{\tilde y}\right)\right] $$
+
+We want to minimize the spread of $C(\beta)$, which in practical terms means we require:
+
+$$ \frac{\partial C(\mathbf \beta)}{\partial \beta_j} = ... = 0 $$
+
+$$ \frac{\partial C(\mathbf \beta)}{\partial \beta_j} = 0 = \mathbf X^T (\mathbf y - \mathbf X \mathbf \beta) $$
+
+which can be rewritten into
+
+$$ \mathbf X^T \mathbf y = \mathbf X^T \mathbf X \mathbf \beta .$$
+
+If the matrix $\mathbf X^T \mathbf X$ is [[Invertibility|invertible]], we have our solution, namely:
+
+$$ \mathbf \beta = \left(\mathbf X^T \mathbf X\right)^{-1} \mathbf X^T \mathbf y $$
+
+## Practical application
+
+From `sklearn.linear_model` we can import `LinearRegression` which contains the handy function `fit`.
+
+(Hopefully, [[Morten Hjorth-Jensen|Morten]] will go more into this)
 
 ***
 
