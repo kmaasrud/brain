@@ -1,9 +1,9 @@
 /* Base */
 :root {
   --transition-length: 150ms;
-  --text-color: 240, 240, 240;
+  --text-color: 10, 10, 10;
   --link-color: 100, 149, 237;
-  --bg-color: 10, 10, 10;
+  --bg-color: 240, 240, 240;
 }
 
 
