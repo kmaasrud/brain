@@ -1,0 +1,1 @@
+**[[Molecular dynamics]]** or *MD* is  a study of the physical movements of a system of [[Atom|atoms]]/[[Molecule|molecules]] via numerically computing their movements. Most commonly, [[Newton's laws of motion]] are used, based on the [[Interatomic potential|interatomic potentials]] present in the system.
