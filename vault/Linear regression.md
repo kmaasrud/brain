@@ -1,0 +1,1 @@
+A **linear regression model** assumes that the regression function is linear in the inputs. 
