@@ -46,3 +46,39 @@ The estimates produced by [[Least squares|least squares]] are often not satisfac
 - **Prediction accuracy**: [[Least squares|Least squares estimates]] often have small bias, but large [[Variance|variance]]. Shrinking coefficients or setting them equal zero can often improve the accuracy, by sacrificing some bias.
 - **Interpretation**: We would often like to determine the subset of a large number of predictors that has the largest effect. Here, we sacrifice the smaller details to get a practical "bigger picture".
 
+## Model assessment
+
+### Bias, variance and model complexity
+
+There is a balance to be struck in our model complexity, as seen by this graph from [[The Elements of Statistical Learning]]:
+
+![[assets/Pasted image.png]]
+
+*The light blue curves show the [[Training error|training error]] $\overline{\text{err}}$, while the light red curves show the [[Test error|conditional test error]] $\text{Err}_{\mathcal T}$ for $100$ training sets of size $50$ each, as the model complexity is increased. The solid curves show the [[Test error|expected test error]] $\text{Err}$ and the [[Training error|expected training error]] $E[\overline{\text{err}}]$.*
+
+**[[Test error]]**, or **generalization error**, is the prediction error over an independent test sample:
+
+$$ \text{Err}_{\mathcal T} = \text E[L(Y, \hat f(X))|\mathcal T] ,$$
+
+where both $X$ and $Y$ are drawn randomly from their joint distribution. Here the training set $\mathcal T$ is fixed, and test error refers to the error for this specific training set. The **expected  test error** is
+
+$$ \text{Err} = \text E[L(Y, \hat f(X))] = \text E[\text{Err}_{\mathcal T}] $$
+
+**[[Training error]]** is the average loss over the training sample
+
+$$ \overline{\text{err}} = \frac{1}{N} \sum_{i=1}^NL(y_i, \hat f(x_i)) .$$
+
+### Model assessment and selection
+
+Assume we have a *tuning parameter* or *parameters* $\alpha$, so that our predictions can be written $\hat f_\alpha(x)$. $\alpha$ varies the complexity of our model, and the goal is to find the complexity that minimizes our resulting error. There are two goals we have in mind:
+
+- **[[Model selection]]**: Estimating the *performance* of different models in order to choose the best one.
+- **[[Model assessment]]**: Having chosen a final model, estimating its *[[Test error|generalization error]]* on new data.
+
+Now say we are in a situation where we have *a lot* of data. In this case it would be best practice to randomly separate this data in to three sets, roughly, but not strictly according to this distribution:
+
+- 50% **Training set**: This set is used to fit the models
+- 25% **Validation set**: This set is used to estimate the [[Test error|prediction error]] for *[[Model selection|model selection]]*.
+- 25% **Test set**: This set is used for assessing the [[Test error|generalization error]] of the final chosen model.
+
+The validation step can be tested either *analytically* ([[Akaike information criterion|AIC]], [[Bayesian information criterion|BIC]], MDL or SRM) or by *efficient sample re-use* ([[Cross-validation|cross-validation]] or [[Bootstrapping (statistics)|the bootstrap]]).
