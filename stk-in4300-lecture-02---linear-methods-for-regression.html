@@ -65,6 +65,47 @@ $$ \frac{\partial^2\text{RSS}}{\partial \beta \partial \beta^T} = 2\mathbf X^T\m
 <li><strong>Prediction accuracy</strong>: <a href="least-squares">Least squares estimates</a> often have small bias, but large <a href="variance">variance</a>. Shrinking coefficients or setting them equal zero can often improve the accuracy, by sacrificing some bias.</li>
 <li><strong>Interpretation</strong>: We would often like to determine the subset of a large number of predictors that has the largest effect. Here, we sacrifice the smaller details to get a practical "bigger picture".</li>
 </ul>
+
+<h2 id="model-assessment">Model assessment</h2>
+
+<h3 id="bias-variance-and-model-complexity">Bias, variance and model complexity</h3>
+
+<p>There is a balance to be struck in our model complexity, as seen by this graph from <a href="the-elements-of-statistical-learning">The Elements of Statistical Learning</a>:</p>
+
+<p><img src="assets/pasted-imagedotpng" alt="assets/Pasted image.png" /></p>
+
+<p><em>The light blue curves show the <a href="training-error">training error</a> $\overline{\text{err}}$, while the light red curves show the <a href="test-error">conditional test error</a> $\text{Err}_{\mathcal T}$ for $100$ training sets of size $50$ each, as the model complexity is increased. The solid curves show the <a href="test-error">expected test error</a> $\text{Err}$ and the <a href="training-error">expected training error</a> $E[\overline{\text{err}}]$.</em></p>
+
+<p><strong><a href="test-error">Test error</a></strong>, or <strong>generalization error</strong>, is the prediction error over an independent test sample:</p>
+
+<p>$$ \text{Err}_{\mathcal T} = \text E[L(Y, \hat f(X))|\mathcal T] ,$$</p>
+
+<p>where both $X$ and $Y$ are drawn randomly from their joint distribution. Here the training set $\mathcal T$ is fixed, and test error refers to the error for this specific training set. The <strong>expected  test error</strong> is</p>
+
+<p>$$ \text{Err} = \text E[L(Y, \hat f(X))] = \text E[\text{Err}_{\mathcal T}] $$</p>
+
+<p><strong><a href="training-error">Training error</a></strong> is the average loss over the training sample</p>
+
+<p>$$ \overline{\text{err}} = \frac{1}{N} \sum_{i=1}^NL(y_i, \hat f(x_i)) .$$</p>
+
+<h3 id="model-assessment-and-selection">Model assessment and selection</h3>
+
+<p>Assume we have a <em>tuning parameter</em> or <em>parameters</em> $\alpha$, so that our predictions can be written $\hat f_\alpha(x)$. $\alpha$ varies the complexity of our model, and the goal is to find the complexity that minimizes our resulting error. There are two goals we have in mind:</p>
+
+<ul>
+<li><strong><a href="model-selection">Model selection</a></strong>: Estimating the <em>performance</em> of different models in order to choose the best one.</li>
+<li><strong><a href="model-assessment">Model assessment</a></strong>: Having chosen a final model, estimating its <em><a href="test-error">generalization error</a></em> on new data.</li>
+</ul>
+
+<p>Now say we are in a situation where we have <em>a lot</em> of data. In this case it would be best practice to randomly separate this data in to three sets, roughly, but not strictly according to this distribution:</p>
+
+<ul>
+<li>50% <strong>Training set</strong>: This set is used to fit the models</li>
+<li>25% <strong>Validation set</strong>: This set is used to estimate the <a href="test-error">prediction error</a> for <em><a href="model-selection">model selection</a></em>.</li>
+<li>25% <strong>Test set</strong>: This set is used for assessing the <a href="test-error">generalization error</a> of the final chosen model.</li>
+</ul>
+
+<p>The validation step can be tested either <em>analytically</em> (<a href="akaike-information-criterion">AIC</a>, <a href="bayesian-information-criterion">BIC</a>, MDL or SRM) or by <em>efficient sample re-use</em> (<a href="cross-validation">cross-validation</a> or <a href="bootstrapping-statistics-">the bootstrap</a>).</p>
 </div>
 
   <!-- KaTeX -->
