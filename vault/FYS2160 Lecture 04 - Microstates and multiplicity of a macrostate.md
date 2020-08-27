@@ -1,0 +1,3 @@
+Notater, flere notater...
+
+[[Knut Morten Aasrud]]

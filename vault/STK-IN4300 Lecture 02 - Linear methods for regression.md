@@ -35,7 +35,7 @@ and now we easiliy get the predicted values ($\hat y_i = f(x_i)$, gathered in th
 
 $$ \hat{\mathbf y} = \mathbf X\hat \beta = \mathbf X(\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y = \mathbf H\mathbf y .$$
 
-We often call $\mathbf H$ the *hat matrix*.
+We often call $\mathbf H = \mathbf X(\mathbf X^T\mathbf X)^{-1}\mathbf X^T$ the *hat matrix*.
 
 (There's more to this, but the book gets kinda technical, and I presume this level of detail will come naturally later)
 
