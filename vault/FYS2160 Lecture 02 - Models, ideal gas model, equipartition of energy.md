@@ -37,6 +37,6 @@ $$U = \frac{f}{2}NkT$$
 ***
 
 Meta:
-- Course: #FYS2160
+- Course: [[FYS2160]]
 - Date: [[daily/2020-08-19]]
 - Lecturer: [[Dag Kristian Dysthe]]

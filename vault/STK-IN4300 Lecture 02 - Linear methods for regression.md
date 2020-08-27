@@ -82,3 +82,10 @@ Now say we are in a situation where we have *a lot* of data. In this case it wou
 - 25% **Test set**: This set is used for assessing the [[Test error|generalization error]] of the final chosen model.
 
 The validation step can be tested either *analytically* ([[Akaike information criterion|AIC]], [[Bayesian information criterion|BIC]], MDL or SRM) or by *efficient sample re-use* ([[Cross-validation|cross-validation]] or [[Bootstrapping (statistics)|the bootstrap]]).
+
+***
+
+Meta:
+- Course: [[STK-IN4300]]
+- References: [The Elements of Statistical Mechanics](https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf)
+- Date: [[daily/2020-08-24]]

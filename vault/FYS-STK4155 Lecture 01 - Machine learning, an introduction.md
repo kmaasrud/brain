@@ -12,3 +12,10 @@ The methods we cover have three main topics in common:
 - **A cost/loss function**: This allows us to present an estimate on how good our model is in reproducing the data it is supposed to train on.
 
 So at the heart of most [[Machine learning]] problems, there is a minimization/optimization problem. 
+
+***
+
+Meta:
+- Course: [[FYS-STK4155]]
+- Lecturer: [[Morten Hjorth-Jensen]]
+- Date: [[daily/2020-08-20]]

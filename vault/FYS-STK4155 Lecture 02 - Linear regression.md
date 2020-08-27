@@ -106,6 +106,6 @@ From `sklearn.linear_model` we can import `LinearRegression` which contains the 
 ***
 
 Meta:
-- Course: #FYS-STK4155
+- Course: [[FYS-STK4155]]
 - Lecturer: [[Morten Hjorth-Jensen]]
 - Date: [[daily/2020-08-20]]

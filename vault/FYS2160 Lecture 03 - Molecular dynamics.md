@@ -25,3 +25,10 @@ $$ F(r) = -\frac{d}{dr} U(r) = 0 $$
 $$ F(r) = 24 \epsilon_0\left(\left(\frac{\sigma}{r}\right)^6 - 2\left(\frac{\sigma}{r}\right)^{12} \right) = 0 \Rightarrow \frac{r}{\sigma} = 2^{1/6} $$
 
 (...Page 34 of compendium)
+
+***
+
+Meta:
+- Course: [[FYS2160]]
+- References: [Anders Malthe-Sørensen: "Statistical and Thermal Physics Using Python"](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf)
+- Date: [[daily/2020-08-24]]
