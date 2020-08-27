@@ -20,7 +20,7 @@
 
 <p>Say we have a box with many particles bouncing around in it (a gas). One way to describe the state of the gas inside this box could be to assign a binary descriptor to each particle $n_i$. $n_i = 1$ if the particle is on the <em>left half</em> of the box, and $n_i = 0$ if the particle is on the <em>right half</em>. The <em>set</em> (or actually <em>vector</em>, since the microstate is dependent on the ordinality) of all $n_i$, $(n_1,...,n_N)$ is called the <em><a href="microstate-statistical-mechanics-">microstate</a></em> of the gas.</p>
 
-<p>Given this, we could calculate the number of particles located on the <em>left half</em> of the box, as $n = \sum_{i=1}^Nn_i$. The value of $n$ is a <em><a href="macrostate-statistical-mechanics-">macrostate</a></em> of the gas. From this example its pretty obvious that a system can have multiple different <a href="microstate-statistical-mechanics-">microstates</a> for one specific <a href="macrostate-statistical-mechanics-">macrostate</a>.</p>
+<p>Given this, we could calculate the number of particles located on the <em>left half</em> of the box, as $\sum_{i=1}^Nn_i$. This value is a <em><a href="macrostate-statistical-mechanics-">macrostate</a></em> of the gas. From this example its pretty obvious that a system can have multiple different <a href="microstate-statistical-mechanics-">microstates</a> for one specific <a href="macrostate-statistical-mechanics-">macrostate</a>.</p>
 
 <p>Another example of a micro/macrostate could be a set of two dice, described my the vector $(n_1, n_2)$. $(1,6)$ could be a <em><a href="microstate-statistical-mechanics-">microstate</a></em> here, with $7$ being a possible <em><a href="macrostate-statistical-mechanics-">macrostate</a></em>.</p>
 
@@ -32,7 +32,19 @@
 
 <p>where $P(q)$ is the probability of the state $q$, $\Omega(q)$ is the <a href="multiplicity">multiplicity</a> of state $q$ and $\Omega_{\text{tot}}$ is the total <a href="multiplicity">multiplicity</a> of the system.</p>
 
-<p>Going back to our original example with the gas in the box, we </p>
+<p>Going back to our original example with the gas in the box, we consider the macrostate describing the number of particles located on the left half of the box, and call it $\lambda$ (lambda = "l" for left):</p>
+
+<p>$$ \lambda = \sum_{i=1}^N \lambda_i.$$</p>
+
+<p>Here $N$ is the total number of particles in the gas and $\lambda_i = 1$ if the $i$th particle is located on the <em>left side</em> of the box. We've earlier found that the probability distribution for $\lambda$ is given by the binomial distribution, namely</p>
+
+<p>$$ P(N,\lambda) = 2^{-N}\Omega(N,\lambda) ,$$</p>
+
+<p>where $\Omega(N,\lambda) = \left(\begin{matrix}N \ \lambda\end{matrix}\right)$ is the <a href="multiplicity">multiplicity</a> of the <a href="macrostate-statistical-mechanics-">macrostate</a> $\lambda$, given $N$ particles. The <a href="mean">average</a> and the <a href="standard-deviation">standard deviation</a> are easily calculated, and looking at their ratio,</p>
+
+<p>$$ \overline{\lambda} = \frac{N}{2},\quad \sigma_\lambda = \sqrt{\frac{N}{4}},\quad \frac{\sigma_\lambda}{\overline \lambda} = N^{-1/2} ,$$</p>
+
+<p>it's apparent that, as the number of particles gets big, the standard deviation gets negligible and we can pretty much consider $\lambda$ a constant. As an example, a litre of gas at room temperature (with about $10^{23}$ particles) has a standard deviation of about $10^{-10}$ the average value, which is extremely accurate.</p>
 
 <hr />
 
