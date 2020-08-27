@@ -120,7 +120,7 @@ $$f(x) = \frac{L}{\pi}\sum_{n=1}^\infty \frac{1}{n}\sin\left(\frac{\pi n x}{L}\r
 $$f(x) = \frac{1}{\pi}\sum_{n=1}^\infty\frac{\sin(\pi n x)}{n}.$$<br />
 Now I change the variable in $$f$$ to $$\chi = \frac{x}{\pi}$$ to get<br />
 $$f(\chi) = \frac{1}{\pi} \sum_{n=1}^\infty\frac{\sin(nx)}{n}$$<br />
-$$\Rightarrow \sum_{n=1}^\infty\frac{\sin(nx)}{n} = \pi f(\chi) = -\frac{1}{2}\bigg{\begin{matrix}(\pi + x) &amp; \text{for} &amp; -1\le x &lt; 0 \ (x - \pi) &amp; \text{for} &amp; 0 &lt; x \le 1\end{matrix}$$</p>
+$$\Rightarrow \sum_{n=1}^\infty\frac{\sin(nx)}{n} = \pi f(\chi) = -\frac{1}{2}\bigg\{\begin{matrix}(\pi + x) &amp; \text{for} &amp; -1\le x &lt; 0 \ (x - \pi) &amp; \text{for} &amp; 0 &lt; x \le 1\end{matrix}$$</p>
 
 <h1 id="problem-4">Problem 4</h1>
 
@@ -152,12 +152,12 @@ $$\Rightarrow \int^\infty_0\frac{1 - \cos k}{k^2}dk = \frac{\pi}{2}$$</p>
 <h2 id="5a">5.a)</h2>
 
 <p>I start by <a href="laplace-transform">Laplace transforming</a> the <a href="partial-differential-equation">PDE</a> with regards to the time dependence:<br />
-$$\mathcal L\left{\frac{\partial^2 u(x,t)}{\partial t^2}\right} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right}$$<br />
-$$s^2\mathcal L \left{u(x,t)\right} - su(x,0) - \frac{\partial u(x,t)}{\partial t}\bigg|_{t=0} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right}$$<br />
+$$\mathcal L\left\{\frac{\partial^2 u(x,t)}{\partial t^2}\right\} = c^2\mathcal L \left\{\frac{\partial^2 u(x,t)}{\partial x^2}\right\}$$<br />
+$$s^2\mathcal L \left\{u(x,t)\right\} - su(x,0) - \frac{\partial u(x,t)}{\partial t}\bigg|_{t=0} = c^2\mathcal L \left\{\frac{\partial^2 u(x,t)}{\partial x^2}\right\}$$<br />
 The initial conditions where $$t = 0$$ are known to equal $$0$$, and thus<br />
-$$s^2\mathcal L\left{u(x,t)\right} = c^2\mathcal L \left{\frac{\partial^2 u(x,t)}{\partial x^2}\right} = c^2\cdot \int^\infty_0 e^{-st}\cdot \frac{\partial^2 u(x,t)}{\partial x^2}dt$$<br />
-$$s^2\mathcal L\left{u(x,t)\right} = c^2 \frac{\partial^2}{\partial x^2}\cdot \int^\infty_0 e^{-st}u(x,t)dt = c^2\frac{\partial^2}{\partial x^2}\mathcal L\left{u(x,t)\right}$$<br />
-Renaming $$\mathcal L\left{u(x,t)\right} = U(x,s)$$, I now end up with the following <a href="ordinary-differential-equation">ODE</a>:<br />
+$$s^2\mathcal L\left\{u(x,t)\right\} = c^2\mathcal L \left\{\frac{\partial^2 u(x,t)}{\partial x^2}\right\} = c^2\cdot \int^\infty_0 e^{-st}\cdot \frac{\partial^2 u(x,t)}{\partial x^2}dt$$<br />
+$$s^2\mathcal L\left\{u(x,t)\right\} = c^2 \frac{\partial^2}{\partial x^2}\cdot \int^\infty_0 e^{-st}u(x,t)dt = c^2\frac{\partial^2}{\partial x^2}\mathcal L\left\{u(x,t)\right\}$$<br />
+Renaming $$\mathcal L\left\{u(x,t)\right\} = U(x,s)$$, I now end up with the following <a href="ordinary-differential-equation">ODE</a>:<br />
 $$\frac{\partial^2 U(x,s)}{\partial x^2} = \frac{s^2}{c^2}U(x,s)$$<br />
 This equation is easily solved generally by utilizing the characteristic equation<br />
 $$r^2 - \frac{s^2}{c^2} = 0 \Rightarrow r = \pm \frac{s}{c}$$<br />
@@ -168,14 +168,14 @@ $$\Rightarrow U(x,s) = A(s)e^{\frac{sx}{c}} + B(s)e^{-\frac{sx}{c}}$$</p>
 <p>The <a href="laplace-transform">Laplace transform</a> $$U(x,s)$$ has to apply to the same boundary conditions as $$u(x,t)$$ (with regards to $$x$$ of course). Applying them will give me expressions for $$A(s)$$ and $$B(s)$$.<br />
 $$\lim_{x\rightarrow\infty} u(x,t) = \lim_{x\rightarrow\infty} U(x,s) = \lim_{x\rightarrow\infty}A(s)e^{\frac{sx}{c}} + B(s)e^{-\frac{sx}{c}} = 0.$$<br />
 The term $$e^{\frac{sx}{c}}$$ tends to infinity as $$x\rightarrow\infty$$, and thus $$A(s) = 0$$. The second boundary condition is a bit more difficult as it is a function itself. With the function<br />
-$$g(t) = \bigg{\begin{matrix}\sin t, &amp; 0 \le t &lt; 2\pi \ 0, &amp; \text{otherwise}\end{matrix}$$<br />
-as the boundary condition for $$u(0,t)$$, the <a href="laplace-transform">Laplace transform</a> $$G(s) = \mathcal L{g(t)}$$ is the boundary condition for $$U(0,s)$$. Thus,<br />
+$$g(t) = \bigg\{\begin{matrix}\sin t, &amp; 0 \le t &lt; 2\pi \ 0, &amp; \text{otherwise}\end{matrix}$$<br />
+as the boundary condition for $$u(0,t)$$, the <a href="laplace-transform">Laplace transform</a> $$G(s) = \mathcal L\{g(t)\}$$ is the boundary condition for $$U(0,s)$$. Thus,<br />
 $$U(0, s) = B(s) = G(s),$$<br />
 and my final Laplace transformed function is<br />
 $$U(x,s) = e^{-\frac{sx}{c}}G(s).$$<br />
-The task gives us the shifting property $$\mathcal L\left{f(t-a)H(t-a)\right} = e^{-as}F(s)$$. Applying this backwards gives me an expression for $$u(x,t)$$:<br />
-$$u(x,t) = \mathcal L^{-1}\left{U(x,s)\right} = \mathcal L^{-1}\left{e^{-\frac{x}{c}s}G(s)\right} = g\left(t - \frac{x}{c}\right)H\left(t - \frac{x}{c}\right),$$<br />
-$$u(x,t) = \bigg{\begin{matrix}\sin\left(t - \frac{x}{c}\right), &amp; \frac{x}{c} \le t &lt; \frac{x}{c} + 2\pi \ 0, &amp; \text{otherwise}\end{matrix}.$$</p>
+The task gives us the shifting property $$\mathcal L\left\{f(t-a)H(t-a)\right\} = e^{-as}F(s)$$. Applying this backwards gives me an expression for $$u(x,t)$$:<br />
+$$u(x,t) = \mathcal L^{-1}\left\{U(x,s)\right\} = \mathcal L^{-1}\left\{e^{-\frac{x}{c}s}G(s)\right\} = g\left(t - \frac{x}{c}\right)H\left(t - \frac{x}{c}\right),$$<br />
+$$u(x,t) = \bigg\{\begin{matrix}\sin\left(t - \frac{x}{c}\right), &amp; \frac{x}{c} \le t &lt; \frac{x}{c} + 2\pi \ 0, &amp; \text{otherwise}\end{matrix}.$$</p>
 
 <div class="backlinks">
 
