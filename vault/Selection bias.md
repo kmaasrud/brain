@@ -1,0 +1,1 @@
+**Selection bias** is the bias introduced into a statistical model or prediction, based on how the data used in the model was originally selected. A dataset used for training or analysis should be totally randomized and accurately reflect the population to avoid this issue.
