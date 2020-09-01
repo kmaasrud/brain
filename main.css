@@ -88,7 +88,7 @@ header {
 
 
 /* Code */
-pre {
+.codehilite {
   background-color: rgba(130, 130, 130, 0.1);
   padding: 20px;
   border-left: 5px solid rgb(var(--accent-color));
