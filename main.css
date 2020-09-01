@@ -2,8 +2,9 @@
 :root {
   --transition-length: 150ms;
   --text-color: 10, 10, 10;
-  --link-color: 100, 149, 237;
-  --bg-color: 240, 240, 240;
+  --link-color: 60, 110, 237;
+  --bg-color: 255, 255, 255;
+  --accent-color: 100, 180, 255;
 }
 
 
@@ -14,6 +15,7 @@ html, body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.4;
 }
 body {
     color: rgb(var(--text-color));
@@ -58,7 +60,7 @@ a {
   transition: all var(--transition-length) ease-in;
 }
 a:hover {
-  filter: brightness(80%);
+  filter: brightness(50%);
 }
 
 
@@ -82,4 +84,22 @@ header {
   margin-top: 100px;
   font-weight: 700;
   font-size: 24px;
+}
+
+
+/* Code */
+pre {
+  background-color: rgba(130, 130, 130, 0.1);
+  padding: 20px;
+  border-left: 5px solid rgb(var(--accent-color));
+  border-radius: 0px 10px 10px 0px;
+  font-size: 14px;
+}
+
+p code {
+  padding: .2em .4em;
+  font-size: 90%;
+  font-family: 'IBM Plex Mono';
+  background: rgba(130, 130, 130, 0.1);
+  border-radius: 3px;
 }
