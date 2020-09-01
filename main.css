@@ -95,7 +95,7 @@ pre {
   border-radius: 0px 10px 10px 0px;
   font-size: 14px;
 }
-
+pre code { background: none !important; }
 p code {
   padding: .2em .4em;
   font-size: 90%;
