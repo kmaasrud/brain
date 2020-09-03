@@ -77,6 +77,10 @@ li::marker {
 ul li::marker {
     content: "-";
 }
+/* Some breaks appear in nested lists, just removing them */
+li ol br, li ul br {
+  display: none;
+}
 
 
 /* Headers */
