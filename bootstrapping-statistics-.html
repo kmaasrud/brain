@@ -12,19 +12,33 @@
   <!-- CSS (uses absolute weblinks to work around relative path issues) -->
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Machine learning</title>
+  <title>Bootstrapping (statistics)</title>
 </head>
 
 <body>
-  <header>Machine learning</header>
-  <div id="content"><div class="backlinks">
+  <header>Bootstrapping (statistics)</header>
+  <div id="content"><p><strong>Bootstrapping</strong> is (in general) a method of assessing the accuracy of a statistic. It can also be used to estimate the skill of a <a href="machine-learning">machine learning (ML)</a> model.</p>
+
+<p>Briefly, this is the process:</p>
+
+<ol>
+<li>Choose a number $B$ of bootstrap samples to perform.</li>
+<li>Generate $B$ bootstrap sets of the desired size, using <a href="sampling-with-replacement">sampling with replacement</a>.</li>
+<li>For each bootstrap set, either:<br />
+<ul><br />
+<li>Calculate the statistic on the set.</li><br />
+<li>Fit a model to the set and estimate the skill of said model.</li><br />
+</ul></li>
+<li>Calculate the mean of the statistics/model skill estimates.</li>
+</ol>
+
+<div class="backlinks">
 
 <h2 id="backlinks">Backlinks</h2>
 
 <ul>
-<li><a href="bootstrapping-statistics-">Bootstrapping (statistics)</a></li>
-<li><a href="fys-stk4155-lecture-01---machine-learning-an-introduction">FYS-STK4155 Lecture 01 - Machine learning, an introduction</a></li>
-<li><a href="fys-stk4155-lecture-02---linear-regression">FYS-STK4155 Lecture 02 - Linear regression</a></li>
+<li><a href="stk-in4300-lecture-02---linear-methods-for-regression">STK-IN4300 Lecture 02 - Linear methods for regression</a></li>
+<li><a href="stk-in4300-lecture-03---more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
 </ul>
 
 </div>

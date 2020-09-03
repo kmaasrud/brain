@@ -49,7 +49,9 @@
 
 <p>There is no clear solution on how to choose $K$, but we have to be aware that there is a <a href="bias-variance-tradeoff">bias-variance tradeoff</a>. For example, setting $K=N$ (called <em>leave-one-out cross-validation</em> or <em>LOOCV</em>) estimates the expected test error approximatively unbiased. However, it has very large variance since the <a href="training-set">training sets</a> are very similar to each other.</p>
 
-<h3 id="bootstrap">Bootstrap</h3>
+<h2 id="bootstrap">Bootstrap</h2>
+
+<p>The <strong><a href="bootstrapping-statistics-">bootstrap method</a></strong> is (in general) a method of assessing <em>statistical accuracy</em> of a model. Briefly, it involves drawing random samples from our <a href="training-set">training dataset</a> <a href="sampling-with-replacement">with replacement</a>, and generating another dataset with the same size as our original <a href="training-set">training set</a>. Thereafter, we refit our model to this new bootstrap set. This is repeated a number of times, and the computed values from our bootstrap-models are used to estimate the conditional error of our <a href="training-set">training set</a>. </p>
 
 <hr />
 
@@ -58,7 +60,7 @@
 <ul>
 <li>Course: <a href="stk-in4300">STK-IN4300</a></li>
 <li>References: <a href="https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf">The Elements of Statistical Mechanics</a> and <a href="riccardo-de-bin">Riccardo's</a> <a href="https://www.uio.no/studier/emner/matnat/math/STK-IN4300/h20/slides/lecture_3.pdf">lecture notes</a>.</li>
-<li>Date: <a href="daily/2020-08-31">daily/2020-08-31</a></li>
+<li>Date: <a href="daily/2020-08-31">daily/2020-08-31</a> and <a href="daily/2020-09-02">daily/2020-09-02</a></li>
 </ul>
 
 <div class="backlinks">
