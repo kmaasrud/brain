@@ -30,11 +30,15 @@ is the curve we need to find the minimum of. The value of $\alpha$ minimizing th
 
 There is no clear solution on how to choose $K$, but we have to be aware that there is a [[Bias-variance tradeoff|bias-variance tradeoff]]. For example, setting $K=N$ (called *leave-one-out cross-validation* or *LOOCV*) estimates the expected test error approximatively unbiased. However, it has very large variance since the [[Training set|training sets]] are very similar to each other.
 
-### Bootstrap
+## Bootstrap
+
+The **[[Bootstrapping (statistics)|bootstrap method]]** is (in general) a method of assessing *statistical accuracy* of a model. Briefly, it involves drawing random samples from our [[Training set|training dataset]] [[Sampling with replacement|with replacement]], and generating another dataset with the same size as our original [[Training set|training set]]. Thereafter, we refit our model to this new bootstrap set. This is repeated a number of times, and the computed values from our bootstrap-models are used to estimate the conditional error of our [[Training set|training set]]. 
+
+
 
 ***
 
 Meta:
 - Course: [[STK-IN4300]]
 - References: [The Elements of Statistical Mechanics](https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf) and [[Riccardo De Bin|Riccardo's]] [lecture notes](https://www.uio.no/studier/emner/matnat/math/STK-IN4300/h20/slides/lecture_3.pdf).
-- Date: [[daily/2020-08-31]]
+- Date: [[daily/2020-08-31]] and [[daily/2020-09-02]]

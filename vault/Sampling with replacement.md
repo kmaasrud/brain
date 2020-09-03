@@ -1,0 +1,1 @@
+Sampling with replacement inolves drawing samples from a dataset, but without removing it from said dataset. This introduces the possibility of drawing the same sample twice or more, but is often handy as a way of generating several "different" sets from only *one* set.
