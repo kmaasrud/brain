@@ -1,0 +1,3 @@
+![](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcoffeeattendant.com%2Fwp-content%2Fuploads%2F2017%2F08%2FWashed-coffee.jpg&f=1&nofb=1)
+
+The **washed** or **wet** processing of coffee involves first removing the fruit from the beans using a machine called a depulper. After this, the beans are put in a tank of water, where fermentation removes the remaining flesh, and then washed thoroughly to remove all leftover debris. The beans are then allowed to dry evenly spread out on brick or special patios.

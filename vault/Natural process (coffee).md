@@ -1,0 +1,3 @@
+![](https://coavacoffee.com/uploads/processing_03_161212_104552.jpg)
+
+The **natural** or **dry** processing of coffee involves spreading the coffee cherries in a thin layer to dry in the sun. This is often done on brick or special raised patios to allow for quick drying and good airflow. To avoid fermenting and mould, the cherries are spread around and turned with big rakes, and the process is thus labour intensive. Once properly dry, the dried fruit and husk of the coffee is removed from the beans mechanically.
