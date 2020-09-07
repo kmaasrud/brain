@@ -1,0 +1,1 @@
+**Artix Linux** is a [[Rolling release|rolling release]] distro based on [[Arch Linux]]. The main difference from [[Arch Linux|Arch]] is it ships without [[systemd]], and gives you the choice of more minimal init systems like [[runit]], [[OpenRC]] or [[s6]].

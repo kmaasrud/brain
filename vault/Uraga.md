@@ -12,4 +12,4 @@ Naturally processed [[Etihopia|Ethiopian]] from [[Kaffebrenneriet]].
 	- **Time**: [[daily/2020-09-06]] 11:07
 	- **Amount**: 18 g coffee to 300 g water
 	- **Grind size**: 1 over A
-	- **Rating**: 9
+	- **Rating**: 

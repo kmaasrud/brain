@@ -11,13 +11,12 @@ I've so far been very happy with it, as it is extremely portable, but still powe
 
 ## Software
 
-On my Lenovo I run [[Manjaro Linux]] in dual boot with [[Windows 10]]. I rarely use [[Windows 10|Windows]], but keep it because of [[FL Studio]]. I have no [[Desktop environment|DE]], but my workflow consists of these packages:
+On my Lenovo I run [[Artix Linux]] (with [[runit]] as the init system) in dual boot with [[Windows 10]]. I rarely use [[Windows 10|Windows]], but keep it because of [[FL Studio]]. Here is my current setup
 
 - **[[Window manager|WM]]**: [[bspwm]]
-- **[[Display manager|DM]]**: [[LightDM]]
 - **Bar**: [[Polybar]]
 - **Browser**: [[Firefox]]
-- **Terminal emulator**: [[Termite (terminal)]]
+- **Terminal emulator**: [[Termite (terminal)|Termite]]
 - **Shell**: [[friendly interactive shell|fish]]
 - **Text editor**: [[Neovim]]
 - **Notifications**: [[Dunst]]

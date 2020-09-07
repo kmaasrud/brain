@@ -7,12 +7,17 @@
   --accent-color: 100, 180, 255;
 }
 
+/* Cooler selection color */
+::selection, ::-moz-selection {
+  background: rgb(var(--text-color))
+}
+
 
 /* HTML and body */
 html, body {
   margin: 0px;
   height: auto;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family:  sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -55,14 +60,26 @@ header {
 
 /* Link styling */
 a {
-  text-decoration: none;
-  color: rgb(var(--link-color));
-  transition: all var(--transition-length) ease-in;
+  position: relative;
+  color: rgb(var(--text-color));
+  text-decoration-color: rgba(var(--text-color), 0.3);
 }
-a:hover {
-  filter: brightness(50%);
+a:after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 1px;
+  bottom: 2.5px;
+  left: 0;
+  background-color: rgb(var(--text-color));
+  -webkit-transition: 0.3s;
+  transition: width opacity 0.3s;
+  opacity: 0;
 }
-
+a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
 
 /* List markers and styling */
 ul, ol {
