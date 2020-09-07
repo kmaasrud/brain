@@ -5,22 +5,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&amp;display=swap"
-    rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
   <title>kmaasrud's Brain</title>
 </head>
 
 <body>
-  <header>Welcome to my brain!</header>
-  <div id="content">
-    <p>Here you will find all of my notes and a lot of my schoolwork, all together forming some form of densely interlinked personal <a href="https://www.wikipedia.org/">Wikipedia</a>. Feel free to explore my brain as you please, but beware that most notes are for personal use, and may thus be confusing for others.</p>
+  <div class="grid">
+    <nav>
+      <ul>
+        <p><strong>kmaasrud's Brain</strong></p>
+        <p id="desc">All my notes in one place</p>
+        <br>
+        <li><a href="https://www.kmaasrud.com">Home</a></li>
+        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
+        <br>
+      </ul>
+      <div class="footer">
+        <p>Get in touch with me:</p>
+        <a href="mailto:kmaasrud@outlook.com">kmaasrud@outlook.com</a>
+      </div>
+    </nav>
+    <article>
+      <header>Welcome to my brain!</header>
+      <div id="content">
+        <p>Here you will find all of my notes and a lot of my schoolwork, all together forming some form of densely interlinked personal <a href="https://www.wikipedia.org/">Wikipedia</a>. Feel free to explore my brain as you please, but beware that most notes are for personal use, and may thus be confusing for others.</p>
 
-    <p>I'm working on implementing <a href="https://www.kmaasrud.com/brain/searching-my-brain">search</a>, as well as some sort of index, but for now you'll just have to follow the hyperlinks. A natural place to start could be to look at <a href="https://www.kmaasrud.com/brain/my-computer">my computer</a>.</p>
+        <p>I'm working on implementing <a href="https://www.kmaasrud.com/brain/searching-my-brain">search</a>, as well as some sort of index, but for now you'll just have to follow the hyperlinks. A natural place to start could be to look at <a href="https://www.kmaasrud.com/brain/my-computer">my computer</a>.</p>
+      </div>
+    </article>
   </div>
 </body>
 
