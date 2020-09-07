@@ -1,34 +1,5 @@
-/* Base */
-:root {
-  --transition-length: 150ms;
-  --text-color: 10, 10, 10;
-  --link-color: 60, 110, 237;
-  --bg-color: 255, 255, 255;
-  --accent-color: 100, 180, 255;
-}
-
-/* Cooler selection color */
-::selection, ::-moz-selection {
-  background: rgb(var(--text-color))
-}
-
-
-/* HTML and body */
-html, body {
-  margin: 0px;
-  height: auto;
-  font-family:  sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-}
-body {
-    color: rgb(var(--text-color));
-    background-color: rgb(var(--bg-color))
-}
 /* Allow overscroll */
 html { padding-bottom: 200px; }
-
 
 /* Images */
 img {
@@ -38,64 +9,21 @@ img {
   height: auto;
 }
 
-
-/* Responsive content wrapper */
-#content {
-    max-width: 700px;
-    margin: 0px auto;
-}
-header {
-  max-width: 760px;
-  margin: 0px auto;
-}
-@media only screen and (max-width: 776px) {
-    #content {
-        margin: 0px 38px;
-    }
-    header {
-        margin: 0px 8px;
-    }
-}
-
-
-/* Link styling */
-a {
-  position: relative;
-  color: rgb(var(--text-color));
-  text-decoration-color: rgba(var(--text-color), 0.3);
-}
-a:after {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 1px;
-  bottom: 2.5px;
-  left: 0;
-  background-color: rgb(var(--text-color));
-  -webkit-transition: 0.3s;
-  transition: width opacity 0.3s;
-  opacity: 0;
-}
-a:hover:after {
-  width: 100%;
-  opacity: 1;
-}
-
 /* List markers and styling */
-ul, ol {
+article ul, col2 ol {
     padding-left: 4%;
 }
-li {
+article li {
     padding-left: 10px;
 }
-li::marker {
+article li::marker {
     color: rgba(var(--text-color), 0.4);
 }
-ul li::marker {
+article ul li::marker {
     content: "-";
 }
 /* Some breaks appear in nested lists, just removing them */
-li ol br, li ul br {
+article li ol br, .col2 li ul br {
   display: none;
 }
 
