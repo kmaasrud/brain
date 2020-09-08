@@ -32,11 +32,21 @@
     </nav>
     <article>
       <header>Ridge regression</header>
-      <div id="content"><p>Where the <em><a href="ordinary-least-squares-regression">OLS</a> <a href="estimator">estimator</a> *is $\hat \beta = (\mathbf X^T\mathbf X)\mathbf X^T\mathbf y$, the *Ridge estimator</em> is</p>
+      <div id="content"><p><strong>Ridge regression</strong> penalizes the size of the regression coefficients, and thus shrinks them. Like in <a href="ordinary-least-squares-regression">OLS regression</a>, the <a href="cost-function">cost function</a> is an <a href="residual-sum-of-squares">RSS function</a>, but this time with an extra term pertaining to this shrinkage:</p>
 
-<p>$$ \hat \beta^{\text{ridge}} = (\mathbf X^T \mathbf X + \lambda\mathbf I)^{-1}\mathbf X^T \mathbf y ,$$</p>
+<p>$$ \text{RSS}(\beta,\lambda) = \sum_{i=1}^N (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^p\beta_j^2 ,$$</p>
 
-<p>where $\mathbf I$ is the $p\times p$ identity matrix.</p>
+<p>$$ \text{RSS}(\beta, \lambda) = (\mathbf y - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) + \lambda \beta^T\beta $$</p>
+
+<p>Here, $\lambda \ge 0$ is a parameter that controls how much the $\beta$'s are shrunk'; the greater the $\lambda$, the more shrinkage. The <em>Ridge <a href="estimator">estimator</a></em> is of course now</p>
+
+<p>$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min}\ \text{RSS}(\beta,\lambda) .$$</p>
+
+<p>Like explained in the <a href="ordinary-differential-equation">page about OLS</a>, the above minimization problem can be written on matrix form as</p>
+
+<p>$$ \hat \beta^{\text{ridge}} = (\mathbf X^T\mathbf X + \lambda \mathbf I)^{-1}\mathbf X^T\mathbf y ,$$</p>
+
+<p>where $\mathbf I$ is the $p\times p$ identity matrix. Notice that when adding a positive constant to the diagonal (or <em>ridge</em> 😉), the matrix inside the parentheses will always be <a href="invertibility">invertible</a>. </p>
 
 <div class="backlinks">
 
