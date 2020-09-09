@@ -44,19 +44,13 @@
 
 <p>$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min}\ S(\beta,\lambda) .$$</p>
 
-<p>Like explained in the <a href="ordinary-differential-equation">page about OLS</a>, the above minimization problem can be written on matrix form as</p>
+<p>Like explained in the <a href="ordinary-differential-equation">page about OLS</a>, the above minimization problem can be written on matrix form as <sup class="footnote-ref" id="fnref-closed-form"><a href="#fn-closed-form">1</a></sup></p>
 
 <p>$$ \hat \beta^{\text{ridge}} = (\mathbf X^T\mathbf X + \lambda \mathbf I)^{-1}\mathbf X^T\mathbf y ,$$</p>
 
 <p>where $\mathbf I$ is the $p\times p$ identity matrix. Notice that when adding a positive constant to the diagonal (or <em>ridge</em> 😉), the matrix inside the parentheses will always be <a href="invertibility">invertible</a>. This was one of the main motivating factors for Ridge regression. Its also worth noting that with <a href="orthonormality">orthonormal</a> inputs, Ridgre regression is just a scaled version of the <a href="ordinary-least-squares-regression">least squares regression</a>, $\hat \beta^{\text{ridge}} = \frac{1}{1 + \lambda}\hat \beta$.</p>
 
 <p>Now what is the whole idea behind shrinking the regression coefficients? Well, its quite clear that when $\lambda = 0$ the <a href="degree-of-freedom">degrees of freedom</a> of the fit is $\text{df}(\lambda) = p$, since this is the number of parameters. However, as $\lambda \rightarrow \infty$, then also $\text{df}(\lambda) \rightarrow 0$, since we gradually reduce the influence the different parameters have on the fit. So the goal is essentially to reduce the influence of unimportant parameters, and thus reduce <a href="overfitting">overfitting</a>. This ties directly in with reducing the <a href="variance">variance</a> by increasing the <a href="bias-of-estimators">bias</a>, following the <a href="bias-variance-tradeoff">Bias-variance tradeoff</a>.</p>
-
-<h4 id="extra-note">Extra note</h4>
-
-<p>The Ridge regressor can be expressed by a <a href="closed-form-expression">closed-form expression</a>, but for other regression methods, this might not be the case. Therefore, here is a more general formula:</p>
-
-<p>$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$</p>
 
 <div class="backlinks">
 
@@ -67,6 +61,17 @@
 <li><a href="lasso-regression">Lasso regression</a></li>
 </ul>
 
+</div>
+
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn-closed-form">
+<p>The Ridge regressor can be expressed by a <a href="closed-form-expression">closed-form expression</a>, but for other regression methods, this might not be the case. Therefore, here is a more general formula:</p>
+
+<p>$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$&#160;<a href="#fnref-closed-form" class="footnoteBackLink" title="Jump back to footnote 1 in the text.">&#8617;</a></p>
+</li>
+</ol>
 </div>
 </div>
     </article>
