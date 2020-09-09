@@ -10,7 +10,7 @@ Here, $\lambda \ge 0$ is a parameter that controls how much the $\beta$'s are sh
 
 $$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min}\ S(\beta,\lambda) .$$
 
-Like explained in the [[Ordinary differential equation|page about OLS]], the above minimization problem can be written on matrix form as
+Like explained in the [[Ordinary differential equation|page about OLS]], the above minimization problem can be written on matrix form as [^closed-form]
 
 $$ \hat \beta^{\text{ridge}} = (\mathbf X^T\mathbf X + \lambda \mathbf I)^{-1}\mathbf X^T\mathbf y ,$$
 
@@ -18,8 +18,6 @@ where $\mathbf I$ is the $p\times p$ identity matrix. Notice that when adding a 
 
 Now what is the whole idea behind shrinking the regression coefficients? Well, its quite clear that when $\lambda = 0$ the [[Degree of freedom|degrees of freedom]] of the fit is $\text{df}(\lambda) = p$, since this is the number of parameters. However, as $\lambda \rightarrow \infty$, then also $\text{df}(\lambda) \rightarrow 0$, since we gradually reduce the influence the different parameters have on the fit. So the goal is essentially to reduce the influence of unimportant parameters, and thus reduce [[Overfitting|overfitting]]. This ties directly in with reducing the [[Variance|variance]] by increasing the [[Bias of estimators|bias]], following the [[Bias-variance tradeoff]].
 
-#### Extra note
+[^closed-form]: The Ridge regressor can be expressed by a [[Closed-form expression|closed-form expression]], but for other regression methods, this might not be the case. Therefore, here is a more general formula:
 
-The Ridge regressor can be expressed by a [[Closed-form expression|closed-form expression]], but for other regression methods, this might not be the case. Therefore, here is a more general formula:
-
-$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$
+	$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$

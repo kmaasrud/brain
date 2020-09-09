@@ -4,11 +4,11 @@
 
 ***
 
-## Relaxation to [[Thermal equilibrium|equilibrium]] by [[Diffusion|diffusion]]
+## Relaxation to [[Thermodynamic equilibrium|equilibrium]] by [[Diffusion|diffusion]]
 
 ### Macroscopic explanation
 
-There's a net transport of either *energy* or *particles* until a [[Thermal equilibrium]] is reached. This is somewhat unexplained in the macroscopic scale. There is, for example, a [[Proportionality|proportionality rule]] between the [[Gradient|gradient]] of concentration/temperature and the corresponding flux:
+There's a net transport of either *energy* or *particles* until a [[Thermodynamic equilibrium]] is reached. This is somewhat unexplained in the macroscopic scale. There is, for example, a [[Proportionality|proportionality rule]] between the [[Gradient|gradient]] of concentration/temperature and the corresponding flux:
 
 - $\vec J =-D\nabla c$
 - $\vec Q = -\lambda \nabla T$
