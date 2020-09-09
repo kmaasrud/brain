@@ -52,12 +52,19 @@
 
 <p>Now what is the whole idea behind shrinking the regression coefficients? Well, its quite clear that when $\lambda = 0$ the <a href="degree-of-freedom">degrees of freedom</a> of the fit is $\text{df}(\lambda) = p$, since this is the number of parameters. However, as $\lambda \rightarrow \infty$, then also $\text{df}(\lambda) \rightarrow 0$, since we gradually reduce the influence the different parameters have on the fit. So the goal is essentially to reduce the influence of unimportant parameters, and thus reduce <a href="overfitting">overfitting</a>. This ties directly in with reducing the <a href="variance">variance</a> by increasing the <a href="bias-of-estimators">bias</a>, following the <a href="bias-variance-tradeoff">Bias-variance tradeoff</a>.</p>
 
+<h4 id="extra-note">Extra note</h4>
+
+<p>The Ridge regressor can be expressed by a <a href="closed-form-expression">closed-form expression</a>, but for other regression methods, this might not be the case. Therefore, here is a more general formula:</p>
+
+<p>$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$</p>
+
 <div class="backlinks">
 
 <h2 id="backlinks">Backlinks</h2>
 
 <ul>
 <li><a href="2020-09-08">2020-09-08</a></li>
+<li><a href="lasso-regression">Lasso regression</a></li>
 </ul>
 
 </div>
