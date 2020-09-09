@@ -1,56 +1,18 @@
 /* Custom colors */
 /* ------------- */
-:root {
-  /* Base color */
-  --base-h: 200;
-  --base-s: 50%;
-  --base-l: 50%;
-}
-
-.theme-dark, .theme-light {
-  /* Text */
-  --text-normal: rgb(var(--text));
-  --text-faint: rgba(var(--text), 0.3);
-
-  /* Accent */
-  --text-accent: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%));
-  --text-accent-hover: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%), 0.8);
-  --interactive-accent: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%), 0.6);
-  --interactive-accent-hover: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%), 0.5);
-
-  /* Other */
-  --background-modifier-accent: hsla(var(--base-h),var(--base-s), var(--base-l), 0.3);
-  --quote-opening-modifier: rgb(var(--text), 0.1);
-}
-
-.theme-dark {
-  --text: 222, 220, 222;
-  --background-primary: hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 50%));
-  --background-secondary: hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
-
-  /* Accent */
-  --text-accent: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%));
-  --text-accent-hover: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%), 0.8);
-  --interactive-accent: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%), 0.6);
-  --interactive-accent-hover: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) + 20%), 0.5);
-}
-
 .theme-light {
-  --text: 23, 23, 23;
-  --background-primary: hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 50%));
-  --background-secondary: hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 45%));
-
-  /* Accent */
-  --text-accent: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) - 20%));
-  --text-accent-hover: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) - 20%), 0.8);
-  --interactive-accent: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) - 20%), 0.6);
-  --interactive-accent-hover: hsl(var(--base-h), calc(var(--base-s) - 30%), calc(var(--base-l) - 20%), 0.5);
+  --bg-color: 255, 255, 255;
+  --text-color: 10, 10, 10;
+}
+.theme-dark {
+  --bg-color: 0, 0, 0;
+  --text-color: 240, 240, 240;
 }
 
 /* Fonts and text (thanks to @kepano for this minimal alteration of the defaults */
 /* ----------------------------------------------------------------------------- */
 :root {
-  --default-font:IBM Plex Sans,-apple-system,BlinkMacSystemFont,sans-serif;
+  --default-font: sans-serif;
 
   --font-normal:13px;
   --font-small:11px;
@@ -60,7 +22,10 @@
   --bold-weight:500;    /* Switch to 600 or 700 if you want thicker bold text */
 }
 
-::selection { background:var(--text-selection); }
+::selection, .CodeMirror-selected, .CodeMirror-selectedtext {
+  background: var(--text-normal) !important;
+  color: var(--background-primary) !important;
+}
 
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
@@ -172,10 +137,13 @@ html, body {
 }
 
 /* Clean header */
-.workspace-leaf.mod-active .view-header {
+.workspace-leaf.mod-active .view-header, .view-header {
   background-color: var(--background-primary) !important;
   border-bottom: 0px !important;
   border-top: 0px !important;
+}
+.view-header-title-container:after {
+  display: none;
 }
 
 /* Cleaner status bar */
@@ -186,13 +154,27 @@ html, body {
 
 /* Pretty link hover animations */
 .cm-hmd-internal-link, a.external-link, a.internal-link {
-  transition: filter var(--transition-length) ease-out;
-  text-decoration: none !important;
+  position: relative;
+  color: var(--text-normal) !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(var(--text-color), 0.3) !important;
 }
-.cm-hmd-internal-link:hover, a.external-link:hover,
-a.internal-link:hover {
-  filter: brightness(70%);
-  text-decoration: none !important;
+.cm-hmd-internal-link::after, a.external-link::after, a.internal-link::after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 1px;
+  bottom: 2.5px;
+  left: 0;
+  background-color: var(--text-normal);
+  -webkit-transition: 0.3s;
+  transition: width opacity 0.3s;
+  opacity: 0;
+}
+.cm-hmd-internal-link:hover::after, a.external-link:hover::after,
+a.internal-link:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 /* Remove border from status bar */
@@ -228,6 +210,14 @@ a.internal-link:hover {
 /* Transparent ribbons (works better with the auto-hiding) */
 .workspace-ribbon.is-collapsed {
   background: transparent;
+}
+
+/* I want things squared */
+.prompt, input, .modal, button, .dropdown, .list-item-ending-flair,
+.checkbox-container, .checkbox-container::after,
+.side-dock-collapsible-section-header, .search-result-file-match,
+.workspace-tab-header.is-active {
+  border-radius: 0px !important;
 }
 
 
@@ -298,6 +288,12 @@ a.internal-link:hover {
 span.cm-math {
   font-style: normal;
 }
+.CodeMirror .cm-inline-code, .CodeMirror .cm-math {
+  color: var(--text-muted);
+}
+.cm-s-obsidian span.cm-formatting-math {
+  color: var(--text-muted);
+}
 
 
 /* Markdown preview styling */
@@ -310,3 +306,10 @@ span.cm-math {
 }
 
 
+/* Obsidians internal color variables */
+.theme-light, .theme-dark {
+  --background-primary: rgb(var(--bg-color));
+  --text-normal: rgb(var(--text-color));
+  --text-muted: rgba(var(--text-color), 0.7);
+  --text-faint: rgba(var(--text-color), 0.3);
+}
