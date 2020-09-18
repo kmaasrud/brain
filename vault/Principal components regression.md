@@ -1,0 +1,1 @@
+**Principal components regression** is a [[Linear regression|linear regression]] method utilizing the *principal components* $v_m$ found via [[Principal components analysis|principal components decomposition]]. It is based on constructing 

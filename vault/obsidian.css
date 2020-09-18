@@ -27,6 +27,10 @@
   color: var(--background-primary) !important;
 }
 
+/* I don't want a titlebar */
+.titlebar { display: none; }
+body { padding-top: 0 !important; }
+
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
@@ -138,7 +142,6 @@ html, body {
 
 /* Clean header */
 .workspace-leaf.mod-active .view-header, .view-header {
-  background-color: var(--background-primary) !important;
   border-bottom: 0px !important;
   border-top: 0px !important;
 }
@@ -151,6 +154,32 @@ html, body {
   background-color: var(--background-primary);
   color: var(--text-faint);
 }
+
+/* Content behind header */
+.view-content, .view-header {
+  position: absolute;
+}
+.view-content {
+  height: 100%;
+}
+.workspace-leaf.mod-active .view-header, .view-header {
+  background-color: var(--background-primary) !important;
+  z-index: 3;
+  border-right: 1px solid var(--text-normal);
+  border-bottom: 1px solid var(--text-normal) !important;
+  border-radius: 0px 0px 10px 0px;
+  max-width: 98%;
+}
+.view-header-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.view-header-title:focus {
+  overflow: visible;
+  text-overflow: initial;
+}
+.CodeMirror-lines { padding-top: 56px; }
+.markdown-preview-view { padding-top: 43px; }
 
 /* Pretty link hover animations */
 .cm-hmd-internal-link, a.external-link, a.internal-link {

@@ -1,4 +1,4 @@
-**Ridge regression** reduces the size of the regression coefficients, and thus increases the [[Bias of estimators|bias]] of the model.
+**Ridge regression** is a [[Linear regression|regression]] method based on reducing the size of the regression coefficients, and thus increasing the [[Bias of estimators|bias]] of the model.
 
 Like in [[Ordinary least squares regression|OLS regression]], the [[Cost function|cost function]] is an [[Residual sum of squares|RSS function]], but this time with an extra term pertaining to the shrinkage of each regression coefficient:
 
