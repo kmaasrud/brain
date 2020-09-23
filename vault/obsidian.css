@@ -27,12 +27,12 @@
   color: var(--background-primary) !important;
 }
 
+h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
+h1,h2,h3,h4 {letter-spacing:-0.02em;} 
+
 /* I don't want a titlebar */
 .titlebar { display: none; }
 body { padding-top: 0 !important; }
-
-h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
-h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
 body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   letter-spacing:0.02rem;
@@ -141,10 +141,6 @@ html, body {
 }
 
 /* Clean header */
-.workspace-leaf.mod-active .view-header, .view-header {
-  border-bottom: 0px !important;
-  border-top: 0px !important;
-}
 .view-header-title-container:after {
   display: none;
 }
@@ -163,11 +159,8 @@ html, body {
   height: 100%;
 }
 .workspace-leaf.mod-active .view-header, .view-header {
-  background-color: var(--background-primary) !important;
+  background-color: rgba(var(--text-color), 0.05) !important;
   z-index: 3;
-  border-right: 1px solid var(--text-normal);
-  border-bottom: 1px solid var(--text-normal) !important;
-  border-radius: 0px 0px 10px 0px;
   max-width: 98%;
 }
 .view-header-title {
