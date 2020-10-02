@@ -3,10 +3,17 @@
 .theme-light {
   --bg-color: 255, 255, 255;
   --text-color: 10, 10, 10;
+  --interactive-accent-rgb: 163, 183, 205;
+  --interactive-accent: #a3b7cd;
 }
 .theme-dark {
   --bg-color: 0, 0, 0;
   --text-color: 240, 240, 240;
+  --interactive-accent-rgb: 163, 183, 205;
+  --interactive-accent: #a3b7cd;
+}
+:root {
+  --interactive-accent-hover: rgba(var(--interactive-accent-rgb), 0.5)
 }
 
 /* Fonts and text (thanks to @kepano for this minimal alteration of the defaults */
@@ -151,52 +158,18 @@ html, body {
   color: var(--text-faint);
 }
 
-/* Content behind header */
-.view-content, .view-header {
-  position: absolute;
-}
-.view-content {
-  height: 100%;
-}
-.workspace-leaf.mod-active .view-header, .view-header {
-  background-color: rgba(var(--text-color), 0.05) !important;
-  z-index: 3;
-  max-width: 98%;
-}
-.view-header-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.view-header-title:focus {
-  overflow: visible;
-  text-overflow: initial;
-}
-.CodeMirror-lines { padding-top: 56px; }
-.markdown-preview-view { padding-top: 43px; }
-
-/* Pretty link hover animations */
-.cm-hmd-internal-link, a.external-link, a.internal-link {
+/* Link styling */
+a.external-link, a.internal-link {
   position: relative;
-  color: var(--text-normal) !important;
-  text-decoration: underline !important;
-  text-decoration-color: rgba(var(--text-color), 0.3) !important;
+  color: rgb(var(--text-color));
+  text-decoration-color: rgba(var(--text-color), 0.5);
+  transition: text-decoration-color var(--transition-length);
 }
-.cm-hmd-internal-link::after, a.external-link::after, a.internal-link::after {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 1px;
-  bottom: 2.5px;
-  left: 0;
-  background-color: var(--text-normal);
-  -webkit-transition: 0.3s;
-  transition: width opacity 0.3s;
-  opacity: 0;
+a.external-link:hover, a.internal-link:hover {
+  text-decoration-color: rgba(var(--text-color), 0.0);
 }
-.cm-hmd-internal-link:hover::after, a.external-link:hover::after,
-a.internal-link:hover::after {
-  width: 100%;
-  opacity: 1;
+.cm-s-obsidian span.cm-link, .cm-s-obsidian span.cm-hmd-internal-link {
+  color: rgba(var(--text-color), 0.7);
 }
 
 /* Remove border from status bar */

@@ -1,0 +1,1 @@
+**Constants** are [[Mutability (programming)|immutable objects]] in [[Rust]], but differ from [[Variables (Rust)|regular immutable variables]] in that they can only be the result of a constant expression, and that they support being declared in any scope - even the global scope.

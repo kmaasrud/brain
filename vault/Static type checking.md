@@ -1,0 +1,1 @@
+**Static type checking** is the process of checking the [[Type safety|type safety]] of a program, often done by ensuring a known type for each variable at compile time. This is done to avoid ambiguous variable data types or wrongful [[Type casting|type casting]]. 
