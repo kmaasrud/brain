@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Python</title>
+  <title>Mutability (programming)</title>
 </head>
 
 <body>
@@ -31,19 +31,25 @@
       </div>
     </nav>
     <article>
-      <header>Python</header>
-      <div id="content"><div class="backlinks">
+      <header>Mutability (programming)</header>
+      <div id="content"><p><strong>Mutability</strong> refers to the ability to change a variable's state or content after its created. </p>
+
+<p><a href="python">Python</a> is an example of a programming language that has mutable variables as a default, without support for <em>immutable</em> variables. As an opposite example, <a href="rust">Rust</a> has immutable variables as the default and demands you explicitly specify the variable as mutable before any change can be done to it. This has several advantages, the key one being avoiding a scenario where one part of a codebase operates as if a variable keeps its value, while the other changes it. This can often be hard to track down when debugging. Mutating a large datastructure may also give performance benefits over copying and creating a new instance.</p>
+
+<p>Sources:</p>
+
+<ul>
+<li><a href="the-rust-programming-language">The Rust Programming Language</a> - <a href="https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html">Variables and mutability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Immutable_object">Wikipedia</a></li>
+</ul>
+
+<div class="backlinks">
 
 <h2 id="backlinks">Backlinks</h2>
 
 <ul>
-<li><a href="data-types-rust-">Data types (Rust)</a></li>
-<li><a href="fys2160-lecture-05---multiplicity-of-einstein-crystal-multiplicity-limit-and-stirling-approximation">FYS2160 Lecture 05 - Multiplicity of Einstein crystal, multiplicity limit and Stirling approximation</a></li>
-<li><a href="mutability-programming-">Mutability (programming)</a></li>
-<li><a href="obsidian-and-github-pages-workflow">Obsidian and GitHub Pages workflow</a></li>
-<li><a href="pythentur">Pythentur</a></li>
-<li><a href="daily/2020-06-30">daily/2020-06-30</a></li>
-<li><a href="daily/2020-08-03">daily/2020-08-03</a></li>
+<li><a href="constants-rust-">Constants (Rust)</a></li>
+<li><a href="mutability-rust-">Mutability (Rust)</a></li>
 </ul>
 
 </div>
