@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+
+  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
+
+  <title>FYS2160 Lecture 04 - Microstates and multiplicity of a macrostate</title>
+</head>
+
+<body>
+  <div class="grid">
+    <nav>
+      <ul>
+        <p><a href="https://www.kmaasrud.com/" style="text-decoration: none;"><strong>kmaasrud</strong></a></p>
+        <p id="desc">Brain</p>
+        <br>
+        <li><a href="https://www.kmaasrud.com/projects">Projects</a></li>
+        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
+        <br>
+      </ul>
+      <div class="footer">
+        <p>Get in touch with me:</p>
+        <a href="mailto:kmaasrud@outlook.com">kmaasrud@outlook.com</a>
+      </div>
+    </nav>
+    <article>
+      <header>FYS2160 Lecture 04 - Microstates and multiplicity of a macrostate</header>
+      <div id="content"><h2 id="micro-and-macrostates">Micro- and macrostates</h2>
+
+<p>Say we have a box with many particles bouncing around in it (a gas). One way to describe the state of the gas inside this box could be to assign a binary descriptor to each particle $n_i$. $n_i = 1$ if the particle is on the <em>left half</em> of the box, and $n_i = 0$ if the particle is on the <em>right half</em>. The <em>set</em> (or actually <em>vector</em>, since the microstate is dependent on the ordinality) of all $n_i$, $(n_1,...,n_N)$ is called the <em><a href="microstate-statistical-mechanics-">microstate</a></em> of the gas.</p>
+
+<p>Given this, we could calculate the number of particles located on the <em>left half</em> of the box, as $\sum_{i=1}^Nn_i$. This value is a <em><a href="macrostate-statistical-mechanics-">macrostate</a></em> of the gas. From this example its pretty obvious that a system can have multiple different <a href="microstate-statistical-mechanics-">microstates</a> for one specific <a href="macrostate-statistical-mechanics-">macrostate</a>.</p>
+
+<p>Another example of a micro/macrostate could be a set of two dice, described my the vector $(n_1, n_2)$. $(1,6)$ could be a <em><a href="microstate-statistical-mechanics-">microstate</a></em> here, with $7$ being a possible <em><a href="macrostate-statistical-mechanics-">macrostate</a></em>.</p>
+
+<h3 id="multiplicity">Multiplicity</h3>
+
+<p>The number of <a href="microstate-statistical-mechanics-">microstate</a> that give the same <a href="macrostate-statistical-mechanics-">macrostate</a> is called the <em><a href="multiplicity">multiplicity</a></em> of that <a href="macrostate-statistical-mechanics-">macrostate</a>. This can be used to find the probability of a certian <a href="macrostate-statistical-mechanics-">macrostate</a>, by dividing its <a href="multiplicity">multiplicity</a> by the number of total <a href="microstate-statistical-mechanics-">microstate</a>. More formally, this can be written:</p>
+
+<p>$$ P(q) = \frac{\Omega (q)}{\Omega_{\text{tot}}} ,$$</p>
+
+<p>where $P(q)$ is the probability of the state $q$, $\Omega(q)$ is the <a href="multiplicity">multiplicity</a> of state $q$ and $\Omega_{\text{tot}}$ is the total <a href="multiplicity">multiplicity</a> of the system.</p>
+
+<p>Going back to our original example with the gas in the box, we consider the macrostate describing the number of particles located on the left half of the box, and call it $\lambda$ (lambda = "l" for left):</p>
+
+<p>$$ \lambda = \sum_{i=1}^N \lambda_i.$$</p>
+
+<p>Here $N$ is the total number of particles in the gas and $\lambda_i = 1$ if the $i$th particle is located on the <em>left side</em> of the box. We've earlier found that the probability distribution for $\lambda$ is given by the binomial distribution, namely</p>
+
+<p>$$ P(N,\lambda) = 2^{-N}\Omega(N,\lambda) ,$$</p>
+
+<p>where $\Omega(N,\lambda) = \left(\begin{matrix}N \ \lambda\end{matrix}\right)$ is the <a href="multiplicity">multiplicity</a> of the <a href="macrostate-statistical-mechanics-">macrostate</a> $\lambda$, given $N$ particles. The <a href="mean">average</a> and the <a href="standard-deviation">standard deviation</a> are easily calculated, and looking at their ratio,</p>
+
+<p>$$ \overline{\lambda} = \frac{N}{2},\quad \sigma_\lambda = \sqrt{\frac{N}{4}},\quad \frac{\sigma_\lambda}{\overline \lambda} = N^{-1/2} ,$$</p>
+
+<p>it's apparent that, as the number of particles gets big, the standard deviation gets negligible and we can pretty much consider $\lambda$ a constant. As an example, a litre of gas at room temperature (with about $10^{23}$ particles) has a standard deviation of about $10^{-10}$ the average value, which is extremely accurate.</p>
+
+<hr />
+
+<p>Meta:</p>
+
+<ul>
+<li>Course: <a href="fys2160">FYS2160</a></li>
+<li>References: <a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf">Anders Malthe-Sørensen: "Statistical and Thermal Physics Using Python"</a></li>
+<li>Date: <a href="daily/2020-08-27">daily/2020-08-27</a></li>
+</ul>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="daily/2020-08-27">daily/2020-08-27</a></li>
+</ul>
+
+</div>
+</div>
+    </article>
+  </div>
+  
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+
+  <!-- Parsing single dollar signs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+    });
+  </script>
+  
+  <!-- Syntax highlighting through highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

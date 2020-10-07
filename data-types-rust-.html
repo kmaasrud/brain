@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+
+  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
+
+  <title>Data types (Rust)</title>
+</head>
+
+<body>
+  <div class="grid">
+    <nav>
+      <ul>
+        <p><a href="https://www.kmaasrud.com/" style="text-decoration: none;"><strong>kmaasrud</strong></a></p>
+        <p id="desc">Brain</p>
+        <br>
+        <li><a href="https://www.kmaasrud.com/projects">Projects</a></li>
+        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
+        <br>
+      </ul>
+      <div class="footer">
+        <p>Get in touch with me:</p>
+        <a href="mailto:kmaasrud@outlook.com">kmaasrud@outlook.com</a>
+      </div>
+    </nav>
+    <article>
+      <header>Data types (Rust)</header>
+      <div id="content"><p><a href="rust">Rust</a> has two data type subsets: <em>scalar</em> and <em>compound</em>.</p>
+
+<h2 id="scalar-types">Scalar types</h2>
+
+<p>There's four primary scalar types: <em>integers</em>, <em>floats</em>, <em>Booleans</em> and <em>characters</em>.</p>
+
+<h3 id="integers">Integers</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="right"><strong>Length</strong></th>
+  <th align="center"><strong>Signed</strong></th>
+  <th align="center"><strong>Unsigned</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="right">8 bits</td>
+  <td align="center"><code>i8</code></td>
+  <td align="center"><code>u8</code></td>
+</tr>
+<tr>
+  <td align="right">16 bits</td>
+  <td align="center"><code>i16</code></td>
+  <td align="center"><code>u16</code></td>
+</tr>
+<tr>
+  <td align="right">32 bits</td>
+  <td align="center"><code>i32</code></td>
+  <td align="center"><code>u32</code></td>
+</tr>
+<tr>
+  <td align="right">64 bits</td>
+  <td align="center"><code>i64</code></td>
+  <td align="center"><code>u64</code></td>
+</tr>
+<tr>
+  <td align="right">128 bits</td>
+  <td align="center"><code>i128</code></td>
+  <td align="center"><code>u128</code></td>
+</tr>
+<tr>
+  <td align="right">Depending on the architecture of the computer (64 or 32 bits)</td>
+  <td align="center"><code>isize</code></td>
+  <td align="center"><code>usize</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>The default integer type is <code>i32</code>.</p>
+
+<h3 id="floating-point-numbers">Floating-point numbers</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="right"><strong>Length</strong></th>
+  <th align="center"><strong>Name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="right">32 bits</td>
+  <td align="center"><code>f32</code></td>
+</tr>
+<tr>
+  <td align="right">64 bits</td>
+  <td align="center"><code>f64</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>The default float type is <code>f64</code>.</p>
+
+<h3 id="booleans-and-characters">Booleans and characters</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="right"><strong>Length</strong></th>
+  <th align="center"><strong>Name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="right">(Probably 1 byte?)</td>
+  <td align="center"><code>bool</code></td>
+</tr>
+<tr>
+  <td align="right">4 bytes</td>
+  <td align="center"><code>char</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="rust">Rust</a> is a <a href="static-type-checking">statically typed</a> language, which means it has to know all the types of each variable at compile time. </p>
+
+<h2 id="compound-types">Compound types</h2>
+
+<p>Compound types group several values together into one type. There's <em>tuples</em> and <em>arrays</em>.</p>
+
+<h3 id="tuples">Tuples</h3>
+
+<p>Tuples have a fixed length, but can contain different types. They are created by listing each value separated by a comma inside parentheses. In the below example, the values are bound to <code>tup</code> as a tuple type and can be accessed by <em>destructuring</em> (or <em>unpacking</em>, as its called in <a href="python">Python</a>) it into other variables. </p>
+
+<pre><code>let tup: (i32, f64, u8) = (500, 6.4, 1); // Types can be declared explicitly
+let tup = (500, 6.4, 1); // Or they can be inferred by the compiler
+
+let (x, y, z) = tup;
+
+println!("The value of y is: {}", y);
+</code></pre>
+
+<p>You can also access the values of a tuple by index (starting at 0), like this</p>
+
+<pre><code>let x: (i32, f64, u8) = (500, 6.4, 1);
+
+let five_hundred = x.0;
+
+let one = x.2;
+</code></pre>
+
+<h3 id="arrays">Arrays</h3>
+
+<p>Arrays differ from tuples in that they require the same type for each element. They still have a fixed length. They are useful when you want your data allocated on the <a href="stack-rust-">stack</a> rather than on the <a href="heap-rust-">heap</a>, or if you want to ensure a fixed number of elements. Arrays are declared by listing the elements out inside square brackets:</p>
+
+<pre><code>let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+</code></pre>
+
+<p>or if you need to specify the type and number of elements:</p>
+
+<pre><code>let a: [i32; 5] = [1, 2, 3, 4, 5];
+</code></pre>
+
+<p>You can also fill an array of a specified length with the same item by the following syntax:</p>
+
+<pre><code>let a = [3; 5];
+</code></pre>
+
+<p>Accessing elements is done in the same syntax as <a href="python">Python</a>, namely using square brackets: <code>a[0]</code>.</p>
+</div>
+    </article>
+  </div>
+  
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+
+  <!-- Parsing single dollar signs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+    });
+  </script>
+  
+  <!-- Syntax highlighting through highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

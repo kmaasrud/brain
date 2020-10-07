@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+
+  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
+
+  <title>lein</title>
+</head>
+
+<body>
+  <div class="grid">
+    <nav>
+      <ul>
+        <p><a href="https://www.kmaasrud.com/" style="text-decoration: none;"><strong>kmaasrud</strong></a></p>
+        <p id="desc">Brain</p>
+        <br>
+        <li><a href="https://www.kmaasrud.com/projects">Projects</a></li>
+        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
+        <br>
+      </ul>
+      <div class="footer">
+        <p>Get in touch with me:</p>
+        <a href="mailto:kmaasrud@outlook.com">kmaasrud@outlook.com</a>
+      </div>
+    </nav>
+    <article>
+      <header>lein</header>
+      <div id="content"><div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="daily/2020-06-22">daily/2020-06-22</a></li>
+</ul>
+
+</div>
+</div>
+    </article>
+  </div>
+  
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+
+  <!-- Parsing single dollar signs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+    });
+  </script>
+  
+  <!-- Syntax highlighting through highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

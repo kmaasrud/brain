@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+
+  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
+
+  <title>$K$-fold cross-validation</title>
+</head>
+
+<body>
+  <div class="grid">
+    <nav>
+      <ul>
+        <p><a href="https://www.kmaasrud.com/" style="text-decoration: none;"><strong>kmaasrud</strong></a></p>
+        <p id="desc">Brain</p>
+        <br>
+        <li><a href="https://www.kmaasrud.com/projects">Projects</a></li>
+        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
+        <br>
+      </ul>
+      <div class="footer">
+        <p>Get in touch with me:</p>
+        <a href="mailto:kmaasrud@outlook.com">kmaasrud@outlook.com</a>
+      </div>
+    </nav>
+    <article>
+      <header>$K$-fold cross-validation</header>
+      <div id="content"><p><strong>$K$-fold <a href="cross-validation">cross-validation</a></strong> involves splitting our dataset into $K$ different "folds". Say, in our example, that we use $K=6$ and divide our dataset into six different folds. First, we use the first fold as our <a href="testing-set">validation set</a>, train on the other five and compute the prediction error of the fitted model. Then, we use the second fold as our <a href="testing-set">validation set</a> and train on the remaining sets, this time also computing the prediction error. Doing this cycle through all $K=6$ folds and averaging the prediction errors gives us our <a href="cross-validation">cross-validation estimate</a> of the prediction error. </p>
+
+<p>An illustration of this from <a href="http://qingkaikong.blogspot.com/2017/02/machine-learning-9-more-on-artificial.html">Qinkai's blog</a>:</p>
+
+<p><img src="https://raw.githubusercontent.com/qingkaikong/blog/master/2017_05_More_on_applying_ANN/figures/figure_1.jpg" alt="" /></p>
+
+<p>Denoting the fitted function that excludes the $k$th fold as $\hat f^{-k}(X)$, and defining a function $\kappa:\{1,\dots,N\}\rightarrow\{1,\dots,K\}$ that takes in an index of the total dataset and returns the index of the fold containing that datapoint, we can write the <a href="cross-validation">cross-validation</a> estimate of the prediction error as</p>
+
+<p>$$ \text{CV}(\hat f) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i)\right) .$$</p>
+
+<p>With a set of models indexed by the tuning parameter $\alpha$, we see that</p>
+
+<p>$$ \text{CV}(\hat f,\alpha) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i, \alpha)\right) $$</p>
+
+<p>is the curve we need to find the minimum of. The value of $\alpha$ minimizing this curve is often denoted $\hat \alpha$, and we now choose our final model to be $f(x,\hat \alpha)$.</p>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="cross-validation">Cross-validation</a></li>
+<li><a href="stk-in4300-lecture-03---more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
+</ul>
+
+</div>
+</div>
+    </article>
+  </div>
+  
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+
+  <!-- Parsing single dollar signs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+    });
+  </script>
+  
+  <!-- Syntax highlighting through highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
