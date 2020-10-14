@@ -20,3 +20,7 @@ On my Lenovo I run [[Artix Linux]] (with [[runit]] as the init system). Here is 
 - **Text editor**: [[Neovim]]
 - **Notifications**: [[Dunst]]
 - **Theming**: [[Pywal]]
+
+> I am currently changing over to [[Arch Linux]] and [[KDE Plasma]], as these will make daily life much simpler. Running [[Artix Linux|Artix]] and customizing most of the DE myself was a great learning experience, but not efficient enough for daily use. Also, [[systemd]] - however bloated it might be - is used by a lot of software and services which I depend on.
+
+I try my best to run a strict file system structure, which I describe [[My file system structure|here]].
