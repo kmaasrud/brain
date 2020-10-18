@@ -11,16 +11,14 @@ I've so far been very happy with it, as it is extremely portable, but still powe
 
 ## Software
 
-On my Lenovo I run [[Artix Linux]] (with [[runit]] as the init system). Here is my current setup:
+On my Lenovo I run [[Arch Linux]]. Here is my current setup:
 
-- **[[Window manager|WM]]**: [[sowm]]
+- **[[Desktop Environment|DE]]**: [[KDE Plasma]]
 - **Browser**: [[Firefox]]
 - **Terminal emulator**: [[Alacritty]]
 - **Shell**: [[mksh]]
-- **Text editor**: [[Neovim]]
-- **Notifications**: [[Dunst]]
-- **Theming**: [[Pywal]]
+- **Text editor**: [[Visual Studio Code]] with embedded [[Neovim]]
 
-> I am currently changing over to [[Arch Linux]] and [[KDE Plasma]], as these will make daily life much simpler. Running [[Artix Linux|Artix]] and customizing most of the DE myself was a great learning experience, but not efficient enough for daily use. Also, [[systemd]] - however bloated it might be - is used by a lot of software and services which I depend on.
+> I've changed from an extremely minlmal install ([[Artix Linux]] with [[sowm]]) to the one described above, as I've experienced a more fully-fledged modern [[Desktop Environment|DE]] makes my daily life much simpler. Running [[Artix Linux|Artix]] and customizing almost everything myself was a great learning experience, but not efficient enough for daily use. Also, [[systemd]] - however bloated it might be - is used by a lot of software and services which I depend on.
 
 I try my best to run a strict file system structure, which I describe [[My file system structure|here]].
