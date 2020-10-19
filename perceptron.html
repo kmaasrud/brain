@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+
+  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
+  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
+
+  <title>Perceptron</title>
+</head>
+
+<body>
+  <div class="grid">
+    <nav>
+      <ul>
+        <p><a href="https://www.kmaasrud.com/" style="text-decoration: none;"><strong>kmaasrud</strong></a></p>
+        <p id="desc">Brain</p>
+        <br>
+        <li><a href="https://www.kmaasrud.com/projects">Projects</a></li>
+        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
+        <br>
+      </ul>
+      <div class="footer">
+        <p>Get in touch with me:</p>
+        <a href="mailto:kmaasrud@outlook.com">kmaasrud@outlook.com</a>
+      </div>
+    </nav>
+    <article>
+      <header>Perceptron</header>
+      <div id="content"><p>A <strong>perceptron</strong> is an algorithm that takes a set of inputs and returns a single binary output. For example, the following diagram shows a perceptron with three inputs $x_1, x_2, x_3$, that returns an output:</p>
+
+<p><img src="http://neuralnetworksanddeeplearning.com/images/tikz0.png" alt="" /></p>
+
+<p>This output is determined by the weighted ($\mathbf w$) sum of the inputs, including an added constant - the bias $b$ - that shifts the decision boundary away from the origin. A perceptron is a so-called <a href="binary-classifier">binary classifier</a>, which means its output is either $1$ or $0$. This can be interpreted as "making a decision" by weighing a set of evidence. Consider the following questions:</p>
+
+<ol>
+<li>Is the weather good?</li>
+<li>Have I gotten my paycheck?</li>
+<li>Are the stores open today?</li>
+</ol>
+
+<p>The answers to these questions are all $1/0$ (yes/no), but can have loads of inputs that aid in finding the correct answer. Not only that, but the answers to these three can further contribute in answering the question of wether I'm going grocery shopping today or not. Many structures with multiple layers can arise from this approach, and quickly get complex. They are, however, useful in many decision making problems.</p>
+
+<p><img src="http://neuralnetworksanddeeplearning.com/images/tikz1.png" alt="" /></p>
+
+<p>Mathematically, a perceptron can be written as</p>
+
+<p>$$\text{output} = \begin{cases}0 &amp; \text{if } \mathbf w\cdot \mathbf x + b \le 0 \ 1 &amp; \text{if } \mathbf w \cdot \mathbf x + b &gt; 0\end{cases}$$</p>
+
+<p>so its an <a href="artificial-neuron">artificial neuron</a> with a <a href="heaviside-step-function">Heaviside</a> <a href="activation-function">activation function</a>.</p>
+</div>
+    </article>
+  </div>
+  
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+
+  <!-- Parsing single dollar signs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+    });
+  </script>
+  
+  <!-- Syntax highlighting through highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
