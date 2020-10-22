@@ -21,8 +21,8 @@
 :root {
   --default-font: sans-serif;
 
-  --font-normal:13px;
-  --font-small:11px;
+  --font-normal:15px;
+  --font-small:12px;
   --font-smaller:10px;
 
   --normal-weight:400;  /* Switch to 300 if you want thinner default text */
@@ -129,7 +129,7 @@ html, body {
 
 /* Collapsing sidedocks */
 .side-dock-ribbon.mod-left.is-collapsed:not(:hover), .side-dock-ribbon.mod-right.is-collapsed:not(:hover) {
-  width: 15px !important;
+  width: 20px !important;
   opacity: 0;
 }
 .side-dock-ribbon {

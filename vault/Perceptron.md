@@ -16,4 +16,4 @@ Mathematically, a perceptron can be written as
 
 $$\text{output} = \begin{cases}0 & \text{if } \mathbf w\cdot \mathbf x + b \le 0 \\ 1 & \text{if } \mathbf w \cdot \mathbf x + b > 0\end{cases}$$
 
-so its an [[Artificial neuron|artificial neuron]] with a [[Heaviside step function|Heaviside]] [[Activation function|activation function]].
+so it can be described as an [[Artificial neuron|artificial neuron]] with a [[Heaviside step function|Heaviside]] [[Activation function|activation function]].
