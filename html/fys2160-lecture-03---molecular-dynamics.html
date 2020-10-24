@@ -1,0 +1,50 @@
+<div id="content"><p>(These notes were not taken from the actual lecture, but from the <a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf">compendium</a> and other sources)</p>
+
+<h2 id="molecular-dynamics">Molecular dynamics</h2>
+
+<p><strong><a href="molecular-dynamics">Molecular dynamics</a></strong> or <em>MD</em> is  a study of the physical movements of a system of <a href="atom">atoms</a>/<a href="molecule">molecules</a> via numerically computing their movements. Most commonly, <a href="newton-s-laws-of-motion">Newton's laws of motion</a> are used, based on the <a href="interatomic-potential">interatomic potentials</a> present in the system. </p>
+
+<p>Now, to accurately depict the dynamics of a large enough system, we would need to compute advanced <a href="quantum-mechanics">quantum mechanical</a> effects on an enormous amount of particles, which would be computationally demanding. Therefore, simplifications - like using <a href="newton-s-laws-of-motion">Newton's laws</a> and/or only considering interactions between neighbouring particles - are required, but only to a point where the cumulating errors are kept to a minimum. </p>
+
+<h3 id="leonard-jones-potential">Leonard-Jones potential</h3>
+
+<p>Let us consider one very simple system. We want to model the interactions between <a href="noble-gas">noble gas</a> atoms, for example <a href="argon">Argon</a>. Between two atoms, these are the main contributions:</p>
+
+<ul>
+<li><strong><a href="van-der-waals-force">Van der Waals interaction</a></strong>: There is an <em>attractive</em> force between the atoms, with a potential <a href="proportionality">proportional</a> to $1/r^6$ ($r$ being the distance between them). </li>
+<li><strong><a href="exchange-interaction">Pauli repulsion</a></strong>: Due to the possibility of overlapping orbitals, there are quantum mechanical effects which cause <em>repulsion</em> between the atoms. This course will not go deeper into this, and we model this with a power law of the form $1/r^n$. In the case of <a href="argon">Argon</a>, a suitable approximation would be $n = 12$.</li>
+</ul>
+
+<p>Combining these into one model, we get the <a href="leonard-jones-potential">Leonard-Jones potential</a>:</p>
+
+<p>$$ U(r) = 4\epsilon \left(\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right) ,$$</p>
+
+<p>where $\epsilon$ is a <em>characteristic energy</em>, which is specific for the atoms we are modeling. $\sigma$ is a <em>characteristic length</em>.</p>
+
+<p>The minimum of this potential is easily found as</p>
+
+<p>$$ F(r) = -\frac{d}{dr} U(r) = 0 $$<br />
+$$ F(r) = 24 \epsilon_0\left(\left(\frac{\sigma}{r}\right)^6 - 2\left(\frac{\sigma}{r}\right)^{12} \right) = 0 \Rightarrow \frac{r}{\sigma} = 2^{1/6} $$</p>
+
+<p>(...Page 34 of compendium)</p>
+
+<hr />
+
+<p>Meta:</p>
+
+<ul>
+<li>Course: <a href="fys2160">FYS2160</a></li>
+<li>References: <a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf">Anders Malthe-Sørensen: "Statistical and Thermal Physics Using Python"</a></li>
+<li>Date: <a href="daily/2020-08-24">daily/2020-08-24</a></li>
+</ul>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="2020-08-24">2020-08-24</a></li>
+</ul>
+
+</div>
+</div>

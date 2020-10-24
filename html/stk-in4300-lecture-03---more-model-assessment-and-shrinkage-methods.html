@@ -1,0 +1,56 @@
+<div id="content"><h2 id="cross-validation">Cross-validation</h2>
+
+<p><a href="cross-validation">Cross-validation</a> is a <a href="model-assessment">model assessment technique</a> based on using a <a href="training-set">set of training data</a> to prime it and then comparing the predictions given to a <a href="testing-set">validation dataset</a>, to evaluate the models ability to predict new data. This is to avoid issues like <a href="overfitting">overfitting</a> and/or <a href="selection-bias">selection bias</a>. The method directly estimates the expected extra-sample error:</p>
+
+<p>$$ \text{Err} = \text E\left[L(Y, \hat f(X)\right] ,$$</p>
+
+<p>the average <a href="test-error">average generalization error</a> when $\hat f(X)$ is a applied to an independent test sample from the joint distribution of $X$ and $Y$.</p>
+
+<h3 id="k-fold-cross-validation">$K$-fold cross-validation</h3>
+
+<p>Ideally, we would split our data into a <a href="training-set">training set</a> and a <a href="testing-set">validation set</a>, like explained in <a href="stk-in4300-lecture-02---linear-methods-for-regression">a previous lecture</a>. However, in many cases our dataset is too small for this. In this case, we will have to use <a href="-k--fold-cross-validation">$K$-fold cross-validation</a> to reuse our <a href="training-set">training set</a> as our <a href="testing-set">validation set</a>.</p>
+
+<p>The method involves splitting our dataset into $K$ different "folds" - usually $5$ or $10$. Say, in our example, that we use $K=6$ and divide our dataset into six different folds. First, we use the first fold as our <a href="testing-set">validation set</a>, train on the other five and compute the prediction error of the fitted model. Then, we use the second fold as our <a href="testing-set">validation set</a> and train on the remaining sets, this time also computing the prediction error. Doing this cycle through all $K=6$ folds and averaging the prediction errors gives us our <a href="cross-validation">cross-validation estimate</a> of the prediction error. </p>
+
+<p>An illustration of this:</p>
+
+<p><img src="https://raw.githubusercontent.com/qingkaikong/blog/master/2017_05_More_on_applying_ANN/figures/figure_1.jpg" alt="" /></p>
+
+<p>Denoting the fitted function that excludes the $k$th fold as $\hat f^{-k}(X)$, and defining a function $\kappa:\{1,\dots,N\}\rightarrow\{1,\dots,K\}$ that takes in an index of the total dataset and returns the index of the fold containing that datapoint, we can write the <a href="cross-validation">cross-validation</a> estimate of the prediction error a</p>
+
+<p>$$\text{CV}(\hat f) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i)\right).$$</p>
+
+<p>With a set of models indexed by the tuning parameter $\alpha$, we see that</p>
+
+<p>$$ \text{CV}(\hat f,\alpha) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i, \alpha)\right) $$</p>
+
+<p>is the curve we need to find the minimum of. The value of $\alpha$ minimizing this curve is often denoted $\hat \alpha$, and we now choose our final model to be $f(x,\hat \alpha)$.</p>
+
+<h4 id="choice-of-k">Choice of $K$</h4>
+
+<p>There is no clear solution on how to choose $K$, but we have to be aware that there is a <a href="bias-variance-tradeoff">bias-variance tradeoff</a>. For example, setting $K=N$ (called <em>leave-one-out cross-validation</em> or <em>LOOCV</em>) estimates the expected test error approximatively unbiased. However, it has very large variance since the <a href="training-set">training sets</a> are very similar to each other.</p>
+
+<h2 id="bootstrap">Bootstrap</h2>
+
+<p>The <strong><a href="bootstrapping-statistics-">bootstrap method</a></strong> is (in general) a method of assessing <em>statistical accuracy</em> of a model. Briefly, it involves drawing random samples from our <a href="training-set">training dataset</a> <a href="sampling-with-replacement">with replacement</a>, and generating another dataset with the same size as our original <a href="training-set">training set</a>. Thereafter, we refit our model to this new bootstrap set. This is repeated a number of times, and the computed values from our bootstrap-models are used to estimate the conditional error of our <a href="training-set">training set</a>. </p>
+
+<hr />
+
+<p>Meta:</p>
+
+<ul>
+<li>Course: <a href="stk-in4300">STK-IN4300</a></li>
+<li>References: <a href="https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf">The Elements of Statistical Mechanics</a> and <a href="riccardo-de-bin">Riccardo's</a> <a href="https://www.uio.no/studier/emner/matnat/math/STK-IN4300/h20/slides/lecture_3.pdf">lecture notes</a>.</li>
+<li>Date: <a href="daily/2020-08-31">daily/2020-08-31</a> and <a href="daily/2020-09-02">daily/2020-09-02</a></li>
+</ul>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="2020-08-31">2020-08-31</a></li>
+</ul>
+
+</div>
+</div>

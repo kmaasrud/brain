@@ -1,0 +1,81 @@
+<div id="content"><p>Maps are <a href="clojure">Clojure</a>'s type of <a href="associative-array">Associative array</a></p>
+
+<ul>
+<li>A map is created in <a href="clojure">Clojure</a> using the following syntax:<br />
+<ul><br />
+<li><code>clojure
+(def my-map {:value-1 1
+     :value-2 2
+     :value-3 3})</code><br /><br />
+<ul><br /><br />
+<li>The keywords don't need to be a <a href="clojure-keyword">keyword type</a>, but this is convention.</li><br /><br />
+<li>There's also no need to have the entries on separate lines, but this increases readability.</li><br /><br />
+</ul></li><br />
+</ul></li>
+<li>Adding values to an existing map is done via the <a href="clojure-assoc">assoc</a> function<br />
+<ul><br />
+<li><code>clojure
+user=&gt; (assoc my-map :value-4 4)
+{:value-1 1, :value-2 2, :value-3 3, :value-4 4}</code></li><br />
+</ul></li>
+<li>Removing values from an existing map is done via the <a href="clojure-dissoc">dissoc</a> function<br />
+<ul><br />
+<li><code>clojure
+user=&gt; (dissoc my-map :value-2)
+{:value-1 1, :value-3 3}</code></li><br />
+</ul></li>
+<li>Looking up a key is done two ways:<br />
+<ul><br />
+<li>Either via the <a href="clojure-get">get</a> function:<br /><br />
+<ul><br /><br />
+<li><code>clojure
+user=&gt; (get my-map :value-1)
+1</code></li><br /><br />
+</ul></li><br />
+<li>or via invoking the map itself:<br /><br />
+<ul><br /><br />
+<li><code>clojure
+user=&gt; (my-map :value-1)
+1</code></li><br /><br />
+<li>This is sensitive to <a href="null">null values</a><br /><br /><br />
+<ul><br /><br /><br />
+<li>Example:<br /><br /><br /><br />
+<ul><br /><br /><br /><br />
+<li>```clojure<br /><br /><br /><br /><br />
+user=&gt; (def bad-lookup-map nil)</li><br /><br /><br /><br />
+</ul></li><br /><br /><br />
+</ul></li><br /><br />
+</ul></li><br />
+</ul></li>
+</ul>
+
+<h1 id="userbad-lookup-map">'user/bad-lookup-map</h1>
+
+<p>user=&gt; (bad-lookup-map :foo)<br />
+Execution error (NullPointerException) at user/eval154 (REPL:1).<br />
+null<code>
+    - You can fallback on a default if necessary
+        -</code>clojure<br />
+user=&gt; (get my-map :value-5 0)<br />
+0</p>
+
+<p>user=&gt; (my-map :value-0 "Yo")<br />
+"Yo"```</p>
+
+<ul>
+<li>Sources:<br />
+<ul><br />
+<li><a href="https://clojure.org/guides/learn/hashed_colls#_maps">clojure.org</a></li><br />
+</ul></li>
+</ul>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="2020-06-23">2020-06-23</a></li>
+</ul>
+
+</div>
+</div>

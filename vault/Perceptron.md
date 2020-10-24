@@ -6,7 +6,7 @@ This output is determined by the weighted ($\mathbf w$) sum of the inputs, inclu
 
 1. Is the weather good?
 2. Have I gotten my paycheck?
-3. Are the stores open today?
+3. Are the stores open today? ^6d807f
 
 The answers to these questions are all $1/0$ (yes/no), but can have loads of inputs that aid in finding the correct answer. Not only that, but the answers to these three can further contribute in answering the question of wether I'm going grocery shopping today or not. Many structures with multiple layers can arise from this approach, and quickly get complex. They are, however, useful in many decision making problems.
 

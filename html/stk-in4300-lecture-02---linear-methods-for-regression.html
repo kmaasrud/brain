@@ -1,0 +1,112 @@
+<div id="content"><p>(<a href="riccardo-de-bin">Riccardo's</a> lectures are kind of a joke, I'll take my own notes from the <a href="https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf">book</a>)</p>
+
+<hr />
+
+<h2 id="linear-methods-of-regression">Linear methods of regression</h2>
+
+<p>A <a href="linear-regression">linear regression</a> model assumes that the regression function $E(Y|X)$ is linear in the inputs. </p>
+
+<p>Assume an input vector $X^T = (X_1, X_2, \dots, X_p)$, where we want to predict an output $Y$. If we know that the output should take a linear form or that this is a reasonable approximation, we can use linear regression. The <a href="linear-regression">linear regression model</a> has the form</p>
+
+<p>$$ f(X) = \beta_0 + \sum^p_{j=1}X_j\beta_j ,$$</p>
+
+<p>where the $\beta_j$'s are unknown coefficients or parameters.</p>
+
+<p>Typically, we have a set of training data $(x_1,y_1),\dots, (x_N,y_N)$, where the $x_i = (x_{i1}, x_{i2},\dots, x_{ip})^T$ elements are vectors containing all the feature measurements for the $i$th case. A common method of estimating the regression function is <strong><a href="least-squares">least squares</a></strong>. Here we pick the $\beta$'s based on minimizing the <a href="residual-sum-of-squares">RSS function</a>:</p>
+
+<p>$$ \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - f(x_i)\right)^2 = \sum_{i=1}^N \left(y_i - \beta_0 - \sum^p_{j=1}x_{ij}\beta_j\right)^2, $$</p>
+
+<p>where $\beta = (\beta_1, \beta_2, \dots, \beta_p)^T$ is the vector of all the coefficients.</p>
+
+<p>Now how do we minimize this? Start by denoting an input matrix $\mathbf X$ (dimensionality $N\times p +1$), where each row is an input vector (with a 1 in the first position, to allow for constants in the model). $\mathbf y$ (dimensionality $N$) are all the outputs we have in our training set. Now the <a href="residual-sum-of-squares">RSS</a> is</p>
+
+<p>$$ \text{RSS}(\beta) = (\mathbf y  - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) ,$$</p>
+
+<p>which we can differentiate with respect to $\beta$ to find the minimum.</p>
+
+<p>$$ \frac{\partial \text{RSS}}{\partial \beta} = -2\mathbf X^T (\mathbf y - \mathbf X\beta) $$<br />
+$$ \frac{\partial^2\text{RSS}}{\partial \beta \partial \beta^T} = 2\mathbf X^T\mathbf X $$</p>
+
+<p>For the moment, we assume that $\mathbf X$ has <a href="rank-linear-algebra-">full column rank</a> and $\mathbf X^T \mathbf X$ is thus <a href="positive-definite">positive definite</a> (and <a href="invertibility">invertible</a>). Setting the first derivative to $0$, we get</p>
+
+<p>$$ \mathbf X^T(\mathbf y - \mathbf X\beta) = 0 \Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y $$</p>
+
+<p>and now we easiliy get the predicted values ($\hat y_i = f(x_i)$, gathered in the vector $\hat{\mathbf y}$) as</p>
+
+<p>$$ \hat{\mathbf y} = \mathbf X\hat \beta = \mathbf X(\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y = \mathbf H\mathbf y .$$</p>
+
+<p>We often call $\mathbf H = \mathbf X(\mathbf X^T\mathbf X)^{-1}\mathbf X^T$ the <em>hat matrix</em>.</p>
+
+<p>(There's more to this, but the book gets kinda technical, and I presume this level of detail will come naturally later)</p>
+
+<h2 id="subset-selection">Subset selection</h2>
+
+<p>The estimates produced by <a href="least-squares">least squares</a> are often not satisfactory, for two reasons:</p>
+
+<ul>
+<li><strong>Prediction accuracy</strong>: <a href="least-squares">Least squares estimates</a> often have small bias, but large <a href="variance">variance</a>. Shrinking coefficients or setting them equal zero can often improve the accuracy, by sacrificing some bias.</li>
+<li><strong>Interpretation</strong>: We would often like to determine the subset of a large number of predictors that has the largest effect. Here, we sacrifice the smaller details to get a practical "bigger picture".</li>
+</ul>
+
+<h2 id="model-assessment">Model assessment</h2>
+
+<h3 id="bias-variance-and-model-complexity">Bias, variance and model complexity</h3>
+
+<p>There is a balance to be struck in our model complexity, as seen by this graph from <a href="the-elements-of-statistical-learning">The Elements of Statistical Learning</a>:</p>
+
+<p><img src="assets/pasted-imagedotpng" alt="assets/Pasted image.png" /></p>
+
+<p><em>The light blue curves show the <a href="training-error">training error</a> $\overline{\text{err}}$, while the light red curves show the <a href="test-error">conditional test error</a> $\text{Err}_{\mathcal T}$ for $100$ training sets of size $50$ each, as the model complexity is increased. The solid curves show the <a href="test-error">expected test error</a> $\text{Err}$ and the <a href="training-error">expected training error</a> $E[\overline{\text{err}}]$.</em></p>
+
+<p><strong><a href="test-error">Test error</a></strong>, or <strong>generalization error</strong>, is the prediction error over an independent test sample:</p>
+
+<p>$$ \text{Err}_{\mathcal T} = \text E[L(Y, \hat f(X))|\mathcal T] ,$$</p>
+
+<p>where both $X$ and $Y$ are drawn randomly from their joint distribution. Here the training set $\mathcal T$ is fixed, and test error refers to the error for this specific training set. The <strong>expected  test error</strong> is</p>
+
+<p>$$ \text{Err} = \text E[L(Y, \hat f(X))] = \text E[\text{Err}_{\mathcal T}] $$</p>
+
+<p><strong><a href="training-error">Training error</a></strong> is the average loss over the training sample</p>
+
+<p>$$ \overline{\text{err}} = \frac{1}{N} \sum_{i=1}^NL(y_i, \hat f(x_i)) .$$</p>
+
+<h3 id="model-assessment-and-selection">Model assessment and selection</h3>
+
+<p>Assume we have a <em>tuning parameter</em> or <em>parameters</em> $\alpha$, so that our predictions can be written $\hat f_\alpha(x)$. $\alpha$ varies the complexity of our model, and the goal is to find the complexity that minimizes our resulting error. There are two goals we have in mind:</p>
+
+<ul>
+<li><strong><a href="model-selection">Model selection</a></strong>: Estimating the <em>performance</em> of different models in order to choose the best one.</li>
+<li><strong><a href="model-assessment">Model assessment</a></strong>: Having chosen a final model, estimating its <em><a href="test-error">generalization error</a></em> on new data.</li>
+</ul>
+
+<p>Now say we are in a situation where we have <em>a lot</em> of data. In this case it would be best practice to randomly separate this data in to three sets, roughly, but not strictly according to this distribution:</p>
+
+<ul>
+<li>50% <strong>Training set</strong>: This set is used to fit the models</li>
+<li>25% <strong>Validation set</strong>: This set is used to estimate the <a href="test-error">prediction error</a> for <em><a href="model-selection">model selection</a></em>.</li>
+<li>25% <strong>Test set</strong>: This set is used for assessing the <a href="test-error">generalization error</a> of the final chosen model.</li>
+</ul>
+
+<p>The validation step can be tested either <em>analytically</em> (<a href="akaike-information-criterion">AIC</a>, <a href="bayesian-information-criterion">BIC</a>, MDL or SRM) or by <em>efficient sample re-use</em> (<a href="cross-validation">cross-validation</a> or <a href="bootstrapping-statistics-">the bootstrap</a>).</p>
+
+<hr />
+
+<p>Meta:</p>
+
+<ul>
+<li>Course: <a href="stk-in4300">STK-IN4300</a></li>
+<li>References: <a href="https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf">The Elements of Statistical Mechanics</a></li>
+<li>Date: <a href="daily/2020-08-24">daily/2020-08-24</a></li>
+</ul>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="2020-08-24">2020-08-24</a></li>
+<li><a href="stk-in4300-lecture-03---more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
+</ul>
+
+</div>
+</div>

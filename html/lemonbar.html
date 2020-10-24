@@ -1,0 +1,30 @@
+<div id="content"><p><strong>lemonbar</strong> is a status bar entirely based on <a href="xcb">XCB</a>. It uses <a href="stdin">stdin</a>, meaning the way to show things on the bar is through piping it. An example of this:</p>
+
+<pre><code>echo "Hello" | lemonbar -p
+</code></pre>
+
+<p>would show a lemonbar with the text <code>Hello</code> on it. Here, I am using the <code>-p</code> (for <em>permanent</em>) flag to ensure the bar doesn't disappear after the <a href="stdin">stdin</a> stream is closed.</p>
+
+<h2 id="lemonbar-formatters">lemonbar formatters</h2>
+
+<p>lemonbar text can be formatted by piping in a text with <code>%{xx}</code>, where <code>xx</code> is/are the formatter(s). The following formatters exist:</p>
+
+<ul>
+<li><code>R</code> - Swap the current background and foreground colors</li>
+<li><code>l</code> - Left align</li>
+<li><code>c</code> - Center align</li>
+<li><code>r</code> - Right align</li>
+<li><code>O&lt;width&gt;</code> - Offsets the position with <code>&lt;width&gt;</code> pixels</li>
+<li><code>B&lt;color&gt;</code> - Background color</li>
+<li><code>F&lt;color&gt;</code> - Foreground color</li>
+<li><code>T&lt;index&gt;</code> - Sets the font for the text. The indices are 1-based and indicate the positional fonts supplied when running lemonbar (this option is for <code>lemonbar-xft</code>)</li>
+<li><code>U&lt;color&gt;</code> - Underline color</li>
+<li><code>A&lt;button&gt;:&lt;command&gt;:</code> - Creates a clickable area. The command <code>&lt;command&gt;</code> is run on click. The field <code>&lt;button&gt;</code> is optional and defaults to left button. Its options are 1 through 5, corresponding to left, middle, right, scroll up and scroll down.</li>
+<li><code>S&lt;dir&gt;</code> - Change the monitor where the bar is drawn. <code>&lt;dir&gt;</code> can be:<br />
+<ul><br />
+<li><code>+/-</code> - Next/previous monitor</li><br />
+<li><code>f/l</code> - First/last monitor</li><br />
+<li><code>0-9</code> - Nth monitor</li><br />
+</ul></li>
+</ul>
+</div>

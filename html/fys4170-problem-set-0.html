@@ -1,0 +1,52 @@
+<div id="content"><h2 id="problem-1">Problem 1</h2>
+
+<h3 id="a">a)</h3>
+
+<p>$$\nabla S = \nabla^i S$$</p>
+
+<p>$$\nabla \cdot \mathbf{A} = \nabla_i A^i$$</p>
+
+<p>$$M = M^i_j \Rightarrow M^T = M_j^i$$</p>
+
+<p>$$M = M^i_j \Rightarrow \text{tr}\ M = M_i^i$$</p>
+
+<h3 id="b">b)</h3>
+
+<p>Using the <a href="levi-civita-symbol">Levi-Civita symbol</a>, <a href="curl-mathematics-">curl</a> can be represented in this way using <a href="index-notation">index notation</a></p>
+
+<p>$$\nabla \times \mathbf{A} = \epsilon_{ijk}\nabla_j A_k$$</p>
+
+<p>Thus, we have</p>
+
+<p>$$\nabla \cdot(\nabla \times \mathbf{A}) = \nabla_i(\epsilon_{ijk}\nabla_j A_k) = \epsilon_{ijk} \nabla_i \nabla_j A_k = 0$$</p>
+
+<p>Since the <a href="levi-civita-symbol">Levi-Civita symbol</a> is antisymmetric and $\nabla_i\nabla_j$ is symmetric.</p>
+
+<hr />
+
+<p>$$\nabla \times (\nabla S) = \epsilon_{ijk}\nabla_j \nabla_k S = 0$$</p>
+
+<p>by the same logic as above.</p>
+
+<h3 id="c">c)</h3>
+
+<ul>
+<li>$\partial_\mu x^\nu = \delta_\mu^\nu$ is valid</li>
+<li>$\partial_\mu x^\mu = 1$ is not valid, but equals $4$.</li>
+<li>$\partial^\mu x^\nu = g^{\mu\nu}$ is valid, because $\partial^\mu x^\nu = g^{\mu\sigma}\partial_\sigma x^\nu = g^{\mu\sigma}\delta_\mu^{\;\sigma} = g^{\mu\nu}$</li>
+<li>$T_{\alpha\enspace\gamma}^{\;\beta} = g^{\beta\mu} T_{\alpha\mu\gamma} = g^{\mu\beta} T_{\alpha\mu\gamma}$ is valid. The <a href="metric-tensor">metric tensor</a> raises the $\beta$ term, and it equals its own <a href="transpose">transpose</a>.</li>
+<li>$T_{\alpha\enspace\beta}^{\;\beta} = g_{\alpha\mu}g^{\beta\alpha} T^{\mu}_{\;\alpha\beta}$ since $\alpha$ appears three times, which is inconsistent with our notation. A solution would be $T_{\alpha\enspace\beta}^{\;\beta} = g_{\alpha\mu}g^{\beta\sigma} T^{\mu}_{\;\sigma\beta}$</li>
+</ul>
+
+<h2 id="problem-2">Problem 2</h2>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="2020-08-20">2020-08-20</a></li>
+</ul>
+
+</div>
+</div>

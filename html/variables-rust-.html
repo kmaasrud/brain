@@ -1,0 +1,36 @@
+<div id="content"><p><strong>Variables</strong> in <a href="rust">Rust</a> are declared with the <code>let</code> keyword, for example:</p>
+
+<pre><code>let x = 5
+</code></pre>
+
+<h3 id="variable-shadowing">Variable shadowing</h3>
+
+<p>You can declare a variable with the same name as a previous variable by repeating the <code>let</code> keyword. This is called <em>shadowing</em>.</p>
+
+<pre><code>fn main() {
+    let x = 5;
+    let x = x + 1; // The old x is now shadowed by the new x
+
+    println!("The value of x is: {}", x);
+}
+</code></pre>
+
+<pre><code>$ cargo run
+   Compiling variables v0.1.0 (file:///projects/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+     Running `target/debug/variables`
+The value of x is: 12
+</code></pre>
+
+<p>Shadowing is different from marking a variable as <a href="mutability-rust-">mutable</a>. Shadowing creates an entirely new variable, just with the same name as a previous variable. This effectively makes the old variable's value inaccessible by succeeding code, but does not delete it.</p>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="constants-rust-">Constants (Rust)</a></li>
+</ul>
+
+</div>
+</div>
