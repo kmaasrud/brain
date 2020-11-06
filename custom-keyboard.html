@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Stochastic gradient descent</title>
+  <title>Custom keyboard</title>
 </head>
 
 <body>
@@ -31,33 +31,16 @@
       </div>
     </nav>
     <article>
-      <header>Stochastic gradient descent</header>
-      <div id="content"><p><strong>Stochastic gradient descen</strong> or <strong>SDG</strong> is a special form of <a href="gradient-descent">gradient descent</a> designed to increase numerical efficiency over the regular method. It considers the <a href="cost-function">cost function</a> $C$, described by the parameter $w$ we wish to optimize. It is typically defined over all observations in the (<a href="training-set">training</a>) dataset</p>
+      <header>Custom keyboard</header>
+      <div id="content"><p>This is my WIP recipe for a custom keyboard build:</p>
 
-<p>$$C(w, b) = \frac{1}{N}\sum_{i=1}^N C_i(w, b),$$</p>
-
-<p>where $C_i$ is the cost associated with the $i$'th observation. Regular <a href="gradient-descent">gradient descent</a> would calculate the gradient over all these observations before taking a step,</p>
-
-<p>$$w\rightarrow w' = w - \eta \nabla C(w) = w - \frac{\eta}{N}\sum_{i=1}^N \nabla C_i(w).$$</p>
-
-<p>Stochastic gradient descent changes this recipe by taking a step towards optimizing $w$ for each observation, randomly ordered. This is more easily described stepwise:</p>
+<p>I've settled on a 65%, since I most likely will use the arrow keys. An alternative could be going 60% and ditching the arrow keys for a more minimal aesthetic. I don't think this'll be as comfortable though, and might make a 40% at a later date for compact usage.</p>
 
 <ul>
-<li>Start with an initial value of $w$ and the stepsize $\eta$.</li>
-<li>Repeat the following until the desired minimum is achieved (when the value of $w$ <a href="convergence">converges</a>):<br />
-<ul><br />
-<li>Randomly shuffle the <a href="training-set">training set</a>.</li><br />
-<li>For each observation $i$, do:<br /><br />
-<ul><br /><br />
-<li>$w\rightarrow w'= w - \eta\nabla C_i(w)$</li><br /><br />
-</ul></li><br />
-</ul></li>
-</ul>
-
-<p>Sources:</p>
-
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Wikipedia</a></li>
+<li>Aluminium plate 65%: <a href="https://kbdfans.com/collections/plate/products/65-cnc-aluminum-plate">KBDFans</a></li>
+<li>DZ65 RGB V2 Hot swap PCB: <a href="https://kbdfans.com/collections/65/products/dz68rgb-hot-swap-rgb-pcb">KBDFans</a></li>
+<li>Tada68 low profile aluminium case (chocolate perhaps?): <a href="https://kbdfans.com/collections/65-layout-case/products/kbdfans-tada68-aluminum-case?variant=21670077923376">KBDFans</a></li>
+<li>Gateron Brown keys: <a href="https://www.banggood.com/70PCS-Pack-3Pin-Gateron-Tactile-Brown-Switch-Keyboard-Switch-for-Mechanical-Gaming-Keyboard-p-1426493.html?rmmds=search&amp;cur_warehouse=CN">Banggood</a> $18.99 + $2.50 shipping</li>
 </ul>
 </div>
     </article>

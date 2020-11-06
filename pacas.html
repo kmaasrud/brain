@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Stochastic gradient descent</title>
+  <title>Pacas</title>
 </head>
 
 <body>
@@ -31,34 +31,86 @@
       </div>
     </nav>
     <article>
-      <header>Stochastic gradient descent</header>
-      <div id="content"><p><strong>Stochastic gradient descen</strong> or <strong>SDG</strong> is a special form of <a href="gradient-descent">gradient descent</a> designed to increase numerical efficiency over the regular method. It considers the <a href="cost-function">cost function</a> $C$, described by the parameter $w$ we wish to optimize. It is typically defined over all observations in the (<a href="training-set">training</a>) dataset</p>
+      <header>Pacas</header>
+      <div id="content"><p>Standard quality in Central America. Very high susceptibility to coffee leaf rust.</p>
 
-<p>$$C(w, b) = \frac{1}{N}\sum_{i=1}^N C_i(w, b),$$</p>
+<h2 id="appearance">Appearance</h2>
 
-<p>where $C_i$ is the cost associated with the $i$'th observation. Regular <a href="gradient-descent">gradient descent</a> would calculate the gradient over all these observations before taking a step,</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center;"><strong>Stature</strong></th>
+  <th style="text-align:center;"><strong>Leaf tip color</strong></th>
+  <th style="text-align:center;"><strong>Bean size</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center;">Dwarf/Compact</td>
+  <td style="text-align:center;">Green</td>
+  <td style="text-align:center;">Average</td>
+</tr>
+</tbody>
+</table>
 
-<p>$$w\rightarrow w' = w - \eta \nabla C(w) = w - \frac{\eta}{N}\sum_{i=1}^N \nabla C_i(w).$$</p>
+<h2 id="agronomics">Agronomics</h2>
 
-<p>Stochastic gradient descent changes this recipe by taking a step towards optimizing $w$ for each observation, randomly ordered. This is more easily described stepwise:</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center;"><strong>Latitude</strong></th>
+  <th style="text-align:center;"><strong>Optimal altitude</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center;">$5^\circ$ N to $5^\circ$ S</td>
+  <td style="text-align:center;">$&gt;1600\text{ m}$</td>
+</tr>
+<tr>
+  <td style="text-align:center;">$5-15^\circ$ N and $5-15^\circ$ S</td>
+  <td style="text-align:center;">$&gt;1300\text{ m}$</td>
+</tr>
+<tr>
+  <td style="text-align:center;">$&gt;15^\circ$ N and $&gt;15^\circ$ S</td>
+  <td style="text-align:center;">$&gt;1000\text{ m}$</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:center;"><strong>Quality potential at high altitude</strong></th>
+  <th style="text-align:center;"><strong>Yield potential</strong></th>
+  <th style="text-align:center;"><strong><a href="coffee-leaf-rust">Coffee leaf rust</a></strong></th>
+  <th style="text-align:center;"><strong><a href="coffee-berry-disease">Coffee berry disease</a></strong></th>
+  <th style="text-align:center;"><strong><a href="nematodes">Nematodes</a></strong></th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center;">Good</td>
+  <td style="text-align:center;">Good</td>
+  <td style="text-align:center;">Susceptible</td>
+  <td style="text-align:center;">Susceptible</td>
+  <td style="text-align:center;">Susceptible</td>
+</tr>
+</tbody>
+</table>
+
+<p>From <a href="https://varieties.worldcoffeeresearch.org/varieties">World Coffee Research</a></p>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
 
 <ul>
-<li>Start with an initial value of $w$ and the stepsize $\eta$.</li>
-<li>Repeat the following until the desired minimum is achieved (when the value of $w$ <a href="convergence">converges</a>):<br />
-<ul><br />
-<li>Randomly shuffle the <a href="training-set">training set</a>.</li><br />
-<li>For each observation $i$, do:<br /><br />
-<ul><br /><br />
-<li>$w\rightarrow w'= w - \eta\nabla C_i(w)$</li><br /><br />
-</ul></li><br />
-</ul></li>
+<li><a href="nacimiento">Nacimiento</a></li>
 </ul>
 
-<p>Sources:</p>
-
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Wikipedia</a></li>
-</ul>
+</div>
 </div>
     </article>
   </div>

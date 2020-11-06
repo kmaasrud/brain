@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Stochastic gradient descent</title>
+  <title>Coffee leaf rust</title>
 </head>
 
 <body>
@@ -31,34 +31,16 @@
       </div>
     </nav>
     <article>
-      <header>Stochastic gradient descent</header>
-      <div id="content"><p><strong>Stochastic gradient descen</strong> or <strong>SDG</strong> is a special form of <a href="gradient-descent">gradient descent</a> designed to increase numerical efficiency over the regular method. It considers the <a href="cost-function">cost function</a> $C$, described by the parameter $w$ we wish to optimize. It is typically defined over all observations in the (<a href="training-set">training</a>) dataset</p>
+      <header>Coffee leaf rust</header>
+      <div id="content"><div class="backlinks">
 
-<p>$$C(w, b) = \frac{1}{N}\sum_{i=1}^N C_i(w, b),$$</p>
-
-<p>where $C_i$ is the cost associated with the $i$'th observation. Regular <a href="gradient-descent">gradient descent</a> would calculate the gradient over all these observations before taking a step,</p>
-
-<p>$$w\rightarrow w' = w - \eta \nabla C(w) = w - \frac{\eta}{N}\sum_{i=1}^N \nabla C_i(w).$$</p>
-
-<p>Stochastic gradient descent changes this recipe by taking a step towards optimizing $w$ for each observation, randomly ordered. This is more easily described stepwise:</p>
+<h2 id="backlinks">Backlinks</h2>
 
 <ul>
-<li>Start with an initial value of $w$ and the stepsize $\eta$.</li>
-<li>Repeat the following until the desired minimum is achieved (when the value of $w$ <a href="convergence">converges</a>):<br />
-<ul><br />
-<li>Randomly shuffle the <a href="training-set">training set</a>.</li><br />
-<li>For each observation $i$, do:<br /><br />
-<ul><br /><br />
-<li>$w\rightarrow w'= w - \eta\nabla C_i(w)$</li><br /><br />
-</ul></li><br />
-</ul></li>
+<li><a href="pacas">Pacas</a></li>
 </ul>
 
-<p>Sources:</p>
-
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Wikipedia</a></li>
-</ul>
+</div>
 </div>
     </article>
   </div>
