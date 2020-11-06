@@ -5,10 +5,5 @@ Description
 - **Country**: 
 - **Region**: 
 
-## Cup history
+## Cup description
 
-1. Description
-	- **Time**: 
-	- **Amount**: 
-	- **Grind size**: 
-	- **Rating**: 
