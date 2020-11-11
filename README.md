@@ -1,4 +1,6 @@
-<div align="center"><img src="brain.svg"></div>
+<div align="center"><img width="200" src="brain.svg"></div>
+
+---
 
 **Hello!** It looks like you've stumbled upon the source for my [personal knowledge base](https://en.wikipedia.org/wiki/Personal_knowledge_base), a construct which I call Brain. You can explore it by following [this link](https://www.kmaasrud.com/brain).
 
