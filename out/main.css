@@ -2,7 +2,7 @@
 html { padding-bottom: 200px; }
 
 /* Images */
-img {
+article img {
   display: block;
   margin: 0px auto;
   width: 80%;
