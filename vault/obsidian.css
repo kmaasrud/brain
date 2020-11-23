@@ -679,6 +679,9 @@ body, input, button,
   padding-bottom:4px;
   cursor:text;
 }
+.CodeMirror .cm-inline-code, .CodeMirror .cm-math {
+  color: var(--text-muted);
+}
 .cm-hashtag-begin {
   border-top-left-radius:14px;
   border-bottom-left-radius:14px;
