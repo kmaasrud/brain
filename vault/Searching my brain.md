@@ -1,0 +1,1 @@
+I first need to implement an optional feature of generating a JSON map of all the content, as part of [`obsidian-html`](https://github.com/kmaasrud/obsidian-html). Thereafter, I'm looking at [tinysearch](https://github.com/tinysearch/tinysearch) as a viable option for an engine to host the search on my site.
