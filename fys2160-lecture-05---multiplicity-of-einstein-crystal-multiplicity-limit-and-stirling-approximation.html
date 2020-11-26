@@ -83,7 +83,7 @@
 
 <p>A simple <a href="python">Python</a> implementation follows here:</p>
 
-<pre><code>from matplotlib.pyplot import *
+<pre><code class="python lang-python language-python">from matplotlib.pyplot import *
 
 # comb(N,k) returns the number of N things taken k at a time.
 from scipy.special import comb
@@ -103,8 +103,7 @@ def multiplicity_plot(NA, NB, q):
     plot(qA_all, totMult, '-o')
 
     xlabel(r'$q_A$'), ylabel(r'$\Omega$')
-    show()
-</code></pre>
+    show()</code></pre>
 
 <p>Running <code>multiplicity_plot(100, 100, 200)</code> returns this plot:</p>
 
@@ -124,17 +123,6 @@ def multiplicity_plot(NA, NB, q):
 <li>Date: <a href="daily/2020-09-01">daily/2020-09-01</a></li>
 <li>Time: 12:55</li>
 </ul>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="2020-09-01">2020-09-01</a></li>
-<li><a href="fys2160-lecture-06--">FYS2160 Lecture 06 -</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -168,10 +156,14 @@ def multiplicity_plot(NA, NB, q):
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

@@ -38,16 +38,6 @@
       <div id="content"><p>The <strong>Heaviside step function</strong> is a <a href="discontinuous">discontinuous</a> function whose value is $0$ for all negative values and $1$ for non-negative values. It is defined as</p>
 
 <p>$$H(x) \equiv \begin{cases}0 &amp; \text{for } x&lt;0 \ 1 &amp; \text{for } x \ge 0\end{cases}$$</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="perceptron">Perceptron</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -81,10 +71,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

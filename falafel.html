@@ -80,8 +80,9 @@
 <li><p>Når falaflene er ferdige, la dem kjøle seg litt ned på kjøkkenpapir og server toppet med litt <a href="tahini">tahini</a>, ved siden av litt <a href="pita">pitabrød</a> og <a href="hummus">hummus</a>.</p></li>
 </ul>
 
-<p><a href="https://toriavey.com/toris-kitchen/falafel/">Kilde</a><br />
-<span class="tag">Oppskrift</span></p>
+<p><a href="https://toriavey.com/toris-kitchen/falafel/">Kilde</a></p>
+
+<p><span class="tag">Oppskrift</span></p>
 </div>
     </article>
   </div>
@@ -115,10 +116,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

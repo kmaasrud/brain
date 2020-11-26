@@ -37,33 +37,21 @@
       <header>Mutability (Rust)</header>
       <div id="content"><p>All variables in <a href="rust">Rust</a> are <a href="mutability-programming-">immutable</a> by default. This is to prevent bugs related to an unexpected change, which can be hard to debug. However, mutability is supported and can be explicitly stated by using the <code>mut</code> keyword: </p>
 
-<pre><code>let mut x = 5;
+<pre><code class="rust lang-rust language-rust">let mut x = 5;
 println!("The value of x is: {}", x);
 x = 6;
-println!("The value of x is: {}", x);
-</code></pre>
+println!("The value of x is: {}", x);</code></pre>
 
 <p>The above code will not throw a compile error, whilst omitting <code>mut</code> would have.</p>
 
-<pre><code>$ cargo run
+<pre><code class="plaintext lang-plaintext language-plaintext">$ cargo run
    Compiling variables v0.1.0 (file:///projects/variables)
     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/variables`
 The value of x is: 5
-The value of x is: 6
-</code></pre>
+The value of x is: 6</code></pre>
 
 <p>Note that immutable variables in <a href="rust">Rust</a> are different from <a href="constants-rust-">Rust constants</a>.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="variables-rust-">Variables (Rust)</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -97,10 +85,14 @@ The value of x is: 6
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

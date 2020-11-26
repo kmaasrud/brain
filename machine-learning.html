@@ -35,18 +35,7 @@
     </nav>
     <article>
       <header>Machine learning</header>
-      <div id="content"><div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="backpropagation">Backpropagation</a></li>
-<li><a href="bootstrapping-statistics-">Bootstrapping (statistics)</a></li>
-<li><a href="fys-stk4155-lecture-01---machine-learning-an-introduction">FYS-STK4155 Lecture 01 - Machine learning, an introduction</a></li>
-<li><a href="fys-stk4155-lecture-02---linear-regression">FYS-STK4155 Lecture 02 - Linear regression</a></li>
-</ul>
-
-</div>
+      <div id="content"><p></p>
 </div>
     </article>
   </div>
@@ -80,10 +69,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

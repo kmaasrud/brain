@@ -40,16 +40,6 @@
 <p>$$a_{n+1} = a_n  + \eta \nabla f(a_n)$$</p>
 
 <p>Here, $a_i$ refers to the $i$'th step, $\eta$ is the step size and $f$ is the function in question.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="stochastic-gradient-descent">Stochastic gradient descent</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -83,10 +73,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

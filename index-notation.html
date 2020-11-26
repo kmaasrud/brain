@@ -64,18 +64,6 @@
 <li>$a_{ij} x_i y_j \ne a_{ij} x_j y_i$</li>
 <li>$(a_{ij} + a_{ji})x_i y_j \ne 2a_{ij} x_i y_j$</li>
 </ol>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="fys4170-lecture-01---introduction-to-quantum-field-theory">FYS4170 Lecture 01 - Introduction to quantum field theory</a></li>
-<li><a href="fys4170-problem-set-0">FYS4170 Problem set 0</a></li>
-<li><a href="kroenecker-delta">Kroenecker delta</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -109,10 +97,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

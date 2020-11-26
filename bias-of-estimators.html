@@ -38,17 +38,6 @@
       <div id="content"><p>The <strong>bias of an <a href="estimator">estimator</a></strong> is the difference between the esimator's <a href="expected-value-statistics-">expected value</a> and the true value of the parameter being estimated.</p>
 
 <p>Source: <a href="https://en.wikipedia.org/wiki/Bias_of_an_estimator">Wikipedia</a></p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="bias-variance-tradeoff">Bias-variance tradeoff</a></li>
-<li><a href="ridge-regression">Ridge regression</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -82,10 +71,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

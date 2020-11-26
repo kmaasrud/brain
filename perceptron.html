@@ -44,7 +44,7 @@
 <ol>
 <li>Is the weather good?</li>
 <li>Have I gotten my paycheck?</li>
-<li>Are the stores open today?<spand id="6d807f"></span></li>
+<li>Are the stores open today?<span id="6d807f"></span></li>
 </ol>
 
 <p>The answers to these questions are all $1/0$ (yes/no), but can have loads of inputs that aid in finding the correct answer. Not only that, but the answers to these three can further contribute in answering the question of wether I'm going grocery shopping today or not. Many structures with multiple layers can arise from this approach, and quickly get complex. They are, however, useful in many decision making problems.</p>
@@ -56,18 +56,6 @@
 <p>$$\text{output} = \begin{cases}0 &amp; \text{if } \mathbf w\cdot \mathbf x + b \le 0 \ 1 &amp; \text{if } \mathbf w \cdot \mathbf x + b &gt; 0\end{cases}$$</p>
 
 <p>so it can be described as an <a href="artificial-neuron">artificial neuron</a> with a <a href="heaviside-step-function">Heaviside</a> <a href="activation-function">activation function</a>.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="artificial-neuron">Artificial neuron</a></li>
-<li><a href="sigmoid-neuron">Sigmoid neuron</a></li>
-<li><a href="testing-new-syntax">Testing new syntax</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -101,10 +89,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

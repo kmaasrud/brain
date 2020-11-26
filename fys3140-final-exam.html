@@ -195,16 +195,6 @@ $$U(x,s) = e^{-\frac{sx}{c}}G(s).$$<br />
 The task gives us the shifting property $$\mathcal L\left\{f(t-a)H(t-a)\right\} = e^{-as}F(s)$$. Applying this backwards gives me an expression for $$u(x,t)$$:<br />
 $$u(x,t) = \mathcal L^{-1}\left\{U(x,s)\right\} = \mathcal L^{-1}\left\{e^{-\frac{x}{c}s}G(s)\right\} = g\left(t - \frac{x}{c}\right)H\left(t - \frac{x}{c}\right),$$<br />
 $$u(x,t) = \bigg\{\begin{matrix}\sin\left(t - \frac{x}{c}\right), &amp; \frac{x}{c} \le t &lt; \frac{x}{c} + 2\pi \ 0, &amp; \text{otherwise}\end{matrix}.$$</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="2020-06-30">2020-06-30</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -238,10 +228,14 @@ $$u(x,t) = \bigg\{\begin{matrix}\sin\left(t - \frac{x}{c}\right), &amp; \frac{x}
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

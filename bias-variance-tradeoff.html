@@ -49,17 +49,6 @@
 <blockquote>
   <p>Bias is related with a model failing to fit the training set and variance is related with a model failing to fit the testing set.</p>
 </blockquote>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="ridge-regression">Ridge regression</a></li>
-<li><a href="stk-in4300-lecture-03---more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -93,10 +82,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

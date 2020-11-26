@@ -42,16 +42,6 @@
 <p>$$ \forall\ i,j:\langle v_i, v_j\rangle = \delta_{ij}, $$</p>
 
 <p>where $\delta_{ij}$ is the <a href="kroenecker-delta">Kroenecker delta</a> and $\langle \cdot,\cdot\rangle$ is the <a href="inner-product">inner product</a> defined in $\mathcal V$.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="ridge-regression">Ridge regression</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -85,10 +75,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

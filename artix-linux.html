@@ -36,16 +36,6 @@
     <article>
       <header>Artix Linux</header>
       <div id="content"><p><strong>Artix Linux</strong> is a <a href="rolling-release">rolling release</a> distro based on <a href="arch-linux">Arch Linux</a>. The main difference from <a href="arch-linux">Arch</a> is it ships without <a href="systemd">systemd</a>, and gives you the choice of more minimal init systems like <a href="runit">runit</a>, <a href="openrc">OpenRC</a> or <a href="s6">s6</a>.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="my-computer">My computer</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -79,10 +69,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

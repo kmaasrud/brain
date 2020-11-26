@@ -35,9 +35,9 @@
     </nav>
     <article>
       <header>2020-07-30</header>
-      <div id="content"><h1 id="tag-asda">tag asda.</h1>
+      <div id="content"><p><span class="tag">tag</span> asda.</p>
 
-<p>And here is another<span class="tag">tag</span>, wtf, but does it fit<br />
+<p>And here is another <span class="tag">tag</span>, wtf, but does it fit<br />
 with another line though? Seems like it.</p>
 </div>
     </article>
@@ -72,10 +72,14 @@ with another line though? Seems like it.</p>
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

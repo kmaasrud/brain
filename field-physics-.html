@@ -40,16 +40,6 @@
 <blockquote>
   <p>A <strong>field</strong> is a physical quantity, represented by a <a href="number">number</a> or <a href="tensor">tensor</a>, that has a value for each point in <a href="space-time">space-time</a>.</p>
 </blockquote>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="fys4170-lecture-01---introduction-to-quantum-field-theory">FYS4170 Lecture 01 - Introduction to quantum field theory</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -83,10 +73,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

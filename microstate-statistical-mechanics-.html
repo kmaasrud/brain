@@ -36,17 +36,6 @@
     <article>
       <header>Microstate (statistical mechanics)</header>
       <div id="content"><p>A <strong>microstate</strong> is a specific configuration of a thermodynamical system at the microscopic level. This is in contrast to a <em><a href="macrostate-statistical-mechanics-">macrostate</a></em>, which refers to properties like <a href="temperature">temperature</a>, <a href="pressure">pressure</a>, <a href="volume">volume</a> or <a href="density">density</a>. We can often specify a microstate as the vector of the state of each of the $N$ elements in the system $(q_1,...,q_N)$, where the $q_i$'s are the properties measured for the $i$th element.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="fys2160-lecture-04---microstates-and-multiplicity-of-a-macrostate">FYS2160 Lecture 04 - Microstates and multiplicity of a macrostate</a></li>
-<li><a href="fys2160-lecture-05---multiplicity-of-einstein-crystal-multiplicity-limit-and-stirling-approximation">FYS2160 Lecture 05 - Multiplicity of Einstein crystal, multiplicity limit and Stirling approximation</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -80,10 +69,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

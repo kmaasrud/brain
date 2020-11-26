@@ -68,16 +68,6 @@ Preferred style, according to <a href="stuart-sierra">Stuart Sierra</a><br />
 Sources:<br />
     <a href="https://8thlight.com/blog/colin-jones/2010/12/05/clojure-libs-and-namespaces-require-use-import-and-ns.html">Clojure Libs and Namespaces: require, use, import, and ns</a><br />
     <a href="https://stuartsierra.com/2016/clojure-how-to-ns.html">How to ns</a></p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="clojure-quote">Clojure quote</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -111,10 +101,14 @@ Sources:<br />
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

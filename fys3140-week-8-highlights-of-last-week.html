@@ -44,16 +44,6 @@
         - If one solution $$y_1(x)$$ of the homogeneous DE is known, a second, linearly independent one, can be found by variation of constants, $$y_2(x) =c(x)y_1(x)$$.  This ansatz will lead to a firstorder DE for $$c′(x)$$, to be solved by integrating factors.<br />
 - Ordinary differential equations - homogeneous case<br />
     - Homogeneous DEs with constant coefficients:  General solution of the form $$e^{\lambda x}$$.  Get a quadratic characteristic equation for $$\lambda$$.  Roots can be real or complex.  In the case of double roots, variation of constants gives $$y(x) = (A+Bx)e^{\lambda x}$$.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="fys3140-week-8">FYS3140 Week 8</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -87,10 +77,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

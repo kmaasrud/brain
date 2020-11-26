@@ -36,16 +36,6 @@
     <article>
       <header>Selection bias</header>
       <div id="content"><p><strong>Selection bias</strong> is the bias introduced into a statistical model or prediction, based on how the data used in the model was originally selected. A dataset used for training or analysis should be totally randomized and accurately reflect the population to avoid this issue.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="stk-in4300-lecture-03---more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -79,10 +69,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

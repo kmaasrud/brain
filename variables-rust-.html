@@ -37,39 +37,26 @@
       <header>Variables (Rust)</header>
       <div id="content"><p><strong>Variables</strong> in <a href="rust">Rust</a> are declared with the <code>let</code> keyword, for example:</p>
 
-<pre><code>let x = 5
-</code></pre>
+<pre><code class="rust lang-rust language-rust">let x = 5</code></pre>
 
 <h3 id="variable-shadowing">Variable shadowing</h3>
 
 <p>You can declare a variable with the same name as a previous variable by repeating the <code>let</code> keyword. This is called <em>shadowing</em>.</p>
 
-<pre><code>fn main() {
+<pre><code class="rust lang-rust language-rust">fn main() {
     let x = 5;
     let x = x + 1; // The old x is now shadowed by the new x
 
     println!("The value of x is: {}", x);
-}
-</code></pre>
+}</code></pre>
 
-<pre><code>$ cargo run
+<pre><code class="plaintext lang-plaintext language-plaintext">$ cargo run
    Compiling variables v0.1.0 (file:///projects/variables)
     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/variables`
-The value of x is: 12
-</code></pre>
+The value of x is: 12</code></pre>
 
 <p>Shadowing is different from marking a variable as <a href="mutability-rust-">mutable</a>. Shadowing creates an entirely new variable, just with the same name as a previous variable. This effectively makes the old variable's value inaccessible by succeeding code, but does not delete it.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="constants-rust-">Constants (Rust)</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -103,10 +90,14 @@ The value of x is: 12
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

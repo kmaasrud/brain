@@ -40,16 +40,6 @@
 <p>$$ \hat \beta^{\text{lasso}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p |\beta_j| \end{Bmatrix} .$$</p>
 
 <p>Notice the similarity to <a href="ridge-regression">Ridge regression</a>, the difference being the penalty. The ridge penalty $L_2 \equiv \sum_{j=1}^p\beta_j^2$ is replaced by the Lasso penalty $L_1 \equiv \sum_{j=1}^p |\beta_j|$. There's also a difference in that the Lasso regressor has no closed form expression, and must thus be computed programatically.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="linear-regression">Linear regression</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -83,10 +73,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

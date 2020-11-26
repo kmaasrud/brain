@@ -78,16 +78,6 @@
 <p>Fordel fisken i bunnen av et smurt ildfast fat, ca. 20 x 30 cm. Hell sausen over og vend fisken forsiktig inn i sausen. Strø over et jevnt lag med strøkavring eller panko, og drypp gjerne litt olivenolje over. Stekes midt i ovnen på 200 grader i 35-45 minutter, til gratengen har stivnet og strøkavringen har fått en fin og gyllen farge. Følg med mot slutten av steketiden.</p>
 
 <p>Mens fiskegratengen koser seg i ovnen koker du potetene. Lag tomatsalat ved å ha cherrytomatene i en liten bolle. Dryss over maldonsalt, ristede pinjekjerner/gresskarkjerner og friske basilikumblader, og rungle til slutt litt av din beste olivenolje over.</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="testing-new-syntax">Testing new syntax</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -121,10 +111,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

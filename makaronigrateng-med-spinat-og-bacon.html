@@ -65,18 +65,9 @@
 <li>Stek gratengen i ca. 20 minutter, til den har fått en fin farge og bobler langs kanten.</li>
 </ul>
 
-<p><a href="https://matpaabordet.no/2017/01/06/mac-n-cheese-med-spinat-og-bacon/">Kilde</a><br />
-<span class="tag">Oppskrift</span></p>
+<p><a href="https://matpaabordet.no/2017/01/06/mac-n-cheese-med-spinat-og-bacon/">Kilde</a></p>
 
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="2020-08-18">2020-08-18</a></li>
-</ul>
-
-</div>
+<p><span class="tag">Oppskrift</span></p>
 </div>
     </article>
   </div>
@@ -110,10 +101,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

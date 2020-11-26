@@ -38,16 +38,6 @@
       <div id="content"><p>The <strong>identity matrix</strong> (denoted $\mathbf I$, $\mathbb I$, $\mathbb 1$ or just $I$) is the $n\times n$ matrix containing $1$'s along its diagonal. For example, with $n = 3$:</p>
 
 <p>$$ \mathbf I_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \ 0 &amp; 1 &amp; 0 \ 0 &amp; 0 &amp; 1\end{pmatrix}$$</p>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="kroenecker-delta">Kroenecker delta</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -81,10 +71,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

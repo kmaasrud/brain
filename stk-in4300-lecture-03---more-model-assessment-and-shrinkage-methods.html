@@ -80,16 +80,6 @@
 <li>References: <a href="https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf">The Elements of Statistical Mechanics</a> and <a href="riccardo-de-bin">Riccardo's</a> <a href="https://www.uio.no/studier/emner/matnat/math/STK-IN4300/h20/slides/lecture_3.pdf">lecture notes</a>.</li>
 <li>Date: <a href="daily/2020-08-31">daily/2020-08-31</a> and <a href="daily/2020-09-02">daily/2020-09-02</a></li>
 </ul>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="2020-08-31">2020-08-31</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -123,10 +113,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

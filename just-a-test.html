@@ -40,6 +40,8 @@
 <p>Here is a <a href="links#header-link-with-dot">header link with .</a>, which I know Hugo isn't happy with.</p>
 
 <p>Okay say another link <a href="links#some-header">Some header</a></p>
+
+<p>Here is <mark class="highlight">highlight</mark>). <img src="pasted-imagedotpng" alt="Pasted image.png" /></p>
 </div>
     </article>
   </div>
@@ -73,10 +75,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>

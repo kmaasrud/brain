@@ -41,7 +41,7 @@
 <li>Tittel: <a href="karl-marx">Karl Marx</a> som influencer.</li>
 <li>Gjest: <a href="helene-nord-mjømen">Helene Nord Mjømen</a>.</li>
 <li>Ganske forsinket. Var mye å gjøre med jobb og skole, samt at filene ble lagret på <a href="håvard">Håvard</a> sin PC, så det tok tid før jeg fikk begynt med redigering.</li>
-<li>[x] Sluppet: </li>
+<li><input type="checkbox" class="task-list-item-checkbox" checked disabled> Sluppet: </li>
 <li>Struktur<br />
 <ul><br />
 <li>Intro: Helenes matvaner</li><br />
@@ -58,16 +58,6 @@
 </ul></li><br />
 </ul></li>
 </ul>
-
-<div class="backlinks">
-
-<h2 id="backlinks">Backlinks</h2>
-
-<ul>
-<li><a href="2020-02-28">2020-02-28</a></li>
-</ul>
-
-</div>
 </div>
     </article>
   </div>
@@ -101,10 +91,14 @@
   </script>
   
   <!-- Syntax highlighting through highlight.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/github-gist.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@10.4.0/highlight.min.js"></script>
 
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    // Ignore highlighting of mermaid
+    hljs.configure({noHighlightRe: /^mermaid$/});
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>
