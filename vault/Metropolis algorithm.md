@@ -1,0 +1,1 @@
+The **Metropolis** or **Metropolis-Hastings** algorithm is a method of obtaining random samples from a [[Probability distribution|probability distribution]] which might be difficult to sample directly from.
