@@ -2,9 +2,9 @@ The **Metropolis** or **Metropolis-Hastings** algorithm is a method of obtaining
 
 ## The algorithm
 
-We often might know a [[Probability distribution|probability distribution]] $P(\theta)$ only up to the [[Proportionality|proportional function]] $f(\theta)$, because doing integration to normalize it might be difficult. We are thus presented with the case of
+We often might know a [[Probability distribution|probability distribution]] $P(\theta)$ only up to the [[Proportionality|proportional function]] $g(\theta)$, because doing integration to normalize it might be difficult. We are thus presented with the case of
 
-$$p(\theta) \propto f(\theta),$$
+$$p(\theta) \propto g(\theta),$$
 
 where our goal is to sample from $p(\theta)$. The algorithm proceeds as follows:
 
