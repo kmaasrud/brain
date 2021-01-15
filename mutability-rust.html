@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Rank (linear algebra)</title>
+  <title>Mutability (Rust)</title>
   <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
 </head>
@@ -34,16 +34,29 @@
       </div>
     </nav>
     <article>
-      <header>Rank (linear algebra)</header>
-      <div id="content"><p>The <strong>rank</strong> of a matrix $A$ is the <a href="dimension">dimension</a> of the <a href="vector-space">vector space</a> spanned by either the <em>columns</em> or the <em>rows</em>. This is directly correspondent to the number of <a href="linear-independence">linearly independent</a> column/row vectors of $A$. The common practice is to denote the rank as:</p>
+      <header>Mutability (Rust)</header>
+      <div id="content"><p>All variables in <a href="rust">Rust</a> are <a href="mutability-programming">immutable</a> by default. This is to prevent bugs related to an unexpected change, which can be hard to debug. However, mutability is supported and can be explicitly stated by using the <code>mut</code> keyword: </p>
 
-<p>$$ \text{rank}(A) $$</p>
+<pre><code class="rust lang-rust language-rust">let mut x = 5;
+println!("The value of x is: {}", x);
+x = 6;
+println!("The value of x is: {}", x);</code></pre>
+
+<p>The above code will not throw a compile error, whilst omitting <code>mut</code> would have.</p>
+
+<pre><code class="plaintext lang-plaintext language-plaintext">$ cargo run
+   Compiling variables v0.1.0 (file:///projects/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+     Running `target/debug/variables`
+The value of x is: 5
+The value of x is: 6</code></pre>
+
+<p>Note that immutable variables in <a href="rust">Rust</a> are different from <a href="constants-rust">Rust constants</a>.</p>
 </div>
       <div class="backlinks">
 
 <ul>
-<li><a href="ordinary-least-squares-regression">Ordinary least squares regression</a></li>
-<li><a href="stk-in4300-lecture-02---linear-methods-for-regression">STK-IN4300 Lecture 02 - Linear methods for regression</a></li>
+<li><a href="variables-rust">Variables (Rust)</a></li>
 </ul>
 
 </div>

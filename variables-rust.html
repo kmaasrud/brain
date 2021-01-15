@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Field (physics)</title>
+  <title>Variables (Rust)</title>
   <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
 </head>
@@ -34,17 +34,34 @@
       </div>
     </nav>
     <article>
-      <header>Field (physics)</header>
-      <div id="content"><p>From <a href="https://en.wikipedia.org/wiki/Field_(physics)">Wikipedia</a>:</p>
+      <header>Variables (Rust)</header>
+      <div id="content"><p><strong>Variables</strong> in <a href="rust">Rust</a> are declared with the <code>let</code> keyword, for example:</p>
 
-<blockquote>
-  <p>A <strong>field</strong> is a physical quantity, represented by a <a href="number">number</a> or <a href="tensor">tensor</a>, that has a value for each point in <a href="space-time">space-time</a>.</p>
-</blockquote>
+<pre><code class="rust lang-rust language-rust">let x = 5</code></pre>
+
+<h3 id="variable-shadowing">Variable shadowing</h3>
+
+<p>You can declare a variable with the same name as a previous variable by repeating the <code>let</code> keyword. This is called <em>shadowing</em>.</p>
+
+<pre><code class="rust lang-rust language-rust">fn main() {
+    let x = 5;
+    let x = x + 1; // The old x is now shadowed by the new x
+
+    println!("The value of x is: {}", x);
+}</code></pre>
+
+<pre><code class="plaintext lang-plaintext language-plaintext">$ cargo run
+   Compiling variables v0.1.0 (file:///projects/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+     Running `target/debug/variables`
+The value of x is: 12</code></pre>
+
+<p>Shadowing is different from marking a variable as <a href="mutability-rust">mutable</a>. Shadowing creates an entirely new variable, just with the same name as a previous variable. This effectively makes the old variable's value inaccessible by succeeding code, but does not delete it.</p>
 </div>
       <div class="backlinks">
 
 <ul>
-<li><a href="fys4170-lecture-01---introduction-to-quantum-field-theory">FYS4170 Lecture 01 - Introduction to quantum field theory</a></li>
+<li><a href="constants-rust">Constants (Rust)</a></li>
 </ul>
 
 </div>

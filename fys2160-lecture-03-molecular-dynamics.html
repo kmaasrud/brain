@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>FYS2160 Lecture 02 - Models, ideal gas model, equipartition of energy</title>
+  <title>FYS2160 Lecture 03 - Molecular dynamics</title>
   <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
 </head>
@@ -34,48 +34,36 @@
       </div>
     </nav>
     <article>
-      <header>FYS2160 Lecture 02 - Models, ideal gas model, equipartition of energy</header>
-      <div id="content"><p><a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Lectures%20and%20assignments/Lecture2/Lecture_2_Fys2160_2020.pdf">Link to lecture notes</a></p>
+      <header>FYS2160 Lecture 03 - Molecular dynamics</header>
+      <div id="content"><p>(These notes were not taken from the actual lecture, but from the <a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf">compendium</a> and other sources)</p>
 
-<p>(I probably know most of this from the previous year, but here are a couple of short notes.)</p>
+<h2 id="molecular-dynamics">Molecular dynamics</h2>
 
-<hr />
+<p><strong><a href="molecular-dynamics">Molecular dynamics</a></strong> or <em>MD</em> is  a study of the physical movements of a system of <a href="atom">atoms</a>/<a href="molecule">molecules</a> via numerically computing their movements. Most commonly, <a href="newtons-laws-of-motion">Newton's laws of motion</a> are used, based on the <a href="interatomic-potential">interatomic potentials</a> present in the system. </p>
 
-<h2 id="relaxation-to-equilibriumthermodynamic-equilibrium-by-diffusiondiffusion">Relaxation to <a href="thermodynamic-equilibrium">equilibrium</a> by <a href="diffusion">diffusion</a></h2>
+<p>Now, to accurately depict the dynamics of a large enough system, we would need to compute advanced <a href="quantum-mechanics">quantum mechanical</a> effects on an enormous amount of particles, which would be computationally demanding. Therefore, simplifications - like using <a href="newtons-laws-of-motion">Newton's laws</a> and/or only considering interactions between neighbouring particles - are required, but only to a point where the cumulating errors are kept to a minimum. </p>
 
-<h3 id="macroscopic-explanation">Macroscopic explanation</h3>
+<h3 id="leonard-jones-potential">Leonard-Jones potential</h3>
 
-<p>There's a net transport of either <em>energy</em> or <em>particles</em> until a <a href="thermodynamic-equilibrium">Thermodynamic equilibrium</a> is reached. This is somewhat unexplained in the macroscopic scale. There is, for example, a <a href="proportionality">proportionality rule</a> between the <a href="gradient">gradient</a> of concentration/temperature and the corresponding flux:</p>
-
-<ul>
-<li>$\vec J =-D\nabla c$</li>
-<li>$\vec Q = -\lambda \nabla T$</li>
-</ul>
-
-<h3 id="microscopic-explanation">Microscopic explanation</h3>
-
-<p>There's a net transportation of <em>energy</em> or <em>particles</em> via random thermal motion and particle collisions, which eventually makes the system reach equilibrium. </p>
-
-<h2 id="models-of-diffusiondiffusion">Models of <a href="diffusion">diffusion</a></h2>
+<p>Let us consider one very simple system. We want to model the interactions between <a href="noble-gas">noble gas</a> atoms, for example <a href="argon">Argon</a>. Between two atoms, these are the main contributions:</p>
 
 <ul>
-<li>Molecular dynamics</li>
-<li><a href="random-walk">Random walk</a></li>
-<li><a href="algorithmic-model-of-diffusion">Algorithmic</a></li>
-<li><a href="ideal-gas">Ideal gas</a></li>
+<li><strong><a href="van-der-waals-force">Van der Waals interaction</a></strong>: There is an <em>attractive</em> force between the atoms, with a potential <a href="proportionality">proportional</a> to $1/r^6$ ($r$ being the distance between them). </li>
+<li><strong><a href="exchange-interaction">Pauli repulsion</a></strong>: Due to the possibility of overlapping orbitals, there are quantum mechanical effects which cause <em>repulsion</em> between the atoms. This course will not go deeper into this, and we model this with a power law of the form $1/r^n$. In the case of <a href="argon">Argon</a>, a suitable approximation would be $n = 12$.</li>
 </ul>
 
-<h2 id="equipartition-theoremequipartition-theorem"><a href="equipartition-theorem">Equipartition theorem</a></h2>
+<p>Combining these into one model, we get the <a href="leonard-jones-potential">Leonard-Jones potential</a>:</p>
 
-<p>The <a href="equipartition-theorem">Equipartition theorem</a> reads:</p>
+<p>$$ U(r) = 4\epsilon \left(\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right) ,$$</p>
 
-<blockquote>
-  <p>At equilibrium with temperature $T$, any quadratic form of the <a href="internal-energy">internal energy</a> is $\frac{1}{2}k_BT$ per degree of freedom</p>
-</blockquote>
+<p>where $\epsilon$ is a <em>characteristic energy</em>, which is specific for the atoms we are modeling. $\sigma$ is a <em>characteristic length</em>.</p>
 
-<p>In an <a href="ideal-gas">Ideal gas</a> with $N$ particles, this gives</p>
+<p>The minimum of this potential is easily found as</p>
 
-<p>$$U = \frac{f}{2}NkT$$</p>
+<p>$$ F(r) = -\frac{d}{dr} U(r) = 0 $$<br />
+$$ F(r) = 24 \epsilon_0\left(\left(\frac{\sigma}{r}\right)^6 - 2\left(\frac{\sigma}{r}\right)^{12} \right) = 0 \Rightarrow \frac{r}{\sigma} = 2^{1/6} $$</p>
+
+<p>(...Page 34 of compendium)</p>
 
 <hr />
 
@@ -83,14 +71,14 @@
 
 <ul>
 <li>Course: <a href="fys2160">FYS2160</a></li>
-<li>Date: <a href="daily/2020-08-19">daily/2020-08-19</a></li>
-<li>Lecturer: <a href="dag-kristian-dysthe">Dag Kristian Dysthe</a></li>
+<li>References: <a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf">Anders Malthe-Sørensen: "Statistical and Thermal Physics Using Python"</a></li>
+<li>Date: <a href="daily2020-08-24">daily/2020-08-24</a></li>
 </ul>
 </div>
       <div class="backlinks">
 
 <ul>
-<li><a href="2020-08-19">2020-08-19</a></li>
+<li><a href="2020-08-24">2020-08-24</a></li>
 </ul>
 
 </div>

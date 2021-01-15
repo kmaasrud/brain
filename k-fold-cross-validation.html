@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>FYS4170 Lecture 02 - The Lorentz group</title>
+  <title>$K$-fold cross-validation</title>
   <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
 </head>
@@ -34,52 +34,28 @@
       </div>
     </nav>
     <article>
-      <header>FYS4170 Lecture 02 - The Lorentz group</header>
-      <div id="content"><h2 id="lorentz-group">Lorentz group</h2>
+      <header>$K$-fold cross-validation</header>
+      <div id="content"><p><strong>$K$-fold <a href="cross-validation">cross-validation</a></strong> involves splitting our dataset into $K$ different "folds". Say, in our example, that we use $K=6$ and divide our dataset into six different folds. First, we use the first fold as our <a href="testing-set">validation set</a>, train on the other five and compute the prediction error of the fitted model. Then, we use the second fold as our <a href="testing-set">validation set</a> and train on the remaining sets, this time also computing the prediction error. Doing this cycle through all $K=6$ folds and averaging the prediction errors gives us our <a href="cross-validation">cross-validation estimate</a> of the prediction error. </p>
 
-<p>Consider a <a href="space-time">space-time</a> <a href="lorentz-transformation">Lorentz transformation</a> $x^\mu \rightarrow x^{\prime\mu} = \Lambda^\mu_\nu x^\nu$. </p>
+<p>An illustration of this from <a href="http://qingkaikong.blogspot.com/2017/02/machine-learning-9-more-on-artificial.html">Qinkai's blog</a>:</p>
 
-<p>These are equivalent:</p>
+<p><img src="https://raw.githubusercontent.com/qingkaikong/blog/master/2017_05_More_on_applying_ANN/figures/figure_1.jpg" alt="" /></p>
 
-<ul>
-<li>$\Lambda$ is a <a href="lorentz-transformation">Lorentz transformation</a></li>
-<li>$x^2 \equiv \eta_{\mu\nu} x^\mu x^\nu \overset{!}{=} x^{\prime 2}$</li>
-<li>$x^T\eta x \overset{!}{=} (x')^T\eta x' = (\Lambda x)^T\eta (\Lambda x) = x^T\Lambda^T\eta \Lambda x$</li>
-<li><strong>$\eta = \Lambda^T\eta \Lambda$</strong></li>
-</ul>
+<p>Denoting the fitted function that excludes the $k$th fold as $\hat f^{-k}(X)$, and defining a function $\kappa:\{1,\dots,N\}\rightarrow\{1,\dots,K\}$ that takes in an index of the total dataset and returns the index of the fold containing that datapoint, we can write the <a href="cross-validation">cross-validation</a> estimate of the prediction error as</p>
 
-<p>For completeness, lets write the last thing in index-notation as well:  $\eta_{\mu\nu} = \Lambda_\mu^\tau \eta_{\tau\sigma}\Lambda_\nu^\sigma$. </p>
+<p>$$ \text{CV}(\hat f) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i)\right) .$$</p>
 
-<hr />
+<p>With a set of models indexed by the tuning parameter $\alpha$, we see that</p>
 
-<p>Compare this to 3D rotations:  $x^i \rightarrow R^{ij}x^i$</p>
+<p>$$ \text{CV}(\hat f,\alpha) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i, \alpha)\right) $$</p>
 
-<p>$R$ is a rotation $\Leftrightarrow x^2\equiv \vec x\cdot \vec x =$ constant $\Leftrightarrow \mathbb{1}_{3\times3} = R^T \mathbb{1}_{3\times 3}R$ $\Leftrightarrow R$ is <em><a href="orthogonality">orthogonal</a></em>.</p>
-
-<hr />
-
-<p><a href="lorentz-transformation">Lorentz transformations</a> form a <a href="group-mathematics-">group</a> $L$: $\{\{\Lambda\}, \cdot\}$. A group satisfies:</p>
-
-<ul>
-<li><a href="closure">Closure</a>: $\Lambda_1, \Lambda_2 \in L \Rightarrow \Lambda_1 \cdot \Lambda_2 \in L$</li>
-<li><a href="associativity">Associativity</a>: $\forall\ \Lambda_1, \Lambda_2, \Lambda_3 \in L: (\Lambda_1\cdot\Lambda_2)\cdot \Lambda_3 = \Lambda_1\cdot(\lambda_2\cdot\Lambda_3)$</li>
-<li><a href="identity">Identity</a>: $\forall\ \Lambda \in L: \mathbb{1}\cdot\Lambda = \Lambda\cdot \mathbb{1} = \Lambda$</li>
-</ul>
-
-<hr />
-
-<p>Meta:</p>
-
-<ul>
-<li>Course: <span class="tag">FYS</span>4170 </li>
-<li>Lecturer: <a href="torsten-bringmann">Torsten Bringmann</a></li>
-<li>Date: <a href="daily/2020-08-20">daily/2020-08-20</a></li>
-</ul>
+<p>is the curve we need to find the minimum of. The value of $\alpha$ minimizing this curve is often denoted $\hat \alpha$, and we now choose our final model to be $f(x,\hat \alpha)$.</p>
 </div>
       <div class="backlinks">
 
 <ul>
-<li><a href="closure">Closure</a></li>
+<li><a href="cross-validation">Cross-validation</a></li>
+<li><a href="stk-in4300-lecture-03-more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
 </ul>
 
 </div>

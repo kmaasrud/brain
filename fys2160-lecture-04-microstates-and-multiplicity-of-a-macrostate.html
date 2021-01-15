@@ -37,15 +37,15 @@
       <header>FYS2160 Lecture 04 - Microstates and multiplicity of a macrostate</header>
       <div id="content"><h2 id="micro-and-macrostates">Micro- and macrostates</h2>
 
-<p>Say we have a box with many particles bouncing around in it (a gas). One way to describe the state of the gas inside this box could be to assign a binary descriptor to each particle $n_i$. $n_i = 1$ if the particle is on the <em>left half</em> of the box, and $n_i = 0$ if the particle is on the <em>right half</em>. The <em>set</em> (or actually <em>vector</em>, since the microstate is dependent on the ordinality) of all $n_i$, $(n_1,...,n_N)$ is called the <em><a href="microstate-statistical-mechanics-">microstate</a></em> of the gas.</p>
+<p>Say we have a box with many particles bouncing around in it (a gas). One way to describe the state of the gas inside this box could be to assign a binary descriptor to each particle $n_i$. $n_i = 1$ if the particle is on the <em>left half</em> of the box, and $n_i = 0$ if the particle is on the <em>right half</em>. The <em>set</em> (or actually <em>vector</em>, since the microstate is dependent on the ordinality) of all $n_i$, $(n_1,...,n_N)$ is called the <em><a href="microstate-statistical-mechanics">microstate</a></em> of the gas.</p>
 
-<p>Given this, we could calculate the number of particles located on the <em>left half</em> of the box, as $\sum_{i=1}^Nn_i$. This value is a <em><a href="macrostate-statistical-mechanics-">macrostate</a></em> of the gas. From this example its pretty obvious that a system can have multiple different <a href="microstate-statistical-mechanics-">microstates</a> for one specific <a href="macrostate-statistical-mechanics-">macrostate</a>.</p>
+<p>Given this, we could calculate the number of particles located on the <em>left half</em> of the box, as $\sum_{i=1}^Nn_i$. This value is a <em><a href="macrostate-statistical-mechanics">macrostate</a></em> of the gas. From this example its pretty obvious that a system can have multiple different <a href="microstate-statistical-mechanics">microstates</a> for one specific <a href="macrostate-statistical-mechanics">macrostate</a>.</p>
 
-<p>Another example of a micro/macrostate could be a set of two dice, described my the vector $(n_1, n_2)$. $(1,6)$ could be a <em><a href="microstate-statistical-mechanics-">microstate</a></em> here, with $7$ being a possible <em><a href="macrostate-statistical-mechanics-">macrostate</a></em>.</p>
+<p>Another example of a micro/macrostate could be a set of two dice, described my the vector $(n_1, n_2)$. $(1,6)$ could be a <em><a href="microstate-statistical-mechanics">microstate</a></em> here, with $7$ being a possible <em><a href="macrostate-statistical-mechanics">macrostate</a></em>.</p>
 
 <h3 id="multiplicity">Multiplicity</h3>
 
-<p>The number of <a href="microstate-statistical-mechanics-">microstate</a> that give the same <a href="macrostate-statistical-mechanics-">macrostate</a> is called the <em><a href="multiplicity">multiplicity</a></em> of that <a href="macrostate-statistical-mechanics-">macrostate</a>. This can be used to find the probability of a certian <a href="macrostate-statistical-mechanics-">macrostate</a>, by dividing its <a href="multiplicity">multiplicity</a> by the number of total <a href="microstate-statistical-mechanics-">microstate</a>. More formally, this can be written:</p>
+<p>The number of <a href="microstate-statistical-mechanics">microstate</a> that give the same <a href="macrostate-statistical-mechanics">macrostate</a> is called the <em><a href="multiplicity">multiplicity</a></em> of that <a href="macrostate-statistical-mechanics">macrostate</a>. This can be used to find the probability of a certian <a href="macrostate-statistical-mechanics">macrostate</a>, by dividing its <a href="multiplicity">multiplicity</a> by the number of total <a href="microstate-statistical-mechanics">microstate</a>. More formally, this can be written:</p>
 
 <p>$$ P(q) = \frac{\Omega (q)}{\Omega_{\text{tot}}} ,$$</p>
 
@@ -59,7 +59,7 @@
 
 <p>$$ P(N,\lambda) = 2^{-N}\Omega(N,\lambda) ,$$</p>
 
-<p>where $\Omega(N,\lambda) = \left(\begin{matrix}N \ \lambda\end{matrix}\right)$ is the <a href="multiplicity">multiplicity</a> of the <a href="macrostate-statistical-mechanics-">macrostate</a> $\lambda$, given $N$ particles. The <a href="mean">average</a> and the <a href="standard-deviation">standard deviation</a> are easily calculated, and looking at their ratio,</p>
+<p>where $\Omega(N,\lambda) = \left(\begin{matrix}N \ \lambda\end{matrix}\right)$ is the <a href="multiplicity">multiplicity</a> of the <a href="macrostate-statistical-mechanics">macrostate</a> $\lambda$, given $N$ particles. The <a href="mean">average</a> and the <a href="standard-deviation">standard deviation</a> are easily calculated, and looking at their ratio,</p>
 
 <p>$$ \overline{\lambda} = \frac{N}{2},\quad \sigma_\lambda = \sqrt{\frac{N}{4}},\quad \frac{\sigma_\lambda}{\overline \lambda} = N^{-1/2} ,$$</p>
 
@@ -72,7 +72,7 @@
 <ul>
 <li>Course: <a href="fys2160">FYS2160</a></li>
 <li>References: <a href="https://www.uio.no/studier/emner/matnat/fys/FYS2160/h20/Compendium/stat_thermal_phys_python.pdf">Anders Malthe-Sørensen: "Statistical and Thermal Physics Using Python"</a></li>
-<li>Date: <a href="daily/2020-08-27">daily/2020-08-27</a></li>
+<li>Date: <a href="daily2020-08-27">daily/2020-08-27</a></li>
 </ul>
 </div>
       <div class="backlinks">

@@ -65,16 +65,16 @@
 <p>We have a point particle in 1D:</p>
 
 <ul>
-<li>It has the <a href="action-physics-">action</a> - $S=\int dt L(q,\dot q)$ - which is only dependent on the <a href="phase-space">Phase space</a> variables <a href="position">Position</a> and <a href="velocity">Velocity</a>. Minimizing this "trajectory" through <a href="phase-space">Phase space</a> leads to the <a href="euler-lagrange-equation">equations of motion</a>.</li>
+<li>It has the <a href="action-physics">action</a> - $S=\int dt L(q,\dot q)$ - which is only dependent on the <a href="phase-space">Phase space</a> variables <a href="position">Position</a> and <a href="velocity">Velocity</a>. Minimizing this "trajectory" through <a href="phase-space">Phase space</a> leads to the <a href="euler-lagrange-equation">equations of motion</a>.</li>
 </ul>
 
 <p>Now lets consider 1D $\rightarrow$ $N$ dimensions. Now $q\rightarrow q = (q_1,...,q_N)$ and $\dot q = \frac{d}{dt}q$. However, our goal is not to consider a situation with $N$ <a href="degree-of-freedom">d.o.f.</a>, but a situation with infinite <a href="degree-of-freedom">d.o.f.'s</a>. </p>
 
-<p>This is where <a href="field-theory">Field theory</a> comes in. It considers a <a href="lagrangian-density">Lagrangian density</a> instead (required by <a href="locality">Locality</a>!). Now our <a href="action-physics-">action</a> is written:</p>
+<p>This is where <a href="field-theory">Field theory</a> comes in. It considers a <a href="lagrangian-density">Lagrangian density</a> instead (required by <a href="locality">Locality</a>!). Now our <a href="action-physics">action</a> is written:</p>
 
 <p>$$S = \int dtL = \int d^4x\mathcal L(\phi, \partial_\mu \phi ),$$</p>
 
-<p>where $\mathcal L$ is the mentioned <a href="lagrangian-density">Lagrangian density</a> (or just the <a href="lagrangian">Lagrangian</a>, if you must). $\phi(x^\mu)$ is a <a href="field-physics-">field</a> in <a href="space-time">Space-time</a>. So the Lagrangian here is not dependent on $x^\mu$, but on $\phi(x^\mu)$, and the system has infinitely many degrees of freedom.</p>
+<p>where $\mathcal L$ is the mentioned <a href="lagrangian-density">Lagrangian density</a> (or just the <a href="lagrangian">Lagrangian</a>, if you must). $\phi(x^\mu)$ is a <a href="field-physics">field</a> in <a href="space-time">Space-time</a>. So the Lagrangian here is not dependent on $x^\mu$, but on $\phi(x^\mu)$, and the system has infinitely many degrees of freedom.</p>
 
 <p><strong><a href="principle-of-least-action">Principle of least action</a></strong>:<br />
 $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \phi}\delta\phi + \frac{\partial \mathcal L}{\partial_\mu \phi} \delta(\partial_\mu\phi)\bigg]$$</p>
@@ -101,7 +101,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \
 
 <p>$$\partial_\mu \frac{\partial \mathcal L}{\partial \partial_\mu \phi} - \frac{\partial \mathcal L}{\partial \phi} = 0$$</p>
 
-<p>which is the <a href="euler-lagrange-equation#field-theory-euler-lagrange-equation">Field theory|Euler-Lagrange equation</a> completely analogous to the <a href="euler-lagrange-equation#classical-mechanics-classical">Classical mechanics|classical</a> one.</p>
+<p>which is the <a href="euler-lagrange-equation#field-theoryeuler-lagrange-equation">Field theory|Euler-Lagrange equation</a> completely analogous to the <a href="euler-lagrange-equation#classical-mechanicsclassical">Classical mechanics|classical</a> one.</p>
 
 <p>We could have more than one, and different fields, this would still describe the system. </p>
 
@@ -154,19 +154,19 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \
 <li>$\frac{1}{2}m^2\phi^2 &gt;0$ associated with having the field at all</li>
 </ul>
 
-<h2 id="noethers-theoremnoether-s-theorem"><a href="noether-s-theorem">Noether's theorem</a></h2>
+<h2 id="noethers-theoremnoethers-theorem"><a href="noethers-theorem">Noether's theorem</a></h2>
 
 <blockquote>
   <p>For every symmetry, there is a conservation law (a constant of motion)</p>
 </blockquote>
 
-<p>Consider a continuous field transformation of a <a href="field-physics-">physical field</a>.</p>
+<p>Consider a continuous field transformation of a <a href="field-physics">physical field</a>.</p>
 
 <p>$$\phi(x)\rightarrow \phi'(x)\equiv \phi(x) + \Delta\phi(x)$$</p>
 
 <p>$$\Rightarrow \mathcal L \rightarrow \mathcal L' = \mathcal L + \Delta \mathcal L$$</p>
 
-<p>The transformation of $\phi(x)$ is a called a <a href="symmetry-physics-">symmetry</a> <a href="iff">iff</a> the equations of motion do not change under the transformation. </p>
+<p>The transformation of $\phi(x)$ is a called a <a href="symmetry-physics">symmetry</a> <a href="iff">iff</a> the equations of motion do not change under the transformation. </p>
 
 <ul>
 <li>Sufficient condition: $\Delta\mathcal L = \partial_\mu J^\mu(x)$</li>
@@ -232,7 +232,7 @@ $$0\overset{!}{=}\delta S = \int d^4x\bigg[\frac{\partial \mathcal L}{\partial \
 
 <ul>
 <li>Course: <span class="tag">FYS</span>4170</li>
-<li>Date: <a href="daily/2020-08-19">daily/2020-08-19</a></li>
+<li>Date: <a href="daily2020-08-19">daily/2020-08-19</a></li>
 <li>Lecturer: <a href="torsten-bringmann">Torsten Bringmann</a></li>
 </ul>
 </div>

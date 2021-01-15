@@ -64,7 +64,7 @@
 <p>$$ \frac{\partial \text{RSS}}{\partial \beta} = -2\mathbf X^T (\mathbf y - \mathbf X\beta) $$<br />
 $$ \frac{\partial^2\text{RSS}}{\partial \beta \partial \beta^T} = 2\mathbf X^T\mathbf X $$</p>
 
-<p>For the moment, we assume that $\mathbf X$ has <a href="rank-linear-algebra-">full column rank</a> and $\mathbf X^T \mathbf X$ is thus <a href="positive-definite">positive definite</a> (and <a href="invertibility">invertible</a>). Setting the first derivative to $0$, we get</p>
+<p>For the moment, we assume that $\mathbf X$ has <a href="rank-linear-algebra">full column rank</a> and $\mathbf X^T \mathbf X$ is thus <a href="positive-definite">positive definite</a> (and <a href="invertibility">invertible</a>). Setting the first derivative to $0$, we get</p>
 
 <p>$$ \mathbf X^T(\mathbf y - \mathbf X\beta) = 0 \Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y $$</p>
 
@@ -91,7 +91,7 @@ $$ \frac{\partial^2\text{RSS}}{\partial \beta \partial \beta^T} = 2\mathbf X^T\m
 
 <p>There is a balance to be struck in our model complexity, as seen by this graph from <a href="the-elements-of-statistical-learning">The Elements of Statistical Learning</a>:</p>
 
-<p><img src="assets/pasted-imagedotpng" alt="assets/Pasted image.png" /></p>
+<p><img src="assetspasted-imagepng" alt="assets/Pasted image.png" /></p>
 
 <p><em>The light blue curves show the <a href="training-error">training error</a> $\overline{\text{err}}$, while the light red curves show the <a href="test-error">conditional test error</a> $\text{Err}_{\mathcal T}$ for $100$ training sets of size $50$ each, as the model complexity is increased. The solid curves show the <a href="test-error">expected test error</a> $\text{Err}$ and the <a href="training-error">expected training error</a> $E[\overline{\text{err}}]$.</em></p>
 
@@ -124,7 +124,7 @@ $$ \frac{\partial^2\text{RSS}}{\partial \beta \partial \beta^T} = 2\mathbf X^T\m
 <li>25% <strong>Test set</strong>: This set is used for assessing the <a href="test-error">generalization error</a> of the final chosen model.</li>
 </ul>
 
-<p>The validation step can be tested either <em>analytically</em> (<a href="akaike-information-criterion">AIC</a>, <a href="bayesian-information-criterion">BIC</a>, MDL or SRM) or by <em>efficient sample re-use</em> (<a href="cross-validation">cross-validation</a> or <a href="bootstrapping-statistics-">the bootstrap</a>).</p>
+<p>The validation step can be tested either <em>analytically</em> (<a href="akaike-information-criterion">AIC</a>, <a href="bayesian-information-criterion">BIC</a>, MDL or SRM) or by <em>efficient sample re-use</em> (<a href="cross-validation">cross-validation</a> or <a href="bootstrapping-statistics">the bootstrap</a>).</p>
 
 <hr />
 
@@ -133,14 +133,14 @@ $$ \frac{\partial^2\text{RSS}}{\partial \beta \partial \beta^T} = 2\mathbf X^T\m
 <ul>
 <li>Course: <a href="stk-in4300">STK-IN4300</a></li>
 <li>References: <a href="https://web.stanford.edu/%7Ehastie/Papers/ESLII.pdf">The Elements of Statistical Mechanics</a></li>
-<li>Date: <a href="daily/2020-08-24">daily/2020-08-24</a></li>
+<li>Date: <a href="daily2020-08-24">daily/2020-08-24</a></li>
 </ul>
 </div>
       <div class="backlinks">
 
 <ul>
 <li><a href="2020-08-24">2020-08-24</a></li>
-<li><a href="stk-in4300-lecture-03---more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
+<li><a href="stk-in4300-lecture-03-more-model-assessment-and-shrinkage-methods">STK-IN4300 Lecture 03 - More model assessment and shrinkage methods</a></li>
 </ul>
 
 </div>
