@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Metropolis algorithm</title>
+  <title>Probability distribution</title>
   <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
 </head>
@@ -34,40 +34,17 @@
       </div>
     </nav>
     <article>
-      <header>Metropolis algorithm</header>
-      <div id="content"><p>The <strong>Metropolis</strong> or <strong>Metropolis-Hastings</strong> algorithm is a method of obtaining random samples from a <a href="probability-distribution">probability distribution</a> which might be difficult to sample directly from.</p>
-
-<h2 id="the-algorithm">The algorithm</h2>
-
-<p>We often might know a <a href="probability-distribution">probability distribution</a> $P(\theta)$ only up to the <a href="proportionality">proportional function</a> $f(\theta)$, because doing integration to normalize it might be difficult. We are thus presented with the case of</p>
-
-<p>$$p(\theta) \propto f(\theta),$$</p>
-
-<p>where our goal is to sample from $p(\theta)$. The algorithm proceeds as follows:</p>
-
-<ol>
-<li>Select an initial value $\theta_0$. This is often chosen randomly.</li>
-<li>For $i=1,...,N$, repeat the following<br />
-<ol><br />
-<li>Draw a candidate $\theta'$ from the proposal distribution $q(\theta'|\theta_{i-1})$</li><br />
-<li>Compute the ratio $r = \frac{g(\theta')q(\theta_{i-1}|\theta')}{g(\theta_{i-1})q(\theta'|\theta_{i-1})}$</li><br />
-<li>Decide:<br /><br />
-<ul><br /><br />
-<li>If $r \ge 1$ or $r &gt; u$ (where $u$ is a random sample from the uniform distribution), set $\theta_{i} = \theta'$.</li><br /><br />
-<li>Else, set $\theta_{i} = \theta_{i-1}$</li><br /><br />
-</ul></li><br />
-</ol></li>
-</ol>
-
-<p>The proposal distribution $q(\theta'|\theta_{i-1})$ is the distribution that suggests a new sample given the previous one. A typical choice here is to use a <a href="normal-distribution">normal distribution</a> centered around the previous sample to favor samples close to it. This makes the sequence into a <a href="random-walk">random walk</a> and makes computing $r$ a bit simpler (now $r = \frac{g(\theta')}{g(\theta_{i-1})}$)</p>
-
-<p>Ideally, the random walk Metropolis algorithm should accept about $23\%-50\%$ of the proposed candidates^[From <a href="https://youtu.be/0lpT-yveuIA?t=550">this video</a>].</p>
-
-<hr />
-
-<p>The Metropolis algorithm is known as a first order <a href="markov-chain-monte-carlo">Markov chain Monte Carlo</a> method in the sense that the next step in the chain only depends on the current position.</p>
+      <header>Probability distribution</header>
+      <div id="content"><p></p>
 </div>
-      
+      <div class="backlinks">
+
+<ul>
+<li><a href="metropolis-algorithm">Metropolis algorithm</a></li>
+</ul>
+
+</div>
+
     </article>
   </div>
   
