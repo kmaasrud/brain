@@ -1,0 +1,3 @@
+The **variational method** is a method in [[Quantum mechanics|quantum mechanics]] used to approximate the [[Ground state|ground state]] of a system.
+
+The method revolves around choosing an initial "trial [[Wave function|wave function]]" that depends on one or more parameter(s) (here denoted $\alpha$). The value of $\alpha$ that minimizes the resulting [[Expectation value (quantum mechanics)|expected]] energy is then used to yield an approximation of the true [[Ground state|ground state]] [[Wave function|wave function]]. The [[Expectation value (quantum mechanics)|expectation value]] of the energy also serves as an upper bound to the [[Ground state energy|ground state energy]].
