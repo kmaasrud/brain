@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
   <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
 
-  <title>Probability distribution</title>
+  <title>Variational Monte Carlo</title>
   <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
 </head>
@@ -34,18 +34,22 @@
       </div>
     </nav>
     <article>
-      <header>Probability distribution</header>
-      <div id="content"><p></p>
+      <header>Variational Monte Carlo</header>
+      <div id="content"><p>The <strong>variational Monte Carlo (VMC) method</strong> is a method that applies the <a href="variational-method">variational method</a> to approximate the <a href="ground-state">ground state</a> of a quantum mechanical system. To achieve this, the <a href="monte-carlo-method">Monte Carlo method</a> of integral solving is used.</p>
+
+<h2 id="brief-description">Brief description</h2>
+
+<p>Given the Hamiltonian $H$ and the <a href="many-body-problem">many-body system</a> $R$, we define a trial <a href="wave-function">wave function</a> $|\Psi_T(R, \alpha)\rangle$, and the corresponding <a href="expectation-value-quantum-mechanics">expected energy</a> $E(\alpha)$. The latter is written as</p>
+
+<p>$$E(\alpha) = \frac{\langle \Psi(R, \alpha)|H|\Psi(R, \alpha)\rangle}{\langle\Psi(R, \alpha)|\Psi(R, \alpha)\rangle} = \frac{\int|\Psi(R,\alpha)|^2 \frac{H\Psi(R, \alpha)}{\Psi(R, \alpha)}dR}{\int|\Psi(R, \alpha)|^2 dR} = \int \frac{|\Psi(R, \alpha)|^2}{\int |\Psi(R, \alpha)|^2 dR}E_{\text{local}}(R)\ dR,$$</p>
+
+<p>where $E_{\text{local}}(R) = \frac{H\Psi(R, \alpha)}{\Psi(R, \alpha)}$ is the so-called <em>local energy</em>. $\frac{|\Psi(R, \alpha)|^2}{\int |\Psi(R, \alpha)|^2dR}$ can be interpretted as a <a href="probability-distribution">probability distribution</a> and thus be used in the <a href="monte-carlo-method">Monte Carlo method</a> to evaluate $E(\alpha)$ as the average of $E_{\text{local}}(R)$. Doing this for a set of variational parameters $\alpha$, we find the minimum and use it as our approximation for the <a href="ground-state">ground state</a> <a href="wave-function">wave function</a>.</p>
+
+<h3 id="the-metropolis-algorithm">The Metropolis algorithm</h3>
+
+<p>...</p>
 </div>
-      <div class="backlinks">
-
-<ul>
-<li><a href="metropolis-algorithm">Metropolis algorithm</a></li>
-<li><a href="variational-monte-carlo">Variational Monte Carlo</a></li>
-</ul>
-
-</div>
-
+      
     </article>
   </div>
   
