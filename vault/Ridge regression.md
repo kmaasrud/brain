@@ -10,7 +10,7 @@ Here, $\lambda \ge 0$ is a parameter that controls how much the $\beta$'s are sh
 
 $$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min}\ S(\beta,\lambda) .$$
 
-Like explained in the [[Ordinary differential equation|page about OLS]], the above minimization problem can be written on matrix form as [^closed-form]
+Like explained in the [[Ordinary least squares regression|page about OLS]], the above minimization problem can be written on matrix form as [^closed-form]
 
 $$ \hat \beta^{\text{ridge}} = (\mathbf X^T\mathbf X + \lambda \mathbf I)^{-1}\mathbf X^T\mathbf y ,$$
 
