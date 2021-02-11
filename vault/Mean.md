@@ -1,0 +1,1 @@
+The mean is the [[Expected value (statistics)|expected value]] of a discrete set.
