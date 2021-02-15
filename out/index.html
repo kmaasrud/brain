@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- IBM Plex Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
-  <!-- IBM Plex Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
-
-  <!-- CSS (uses absolute weblinks to work around relative path issues) -->
-  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/main.css">
-  <link rel="stylesheet" type="text/css" href="https://www.kmaasrud.com/brain/main.css">
-
-  <title>Brain</title>
-  <link rel="icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="https://raw.githubusercontent.com/kmaasrud/brain/master/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <script src="https://www.kmaasrud.com/web-components/head.js"></script>
+    <script src="https://www.kmaasrud.com/web-components/darkModeToggle.js"></script>
+    <script src="https://www.kmaasrud.com/web-components/katex.js"></script>
+    <script src="https://www.kmaasrud.com/web-components/highlight.js"></script>
+    <title>kmaasrud/brain</title>
 </head>
-
 <body>
-  <div class="grid">
-    <nav>
-      <ul>
-        <a href="https://www.kmaasrud.com/brain"><img id="logo" src="https://raw.githubusercontent.com/kmaasrud/brain/master/brain.svg"></img></a>
-        <br>
-        <li><a href="https://www.kmaasrud.com/projects">Projects</a></li>
-        <li><a href="https://github.com/kmaasrud">GitHub</a></li>
-        <br>
-      </ul>
-      <div class="footer">
-        <p>Get in touch with me:</p>
-        <a href="mailto:km@aasrud.com">km@aasrud.com</a>
-      </div>
-    </nav>
-    <article>
-      <header>Welcome to my brain!</header>
-      <div id="content">
-        <p>Here you will find all of my notes and a lot of my schoolwork, all together forming some form of densely interlinked personal <a href="https://www.wikipedia.org/">Wikipedia</a>. Feel free to explore my brain as you please, but beware that most notes are for personal use, and may thus be confusing for others.</p>
-
-        <p>I'm working on implementing <a href="https://www.kmaasrud.com/brain/searching-my-brain">search</a>, as well as some sort of index, but for now you'll just have to follow the hyperlinks. A natural place to start could be to look at <a href="https://www.kmaasrud.com/brain/my-computer">my computer</a>.</p>
-      </div>
-    </article>
-  </div>
+    <div id="main">
+        <div id="header">kmaasrud/<strong>brain</strong></div>
+        <script src="https://www.kmaasrud.com/web-components/header.js"></script>
+        <div id="content">
+            <h1>Welcome to my brain!</h1>
+            <p>Here you will find all of my notes and a lot of my schoolwork, all together forming some form of densely interlinked personal <a href="https://www.wikipedia.org/">Wikipedia</a>. Feel free to explore my brain as you please, but beware that most notes are for personal use, and may thus be confusing for others.</p>
+            <p>I'm working on implementing <a href="https://www.kmaasrud.com/brain/searching-my-brain">search</a>, as well as some sort of index, but for now you'll just have to follow the hyperlinks. A natural place to start could be to look at <a href="https://www.kmaasrud.com/brain/my-computer">my computer</a>.</p>
+        </div>
+    </div>
 </body>
-
 </html>
