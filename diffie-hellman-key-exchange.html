@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://www.kmaasrud.com/web-components/head.js"></script>
+    <script src="https://www.kmaasrud.com/web-components/katex.js"></script>
+    <script src="https://www.kmaasrud.com/web-components/highlight.js"></script>
+    <title>brain/Diffie-Hellman key exchange</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">brain/<strong>Diffie-Hellman key exchange</strong></div>
+        <script src="https://www.kmaasrud.com/web-components/header.js"></script>
+        <div id="content"><div id="content"><p><strong>Diffie-Hellman key exchange</strong> is a method of exchanging cryptographic keys through a public domain, with no prior shared knowledge between the client and the server. In fact, the two parts are actually not sharing keys, but creating one together.</p>
+
+<p>The standard Diffie-Hellman works as follows:</p>
+
+<ul>
+<li>Alice and Bob agree on a shared set of numbers: The prime number $p$ and the generator $g$ which is a <a href="primitive-root-modulo-n">primitive root modulo $p$</a>. The size of $p$ determines the security of the key exchange, and is thus preferrably large.</li>
+<li>Alice generates a random number $a$ and keeps it secretly stored on her computer. She uses this number to generate $A = g^a\mod p$, which she then shares with Bob.</li>
+<li>Bob also generates a random number $b$, and shares the number $B = g^b \mod p$ with Alice.</li>
+<li>Both repeat the same proceedure, but replace the generator $g$ with the number they recieved. So for Alice, thats $B^a \mod p$ and for Bob thats $A^b\mod p$.</li>
+<li>The resulting number is used as the final shared cryptographic key.</li>
+</ul>
+
+<p>This process works because modulo exponents behave in the following way:</p>
+
+<p>$$(g^a \mod p)^b \mod p = g^{ab} \mod p$$</p>
+
+<p>$$(g^b \mod p)^a \mod p = g^{ba} \mod p$$</p>
+
+<p>Meaning Alice and Bob end up with the same number. Note also that the only numbers that are visible to the public domain are $p$, $g$, $A$ and $B$ - none of which a malicious actor could use to get the final key (at least not without brute forcing it, which is why $p$ needs to be large).</p>
+</div></div>
+    </div>
+    <script src="https://www.kmaasrud.com/web-components/darkModeToggle.js"></script>
+</body>
+</html>
