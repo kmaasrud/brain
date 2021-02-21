@@ -1,1 +1,1 @@
-Means: **if and only if**
+Abbreviation of **if and only if**.

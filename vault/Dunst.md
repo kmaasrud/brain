@@ -1,1 +1,0 @@
-[My dotfiles](https://github.com/kmaasrud/dotfiles/tree/master/.config/dunst)

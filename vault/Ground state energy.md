@@ -1,0 +1,1 @@
+The energy of a system's [[Ground state|ground state]].

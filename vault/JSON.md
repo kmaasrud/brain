@@ -1,0 +1,1 @@
+**JavaScript Object Notation** or **JSON** is a data interchange file format that serves as a simplified replacement of [[XML]]. It uses human-readable text to represent objects consisting of key-value pairs and arrays.
