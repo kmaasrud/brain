@@ -11,7 +11,27 @@
     <div id="main">
         <div id="header">brain/<strong>Monte Carlo integration</strong></div>
         <script src="https://www.kmaasrud.com/web-components/header.js"></script>
-        <div id="content"><div id="content"><p><strong>Monte Carlo integration</strong> is a way of evaluating an integral using the <a href="monte-carlo-method">Monte Carlo method</a> (using random numbers).</p>
+        <div id="content"><div id="content"><p><strong>Monte Carlo integration</strong> is a way of evaluating an integral using the <a href="monte-carlo-method">Monte Carlo method</a> (using random numbers). The method generalizes well to higher dimensions and is thus computationally much more effective than many other numerical integration methods.</p>
+
+<p>The simplest form of Monte Carlo integration evaluates the mean function value over a set of parameters randomly sampled within the interval, and multiplies it with said interval. For example, the simple one parameter integral $I = \int^5_{-2} f(x) = \int^5_{-2}(-x^3 + 6x^2 - x + 17)dx$ can be calculated with $6$ Monte Carlo cycles thusly:</p>
+
+<p><img src="https://miro.medium.com/max/700/1*D3cackc27gSRjS2LrjYKzQ.jpeg" alt="" /></p>
+
+<p>The mean value of the yellow areas represent the result of the Monte Carlo integration.</p>
+
+<h2 id="definition">Definition</h2>
+
+<p>Consider a multidimensional integral of the function $f$</p>
+
+<p>$$I = \int_\Omega f(\mathbf x)d\mathbf x$$</p>
+
+<p>in the domain $\Omega$. The domain has volume $V = \int_\Omega d\mathbf x$. Monte Carlo integration revolves around doing a set number ($N$) of samples $\mathbf x_1, ..., \mathbf x_N \in \Omega$ and approximating the integral as</p>
+
+<p>$$I \approx M_I = \frac{V}{N}\sum_{i=1}^N f(\mathbf x_i).$$</p>
+
+<p>When $N\rightarrow \infty$, the <a href="law-of-large-numbers">law of large numbers</a> says that also $M_I \rightarrow I$.</p>
+
+<p>The key here is how the parameters $\mathbf x_i$ are sampled. In the example above (the <em>crude Monte Carlo</em>), we simply sample from a <a href="uniform-distribution">uniform distribution</a>, but more complex (and more efficient) methods do what's called <em>importance sampling</em> in accordance with a <a href="probability-density-function">PDF</a>.</p>
 </div><div class="backlinks">
 
 <ul>
