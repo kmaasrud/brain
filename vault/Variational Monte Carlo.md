@@ -1,4 +1,4 @@
-The **variational Monte Carlo (VMC) method** is a method that applies the [[Variational method|variational method]] to approximate the [[Ground state|ground state]] of a quantum mechanical system. To achieve this, the [[Monte Carlo method]] of integral solving is used.
+The **variational Monte Carlo (VMC) method** is a method that applies the [[Variational method|variational method]] to approximate the [[Ground state|ground state]] of a quantum mechanical system. To achieve this, [[Monte Carlo integration]] is used.
 
 ## Brief description
 

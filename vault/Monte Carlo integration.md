@@ -1,0 +1,1 @@
+**Monte Carlo integration** is a way of evaluating an integral using the [[Monte Carlo method]] (using random numbers).
