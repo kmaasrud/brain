@@ -16,7 +16,7 @@
 <p>The standard Diffie-Hellman works as follows:</p>
 
 <ul>
-<li>Alice and Bob agree on a shared set of numbers: The prime number $p$ and the generator $g$ which is a <a href="primitive-root-modulo-n">primitive root modulo $p$</a>. The size of $p$ determines the security of the key exchange, and is thus preferrably large.</li>
+<li>Alice and Bob agree on a shared set of numbers: The prime number $p$ and the generator $g$ which is a <a href="primitive-root-modulo-nprimitive-root-modulo-p">primitive root modulo $p$</a>. The size of $p$ determines the security of the key exchange, and is thus preferrably large.</li>
 <li>Alice generates a random number $a$ and keeps it secretly stored on her computer. She uses this number to generate $A = g^a\mod p$, which she then shares with Bob.</li>
 <li>Bob also generates a random number $b$, and shares the number $B = g^b \mod p$ with Alice.</li>
 <li>Both repeat the same proceedure, but replace the generator $g$ with the number they recieved. So for Alice, thats $B^a \mod p$ and for Bob thats $A^b\mod p$.</li>

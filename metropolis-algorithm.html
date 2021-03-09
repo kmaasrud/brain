@@ -11,11 +11,11 @@
     <div id="main">
         <div id="header">brain/<strong>Metropolis algorithm</strong></div>
         <script src="https://www.kmaasrud.com/web-components/header.js"></script>
-        <div id="content"><div id="content"><p>The <strong>Metropolis</strong> or <strong>Metropolis-Hastings</strong> algorithm is a method of obtaining random samples from a <a href="probability-distribution">probability distribution</a> which might be difficult to sample directly from.</p>
+        <div id="content"><div id="content"><p>The <strong>Metropolis</strong> or <strong>Metropolis-Hastings</strong> algorithm is a method of obtaining random samples from a <a href="probability-distributionprobability-distribution">probability distribution</a> which might be difficult to sample directly from.</p>
 
 <h2 id="the-algorithm">The algorithm</h2>
 
-<p>We often might know a <a href="probability-distribution">probability distribution</a> $P(\theta)$ only up to the <a href="proportionality">proportional function</a> $g(\theta)$, because doing integration to normalize it might be difficult. We are thus presented with the case of</p>
+<p>We often might know a <a href="probability-distributionprobability-distribution">probability distribution</a> $P(\theta)$ only up to the <a href="proportionalityproportional-function">proportional function</a> $g(\theta)$, because doing integration to normalize it might be difficult. We are thus presented with the case of</p>
 
 <p>$$p(\theta) \propto g(\theta),$$</p>
 
@@ -35,7 +35,7 @@
 </ol></li>
 </ol>
 
-<p>The proposal distribution $q(\theta'|\theta_{i-1})$ is the distribution that suggests a new sample given the previous one. A typical choice here is to use a <a href="normal-distribution">normal distribution</a> centered around the previous sample to favor samples close to it. This makes the sequence into a <a href="random-walk">random walk</a> and makes computing $r$ a bit simpler (now $r = \frac{g(\theta')}{g(\theta_{i-1})}$)<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup></p>
+<p>The proposal distribution $q(\theta'|\theta_{i-1})$ is the distribution that suggests a new sample given the previous one. A typical choice here is to use a <a href="normal-distributionnormal-distribution">normal distribution</a> centered around the previous sample to favor samples close to it. This makes the sequence into a <a href="random-walkrandom-walk">random walk</a> and makes computing $r$ a bit simpler (now $r = \frac{g(\theta')}{g(\theta_{i-1})}$)<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup></p>
 
 <p>Ideally, the random walk Metropolis algorithm should accept about $23\%-50\%$ of the proposed candidates^[From <a href="https://youtu.be/0lpT-yveuIA?t=550">this video</a>].</p>
 

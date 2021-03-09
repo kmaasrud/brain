@@ -33,11 +33,11 @@
 
 <p>$$ y(x) = f(x) + N(0, \sigma^2) ,$$</p>
 
-<p>where $N$ is a <a href="probability-density-function">PDF</a> (<a href="normal-distribution">Normal distribution</a>), where $\mu = 0$ and we have a variance $\sigma^2$. Then we assume this <a href="probability-density-function">PDF</a> $P(x)$ is known and <a href="continuity">continuous</a>, then our mean value is defined:</p>
+<p>where $N$ is a <a href="probability-density-functionpdf">PDF</a> (<a href="normal-distribution">Normal distribution</a>), where $\mu = 0$ and we have a variance $\sigma^2$. Then we assume this <a href="probability-density-functionpdf">PDF</a> $P(x)$ is known and <a href="continuitycontinuous">continuous</a>, then our mean value is defined:</p>
 
 <p>$$\sigma = \int dx x P(x),$$</p>
 
-<p>However, in our case, $P(x)$ is often unkown. <a href="machine-learning">Machine learning</a> is a <a href="frequentist-approach">frequentist approach</a> to this.</p>
+<p>However, in our case, $P(x)$ is often unkown. <a href="machine-learning">Machine learning</a> is a <a href="frequentist-approachfrequentist-approach">frequentist approach</a> to this.</p>
 
 <p>$$ (y,x)\rightarrow x= \begin{matrix}\{x_0,x_1,...,x_{n-1}\} \ \{y_0,y_1,...,y_{n-1}\}\end{matrix} $$</p>
 
@@ -46,18 +46,18 @@
 <p>$$ \mu_y = \frac{1}{n}\sum_{i=0}^{n-1}y_i $$<br />
 $$ \mu_y \ne \mu $$</p>
 
-<p>So $\mu_y$ is not the exact mean, but the <strong><a href="sample-mean">sample mean</a></strong>.</p>
+<p>So $\mu_y$ is not the exact mean, but the <strong><a href="sample-meansample-mean">sample mean</a></strong>.</p>
 
 <hr />
 
 <p>$$ \sigma^2 = \int (x-\mu)^2 P(x) dx ,$$</p>
 
-<p>the true <a href="variance">Variance</a>. However, we have to live with the <strong><a href="sample-variance">sample variance</a></strong>.</p>
+<p>the true <a href="variance">Variance</a>. However, we have to live with the <strong><a href="sample-variancesample-variance">sample variance</a></strong>.</p>
 
 <p>$$ \sigma_x^2 = \frac{1}{n}\sum_{i=0}^{n-1}(x_i \mu_x)^2 $$<br />
 $$\sigma_x^2 \ne \sigma^2$$</p>
 
-<p>(when <a href="morten-hjorth-jensen">Morten</a> puts a subscript to the variance or mean, he is talking about the sampled version)</p>
+<p>(when <a href="morten-hjorth-jensenmorten">Morten</a> puts a subscript to the variance or mean, he is talking about the sampled version)</p>
 
 <hr />
 
@@ -86,15 +86,15 @@ $$ \mathbf{\beta} = \{\beta_0, \beta_1\} $$</p>
 
 <p>(When you see $y - \tilde y$, this equals $\sum_{i=0}^{n-1} (y_i - \tilde y_i$)</p>
 
-<p>We have the <a href="mean-squared-error">mean squared error (MSE)</a>:</p>
+<p>We have the <a href="mean-squared-errormean-squared-error-mse">mean squared error (MSE)</a>:</p>
 
 <p>$$ \text{MSE} = \frac{1}{n}\sum_{i=0}^{n-1}(y_i - \tilde y_i) = C(\mathbf{\beta}|x) $$</p>
 
-<p>or <a href="cost-function">Cost function</a> (which <a href="morten-hjorth-jensen">Morten</a> will write as $C(\mathbf{\beta})$ from now on).</p>
+<p>or <a href="cost-function">Cost function</a> (which <a href="morten-hjorth-jensenmorten">Morten</a> will write as $C(\mathbf{\beta})$ from now on).</p>
 
 <p>We seek an optimal $\hat \beta = \text{argmin}_{\beta} C(\mathbf{\beta}1|x)$.</p>
 
-<p>We can rewrite the <a href="cost-function">Cost function</a> (<a href="morten-hjorth-jensen">Morten's</a> slides of this <a href="https://compphysics.github.io/MachineLearning/doc/pub/Regression/html/Regression.html#___sec12">here</a>)</p>
+<p>We can rewrite the <a href="cost-function">Cost function</a> (<a href="morten-hjorth-jensenmortens">Morten's</a> slides of this <a href="https://compphysics.github.io/MachineLearning/doc/pub/Regression/html/Regression.html#___sec12">here</a>)</p>
 
 <p>$$ C(\mathbf{\beta}) = \frac{1}{n}\left[\left(\mathbf y - \mathbf{\tilde y}\right)^T \left(\mathbf y -\mathbf{\tilde y}\right)\right] $$</p>
 
@@ -108,7 +108,7 @@ $$ \mathbf{\beta} = \{\beta_0, \beta_1\} $$</p>
 
 <p>$$ \mathbf X^T \mathbf y = \mathbf X^T \mathbf X \mathbf \beta .$$</p>
 
-<p>If the matrix $\mathbf X^T \mathbf X$ is <a href="invertibility">invertible</a>, we have our solution, namely:</p>
+<p>If the matrix $\mathbf X^T \mathbf X$ is <a href="invertibilityinvertible">invertible</a>, we have our solution, namely:</p>
 
 <p>$$ \mathbf \beta = \left(\mathbf X^T \mathbf X\right)^{-1} \mathbf X^T \mathbf y $$</p>
 
@@ -116,7 +116,7 @@ $$ \mathbf{\beta} = \{\beta_0, \beta_1\} $$</p>
 
 <p>From <code>sklearn.linear_model</code> we can import <code>LinearRegression</code> which contains the handy function <code>fit</code>.</p>
 
-<p>(Hopefully, <a href="morten-hjorth-jensen">Morten</a> will go more into this)</p>
+<p>(Hopefully, <a href="morten-hjorth-jensenmorten">Morten</a> will go more into this)</p>
 
 <hr />
 
@@ -125,7 +125,7 @@ $$ \mathbf{\beta} = \{\beta_0, \beta_1\} $$</p>
 <ul>
 <li>Course: <a href="fys-stk4155">FYS-STK4155</a></li>
 <li>Lecturer: <a href="morten-hjorth-jensen">Morten Hjorth-Jensen</a></li>
-<li>Date: <a href="daily2020-08-20">daily/2020-08-20</a></li>
+<li>Date: <a href="daily/2020-08-20">daily/2020-08-20</a></li>
 </ul>
 </div><div class="backlinks">
 

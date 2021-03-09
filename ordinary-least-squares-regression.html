@@ -11,7 +11,7 @@
     <div id="main">
         <div id="header">brain/<strong>Ordinary least squares regression</strong></div>
         <script src="https://www.kmaasrud.com/web-components/header.js"></script>
-        <div id="content"><div id="content"><p><strong>Ordinary least squares</strong> (OLS) is a method of estimating the parameters in a <a href="linear-regression">linear regression</a> model. </p>
+        <div id="content"><div id="content"><p><strong>Ordinary least squares</strong> (OLS) is a method of estimating the parameters in a <a href="linear-regressionlinear-regression">linear regression</a> model. </p>
 
 <p>We have a dataset of $n$ observations $(y_i, \mathbf x_i)$, where $\mathbf x_i$ are the column vectors of length $p$ containing the parameters and $y_i$ are the scalar responses. We set up the linear function for the $i$'th case as</p>
 
@@ -23,15 +23,15 @@
 
 <p>$$ \mathbf y = \mathbf X\mathbf \beta + \mathbf \epsilon ,$$</p>
 
-<p>with $\mathbf X$ being an $n\times p$ matrix, often called the <em><a href="design-matrix">design matrix</a></em> or <em>matrix of regressors</em>. It's worth noting that - contrary to what on might've thought - the $i$'th <strong>row</strong> of $\mathbf X$ equals $\mathbf x_i^T$. Also, the constant term is included in our equation by setting $x_{i1} = 1\ \forall\ i=1,\dots, n$.</p>
+<p>with $\mathbf X$ being an $n\times p$ matrix, often called the <em><a href="design-matrixdesign-matrix">design matrix</a></em> or <em>matrix of regressors</em>. It's worth noting that - contrary to what on might've thought - the $i$'th <strong>row</strong> of $\mathbf X$ equals $\mathbf x_i^T$. Also, the constant term is included in our equation by setting $x_{i1} = 1\ \forall\ i=1,\dots, n$.</p>
 
-<p>Now because of the errors, $\mathbf y = \mathbf X\mathbf \beta$ does not have a unique solution. However, we can find the best fit by finding the vector $\hat \beta$ that minimizes some sort of <a href="cost-function">cost function</a>,</p>
+<p>Now because of the errors, $\mathbf y = \mathbf X\mathbf \beta$ does not have a unique solution. However, we can find the best fit by finding the vector $\hat \beta$ that minimizes some sort of <a href="cost-functioncost-function">cost function</a>,</p>
 
 <p>$$ \hat \beta = \underset{\beta}{\arg \min} S(\beta) .$$</p>
 
 <p>$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$.</p>
 
-<p>In the case of OLS, the <a href="cost-function">cost function</a> we use is the <a href="residual-sum-of-squares">residual sum of squares (RSS) function</a>:</p>
+<p>In the case of OLS, the <a href="cost-functioncost-function">cost function</a> we use is the <a href="residual-sum-of-squaresresidual-sum-of-squares-rss-function">residual sum of squares (RSS) function</a>:</p>
 
 <p>$$ \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .$$</p>
 
@@ -43,7 +43,7 @@
 
 <p>$$ \frac{\partial \text{RSS}}{\partial \beta} = -2\mathbf X^T (\mathbf y - \mathbf X\beta) .$$</p>
 
-<p>Assuming <a href="rank-linear-algebra">full column rank</a> for $\mathbf X$, $(\mathbf X^T \mathbf X)$ is thus <a href="positive-definite">positive definite</a> (and importantly, <a href="invertibility">invertible</a>). Setting the first derivative to $0$, we get</p>
+<p>Assuming <a href="rank-linear-algebrafull-column-rank">full column rank</a> for $\mathbf X$, $(\mathbf X^T \mathbf X)$ is thus <a href="positive-definitepositive-definite">positive definite</a> (and importantly, <a href="invertibilityinvertible">invertible</a>). Setting the first derivative to $0$, we get</p>
 
 <p>$$ \mathbf X^T(\mathbf y - \mathbf X\beta) = 0$$</p>
 

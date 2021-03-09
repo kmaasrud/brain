@@ -138,7 +138,7 @@ $$f(x) = \frac{1}{\sqrt{2\pi}}\int^\infty_{-\infty}F(k)e^{ikx}dk = \frac{2}{\pi}
 
 <p>Inserting the values of $$a = 1$$ and $$x = 0$$ into the function $$f(x)$$ and the expression above gives me:<br />
 $$f(0) = 2 = \frac{2}{\pi}\int^\infty_{-\infty}\frac{1-\cos k}{k^2}dk$$<br />
-Since the integrand $$\frac{1-\cos k}{k^2}$$ is an even function, I utilize the <a href="parity">symmetry</a> of it to split the integral into two equal integrals from $$0$$t to $$\infty$$:<br />
+Since the integrand $$\frac{1-\cos k}{k^2}$$ is an even function, I utilize the <a href="paritysymmetry">symmetry</a> of it to split the integral into two equal integrals from $$0$$t to $$\infty$$:<br />
 $$2 = \frac{2}{\pi}\cdot 2\int^\infty_0\frac{1-\cos k}{k^2}dk$$<br />
 $$\Rightarrow \int^\infty_0\frac{1 - \cos k}{k^2}dk = \frac{\pi}{2}$$</p>
 
@@ -146,13 +146,13 @@ $$\Rightarrow \int^\infty_0\frac{1 - \cos k}{k^2}dk = \frac{\pi}{2}$$</p>
 
 <h2 id="5a">5.a)</h2>
 
-<p>I start by <a href="laplace-transform">Laplace transforming</a> the <a href="partial-differential-equation">PDE</a> with regards to the time dependence:<br />
+<p>I start by <a href="laplace-transformlaplace-transforming">Laplace transforming</a> the <a href="partial-differential-equationpde">PDE</a> with regards to the time dependence:<br />
 $$\mathcal L\left\{\frac{\partial^2 u(x,t)}{\partial t^2}\right\} = c^2\mathcal L \left\{\frac{\partial^2 u(x,t)}{\partial x^2}\right\}$$<br />
 $$s^2\mathcal L \left\{u(x,t)\right\} - su(x,0) - \frac{\partial u(x,t)}{\partial t}\bigg|_{t=0} = c^2\mathcal L \left\{\frac{\partial^2 u(x,t)}{\partial x^2}\right\}$$<br />
 The initial conditions where $$t = 0$$ are known to equal $$0$$, and thus<br />
 $$s^2\mathcal L\left\{u(x,t)\right\} = c^2\mathcal L \left\{\frac{\partial^2 u(x,t)}{\partial x^2}\right\} = c^2\cdot \int^\infty_0 e^{-st}\cdot \frac{\partial^2 u(x,t)}{\partial x^2}dt$$<br />
 $$s^2\mathcal L\left\{u(x,t)\right\} = c^2 \frac{\partial^2}{\partial x^2}\cdot \int^\infty_0 e^{-st}u(x,t)dt = c^2\frac{\partial^2}{\partial x^2}\mathcal L\left\{u(x,t)\right\}$$<br />
-Renaming $$\mathcal L\left\{u(x,t)\right\} = U(x,s)$$, I now end up with the following <a href="ordinary-differential-equation">ODE</a>:<br />
+Renaming $$\mathcal L\left\{u(x,t)\right\} = U(x,s)$$, I now end up with the following <a href="ordinary-differential-equationode">ODE</a>:<br />
 $$\frac{\partial^2 U(x,s)}{\partial x^2} = \frac{s^2}{c^2}U(x,s)$$<br />
 This equation is easily solved generally by utilizing the characteristic equation<br />
 $$r^2 - \frac{s^2}{c^2} = 0 \Rightarrow r = \pm \frac{s}{c}$$<br />

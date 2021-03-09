@@ -11,11 +11,11 @@
     <div id="main">
         <div id="header">brain/<strong>Stochastic gradient descent</strong></div>
         <script src="https://www.kmaasrud.com/web-components/header.js"></script>
-        <div id="content"><div id="content"><p><strong>Stochastic gradient descen</strong> or <strong>SDG</strong> is a special form of <a href="gradient-descent">gradient descent</a> designed to increase numerical efficiency over the regular method. It considers the <a href="cost-function">cost function</a> $C$, described by the parameter $w$ we wish to optimize. It is typically defined over all observations in the (<a href="training-set">training</a>) dataset</p>
+        <div id="content"><div id="content"><p><strong>Stochastic gradient descen</strong> or <strong>SDG</strong> is a special form of <a href="gradient-descentgradient-descent">gradient descent</a> designed to increase numerical efficiency over the regular method. It considers the <a href="cost-functioncost-function">cost function</a> $C$, described by the parameter $w$ we wish to optimize. It is typically defined over all observations in the (<a href="training-settraining">training</a>) dataset</p>
 
 <p>$$C(w, b) = \frac{1}{N}\sum_{i=1}^N C_i(w, b),$$</p>
 
-<p>where $C_i$ is the cost associated with the $i$'th observation. Regular <a href="gradient-descent">gradient descent</a> would calculate the gradient over all these observations before taking a step,</p>
+<p>where $C_i$ is the cost associated with the $i$'th observation. Regular <a href="gradient-descentgradient-descent">gradient descent</a> would calculate the gradient over all these observations before taking a step,</p>
 
 <p>$$w\rightarrow w' = w - \eta \nabla C(w) = w - \frac{\eta}{N}\sum_{i=1}^N \nabla C_i(w).$$</p>
 
@@ -23,9 +23,9 @@
 
 <ul>
 <li>Start with an initial value of $w$ and the stepsize $\eta$.</li>
-<li>Repeat the following until the desired minimum is achieved (when the value of $w$ <a href="convergence">converges</a>):<br />
+<li>Repeat the following until the desired minimum is achieved (when the value of $w$ <a href="convergenceconverges">converges</a>):<br />
 <ul><br />
-<li>Randomly shuffle the <a href="training-set">training set</a>.</li><br />
+<li>Randomly shuffle the <a href="training-settraining-set">training set</a>.</li><br />
 <li>For each observation $i$, do:<br /><br />
 <ul><br /><br />
 <li>$w\rightarrow w'= w - \eta\nabla C_i(w)$</li><br /><br />
