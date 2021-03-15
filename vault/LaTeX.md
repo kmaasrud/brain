@@ -1,0 +1,1 @@
+$\mathrm \LaTeX$ is a system for document creation utilizing the [[TeX]] typesetting program. It is widely used in academia for documents requiring complex formatting, and is written in [[Plain text|plain text]] (as opposed to [[WYSIWYG]] editors).
